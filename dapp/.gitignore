@@ -5,7 +5,7 @@ media
 *.zip
 *.xlsx
 **/__init__.py
-**/conf.py
+./main/conf.py
 
 
 # Byte-compiled / optimized / DLL files
