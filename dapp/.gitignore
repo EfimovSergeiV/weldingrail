@@ -4,8 +4,7 @@ static
 media
 *.zip
 *.xlsx
-**/__init__.py
-./main/conf.py
+**/conf.py
 
 
 # Byte-compiled / optimized / DLL files
