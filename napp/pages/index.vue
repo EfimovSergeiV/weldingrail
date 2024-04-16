@@ -1,0 +1,400 @@
+<script setup>
+
+  const localePath = useLocalePath()
+  const config = useRuntimeConfig()
+  // const colorMode = useColorMode()
+  // const route = useRoute()
+
+  const { data: categories } = await useFetch(`${ config.public.baseURL }c/categories/`)
+  const { data: products } = await useFetch(`${ config.public.baseURL }c/products/`)
+
+  
+
+  const mashineDescription = ref('The machine is designed for flash butt welding of rails with cross-sectional area of from 6,500 mm to 10,000 mm in field conditions, through continuous or pulsating flashing, and removes flash immediately after welding. Due to the increased upsetting force of 140 tons, the welding machine is capable of welding long rail strings into tracks and tightening the strings. The welding machine can hold the welded joint within the time necessary for the joint to cool down after welding and removing flash. The welding machine is equipped with a welding process control system, which allows monitoring the welding process and and issues data sheets for every welded joint.')
+
+
+</script>
+
+
+<template>
+  <div class="">
+
+    
+    <div>
+      <div class="min-h-screen grid grid-cols-1 content-between">
+        <div></div>
+
+        <div class="absolute h-screen   -z-10">
+          <img src="/backgrounds/bg-5.webp" class="h-screen object-cover" />
+        </div>
+
+        <div class="">
+
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <div class="flex">
+              <div class="bg-white/50 backdrop-blur-sm px-16 py-4 border-l-8 border-sky-800/90">
+                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-800 text-[40px] md:text-[62px] uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-600 text-[40px] md:text-[62px] uppercase se lect-none">{{ $t('title-2') }}</p>          
+                <div class="py-3">
+                  <p class="text-xl text-sky-800 se lect-none font-sans">{{ $t('slogan') }}</p>
+                </div>          
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="">
+          <div class="">
+
+            <div class="bg-gradient-to-br from-sky-950/95 to-sky-800/95 backdrop-blur-sm border-t border-sky-950/40 py- 2">
+              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
+                <div class="flex items-end justify-between">
+                  <div class="">
+                    <p class="text-white text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                    <div class="grid grid-cols-3 gap-4 text-gray-100">
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                    </div>                  
+                  </div>
+                  <div class="grid grid-cols-1 gap-2 text-right">
+                    <div class="grid grid-cols-1 gap-1">
+                      <p class="text-white text-xl font-semibold">info@weldingrail.com</p>
+                    </div>
+                    <div class=" shadow-xl shadow-gray-900/10">
+                      <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 mt-2 cut-corners">{{ $t('requestCall') }}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class=" bg-sky-950 border-t border-sky-950/20 border-white">
+              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+                <div class="flex items-center h-20 justify-between">
+                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+150</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
+                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+3500</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
+                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+560Ha</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
+                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+200</span><p class="text-gray-100 text-base font-semibold">Клиентов</p></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
+
+          <div v-for="category in categories" :key="category.id" class="py-8">
+            <p class="text-xl text-sky-950">{{ category.name }}</p>
+            <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="">
+      <div class="bg-white">
+
+        <div class="bg-[url('images/rails-bg.jpg')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
+          <div class="bg-sky-950/70 hover:bg-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
+            <div class="absolute w-full h-full">
+
+              <div class="flex items-center justify-center h-full">
+                <div class="grid grid-cols-1 gap-8">
+                  <p class="text-slate-200 font-semibold text-xl uppercase">
+                    {{ $t('pages.index.quest-title') }}
+                  </p>
+                  <p class="text-4xl text-white uppercase">
+                    {{ $t('pages.index.quest-text') }}
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-sky-950 border-t border-b border-white/20">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+        <div class="">
+          <a href="#" class="flex items-center justify-center gap-2 py-6">
+            <div class="mdi mdi-24px mdi-book-open-page-variant text-gray-100"></div>
+            <p class="text-xl text-gray-100">Скачать каталог</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="repair" class="bg-fixed bg-no-repeat bg-[center_0px] bg-cover bg-[url('bg/bg-1.jpg')]">
+      <div class="bg-white/80 py-8 grid grid-cols-1 content-center border-t border-b border-sky-950/20">
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+
+          <div class="flex items-center justify-end my-4">
+            <p class="font-sans font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-sky-900 to-sky-800 uppercase se lect-none">
+              Наши услуги
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-8">
+            <div class="">
+              <div class="flex">
+                <div class="bg-sky-800 z-20 rounded-sm px-8 py-2">
+                  <p class=" font-sans font-semibold text-transparent text-lg bg-clip-text bg-gradient-to-r from-white to-gray-200 uppercase">
+                    {{ $t('pages.index.repair-title') }}
+                  </p>                  
+                </div>
+              </div>
+              <div class="bg-gradient-to-br z-10 from-white/70 to-white/40 backdrop-blur-sm border border-sky-950/10 shadow-xl shadow-black/10 rounded-md -mt-6 py-8 ">
+
+                <div class="py-2 px-4">
+                  <p class="text-sky-900 uppercase text-sm font-semibold"> Мы имеем:</p>
+
+                  <div class="grid grid-cols-1 gap-1 my-2">
+                    <div class="flex items-center gap-2 text-sky-900/30 mdi mdi-brightness-1 text-xs">
+                      <p class="text-sm text-sky-950"> Собственное современное производство</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-sky-900/30 mdi mdi-brightness-1 text-xs">
+                      <p class="text-sm text-sky-950"> Собственный конструкторский отдел</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-sky-900/30 mdi mdi-brightness-1 text-xs">
+                      <p class="text-sm text-sky-950"> Проверенных поставщиков материалов</p>
+                    </div>            
+                  </div>
+
+                  
+                </div>
+
+                <div class="bg-sky-800 px-6 py-2">
+                  <p class="text-sm text-white font-sans">
+                    {{ $t('pages.index.repair-text-1') }}
+                  </p>                  
+                </div>
+
+                <div class="px-4">
+                  <p class="text-sm text-sky-900 font-semibold se lect-none font-sans my-4">
+                    {{ $t('pages.index.repair-text-2') }}
+                  </p>
+                </div>
+               
+              </div>
+            </div>
+
+
+            <div class="mt-8">
+              <div class="flex">
+                <div class="bg-sky-800 z-20 rounded-sm px-8 py-2">
+                  <p class=" font-sans font-semibold text-transparent text-lg bg-clip-text bg-gradient-to-r from-white to-gray-200 uppercase">
+                    {{ $t('pages.index.learn-title') }}
+                  </p>                  
+                </div>
+              </div>
+              <div class="bg-gradient-to-br z-10 from-white/70 to-white/40 backdrop-blur-sm border border-sky-950/10 shadow-xl shadow-black/10 rounded-md -mt-6 py-8 ">
+
+                <div class="py-2 px-4">
+                  <p class="text-sm text-sky-950 se lect-none font-sans">
+                    Мы предлагаем специализированное техническое обучение и консультации по электросварке рельсов.
+                  </p>
+                </div>
+
+                <div class="py-2 px-4">
+                  <p class="text-sm text-sky-950 se lect-none font-sans">
+                    Наша команда состоит из опытных инженеров и квалифицированных рабочих, которые всегда готовы и рады поделиться своими знаниями с другими профессионалами в этой области. 
+                  </p>
+                </div>
+              
+                <div class="bg-sky-800 px-6 py-2 rounded-sm">
+                  <p class="text-sm text-gray-100 font-sans">
+                    Сервисная служба компании Railwelding уделяет много внимания качественной передаче знаний, постоянному сопровождению и обеспечению устойчивого производства без необходимости частого технического обслуживания. Такой комплексный подход к клиентскому сервису является залогом долгосрочного плодотворного сотрудничества.
+                  </p>                  
+                </div>
+
+                <div class="py-2 px-4">
+                  <p class="text-sm font-semibold text-sky-900 se lect-none font-sans">
+                    Мы охотно обучим и проконсультируем вас по всем вопросам эксплуатации и обслуживания выпускаемого нами оборудования.                  </p>
+                </div>
+        
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="service" class="bg-white/80 py-8 min-h-screen grid grid-cols-1 content-center">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+
+        <div class="flex">
+          <div class="bg-sky-800 z-20 rounded-sm px-8 py-2 ">
+            <p class=" font-sans font-semibold text-transparent text-lg bg-clip-text bg-gradient-to-r from-white to-gray-200 uppercase">
+              Ремонт и обслуживание оборудования
+            </p>                  
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-8">
+
+
+          <div class="">
+            <div class="grid grid-cols-2 gap-8 py-8">
+              <div class="bg-gradient-to-br from-gray-100/95 to-gray-50/90 border-l-8 border-sky-800/90 shadow-lg shadow-black/10 px-4">
+                <div class=" h-[6rem] flex items-center py-2">
+                  <p class="text-md text-sky-800 font-sans">{{ $t('pages.index.service-2') }}</p>
+
+                </div>
+              </div>
+            
+              <div class="bg-gradient-to-br from-gray-100/95 to-gray-50/90 border-l-8 border-sky-800/90 shadow-lg shadow-black/10 px-4">
+                <div class="h-[6rem] flex items-center py-2">
+                  <p class="text-md text-sky-800 font-sans">{{ $t('pages.index.service-3') }}</p>
+
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-gray-100/95 to-gray-50/90 border-l-8 border-sky-800/90 shadow-lg shadow-black/10 px-4">
+                <div class="h-[6rem] flex items-center py-2">
+                  <p class="text-md text-sky-800 font-sans">{{ $t('pages.index.service-4') }}</p>
+
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-gray-100/95 to-gray-50/90 border-l-8 border-sky-800/90 shadow-lg shadow-black/10 px-4">
+                <div class="h-[6rem] flex items-center py-2">
+                  <p class="text-md text-sky-800 font-sans">{{ $t('pages.index.service-5') }}</p>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class=" grid grid-cols-2 gap-8 py-8">
+
+          <div class="flex items-center justify-center">
+            <div class="w-full">
+              <div class="grid grid-cols-1 gap-2">
+                <div class="relative">
+                  <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-950/90"></p>
+                  <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
+                </div>
+                <div class="relative">
+                  <p class="absolute px-2 py-1 mdi mdi-16px mdi-at text-sky-950/90"></p>
+                  <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.youremail')" />
+                </div>
+                <div class="relative">
+                  <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-950/90"></p>
+                  <textarea type="text" id="person" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.yourmess')"></textarea>
+                </div>
+              </div>
+              <div class="flex items-center justify-end py-2 ">
+                <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Отправить сообщение</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex items-center">
+            <div class="">
+              <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">Почему выбирают нас?</p>
+              <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+                {{ $t('pages.index.service-1' ) }}
+              </p>
+              <div class="my-4">
+                <p class="text-xl text-sky-950 se lect-none font-sans">
+                  {{ $t('pages.index.service-6') }}
+                </p>
+              </div>              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="border-t border-sky-950/30">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+        <div class="flex items-center justify-center">
+          <div class="grid grid-cols-3 gap-24 py-2">
+            
+            <div class="text-sky-900 flex items-center gap-4">
+              <div>
+                <div class="mdi mdi-36px mdi-map-marker text-sky-900"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-sm">Axel Springer Neubau</p>
+                <div class="py-1 grid grid-cols-1 gap-0.5">
+                  <p class="text-xs">Zimmerstraße 50, 10117 Berlin</p>                  
+                </div>              
+              </div>
+            </div>
+
+            <div class="text-sky-900 flex items-center gap-8">
+              <div>
+                <div class="mdi mdi-36px mdi-at text-sky-900"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-sm">Напишите нам</p>
+                <div class="py-1 grid grid-cols-1 gap-0.5">
+                  <p class="text-xs">info@weldingrail.com</p>
+                </div>              
+              </div>
+            </div>
+
+            <div class="text-sky-900 flex items-center gap-8">
+              <div>
+                <div class="mdi mdi-36px mdi-book-open-page-variant text-sky-900"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-sm">Cкачать каталог</p>
+                <div class="py-1 grid grid-cols-1 gap-1">
+                  <a href="#" class="text-xs cursor-pointer">catalog-railwelding.pdf</a>
+                </div>              
+              </div>
+            </div>
+
+            <!-- <div class="text-sky-900 flex items-center gap-8">
+              <div>
+                <div class="mdi mdi-36px mdi-train text-sky-900"></div>
+              </div>
+              <div>
+                <p class="font-semibold text-sm">Материалы</p>
+                <div class="py-1 grid grid-cols-1 gap-0.5">
+                  <p class="text-xs cursor-pointer">Документы</p>
+                  <p class="text-xs cursor-pointer">Видеоматериалы</p>              
+                </div>              
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+</template>
