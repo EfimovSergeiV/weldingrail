@@ -48,7 +48,7 @@
                           <div class="grid grid-cols-2 gap-2">
                             <div v-for="machine in railmachines.slice(0, 3)" :key="machine.id" class="">
                               <div class="">
-                                <nuxt-link :to="localePath({ name: 'c-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
                                   <div class="px-2 py-2">
                                     <div class="flex items-center gap-2">
                                       <div class="px-4 py-2">
@@ -86,7 +86,7 @@
                           <div class="grid grid-cols-2 gap-2">
                             <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
                               <div class="">
-                                <nuxt-link :to="localePath({ name: 'c-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
                                   <div class="px-2 py-2">
                                     <div class="flex items-center gap-2">
                                       <div class="px-4 py-2">
@@ -123,7 +123,7 @@
                           <div class="grid grid-cols-2 gap-2">
                             <div v-for="machine in railmachines.slice(0, 1)" :key="machine.id" class="">
                               <div class="">
-                                <nuxt-link :to="localePath({ name: 'c-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
                                   <div class="px-2 py-2">
                                     <div class="flex items-center gap-2">
                                       <div class="px-4 py-2">

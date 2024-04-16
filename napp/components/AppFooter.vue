@@ -27,7 +27,7 @@
                     </p>                  
                   </div>
                   <div class="">
-                    <p class="text-lg text-gray-100 text-center font-sans font-semibold">
+                    <p class="text-2xl text-gray-100 text-center font-sans">
                       {{ $t('pages.index.aboutus-text-2') }}
                     </p>                  
                   </div>                  
@@ -35,14 +35,14 @@
 
 
                 <div class="my-4">
-                  <p class="text-base text-gray-100 text-center font-sans">
+                  <p class="text-2xl text-gray-100 text-center font-sans">
                     {{ $t('pages.index.aboutus-text-3') }}
                   </p>                  
                 </div>
               </div>
               <div class="">
                 <div class="flex items-center justify-center py-4">
-                  <p class="text-center text-xl text-gray-100 se lect-none font-sans">{{ $t('pages.index.aboutus-promo') }}</p>
+                  <p class="text-center text-2xl text-gray-100 se lect-none font-sans">{{ $t('pages.index.aboutus-promo') }}</p>
                 </div>
                 <div class="flex items-end justify-center py-6">
                   <img src="/logo-white.png" class=" h-6"/>
@@ -55,7 +55,7 @@
           <div class="">
 
             <div class="flex items-center justify-center py-6">
-              <p class="text-white text-sm">Нашими партнёрами уже стали</p>
+              <p class="text-white text-xl">Нашими партнёрами уже стали</p>
             </div>
 
             <div class="grid grid-cols-4 gap-2">

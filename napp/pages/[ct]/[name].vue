@@ -1,9 +1,15 @@
-<script lang="ts" setup>
+<script setup>
 
   const config = useRuntimeConfig()
   const route = useRoute()
   const router = useRouter()
+  const localePath = useLocalePath()
+  const { locale, setLocale } = useI18n()
 
+  console.log(route.params)
+
+
+  const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.name}/`)
 
   const advantages = ref([  
     { "id": 1, "text": "Мощные сварочные трансформаторы, что позволяет вести сварку на более жестких режимах" },
@@ -135,6 +141,8 @@
     </div>
 
 
+    {{ product }}
+
 
     <div class="bg-white py-2 grid grid-cols-1 content-center">
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
@@ -144,7 +152,7 @@
           <div class="flex items-center gap-8 py-2">
             <div class="flex gap-2">
               <div class="bg-white w-[400px] flex items-center justify-center">
-                <img src="/prod/MPCK-01.png" class=" w-[400px] py-4" />
+                <img :src="product.image" class=" py-4" />
               </div>
 
 
@@ -173,13 +181,11 @@
             <div class="grid grid-cols-1 content-between ">
               <div class="flex items-center justify-start">
                 <!-- <p class="text-lg font-semibold text-sky-950 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
-                <p class="text-lg font-semibold text-sky-950 text-center">МРКК-001</p>
+                <p class="text-lg font-semibold text-sky-950 text-center">{{ product.name }}</p>
               </div>
               
-              <div class="py-4">
-                <p class="text-base text-sky-950">
-                  The machine is designed for flash butt welding of rails with cross-sectional area of from 6,500 mm to 10,000 mm in field conditions, through continuous or pulsating flashing, and removes flash immediately after welding. Due to the increased upsetting force of 140 tons, the welding machine is capable of welding long rail strings into tracks and tightening the strings. The welding machine can hold the welded joint within the time necessary for the joint to cool down after welding and removing flash. The welding machine is equipped with a welding process control system, which allows monitoring the welding process and and issues data sheets for every welded joint.
-                </p>                
+              <div class="py-4 text-base text-sky-950">
+                <div class="" v-html="product.description"></div>
               </div>
 
               <div class="flex items-end justify-between gap-4 py-4">

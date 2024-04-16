@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   
   app: {
     head: {
-      title: 'Rail Welding Solutions',
+      title: 'Rail Welding',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
 
   i18n: {
     strategy: 'prefix_except_default',
-    defaultLocale: 'ru',
+    defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -66,11 +66,6 @@ export default defineNuxtConfig({
         file: 'en-US.json'
       },
       {
-        code: 'ru',
-        iso: 'ru-RU',
-        file: 'ru-RU.json'
-      },
-      {
         code: 'pt',
         iso: 'pt-PT',
         file: 'pt-PT.json'
@@ -79,7 +74,12 @@ export default defineNuxtConfig({
         code: 'de',
         iso: 'de-DE',
         file: 'de-DE.json'
-      }
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file: 'ru-RU.json'
+      },
     ],
     lazy: true,
     langDir: 'lang/',

@@ -2,11 +2,14 @@
 
   const localePath = useLocalePath()
   const config = useRuntimeConfig()
-  // const colorMode = useColorMode()
-  // const route = useRoute()
+  const route = useRoute()
+  const { locale, setLocale } = useI18n()
 
-  const { data: categories } = await useFetch(`${ config.public.baseURL }c/categories/`)
-  const { data: products } = await useFetch(`${ config.public.baseURL }c/products/`)
+
+
+
+  const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
 
   
 
@@ -18,6 +21,9 @@
 
 <template>
   <div class="">
+
+
+    
 
     
     <div>
@@ -93,13 +99,41 @@
 
 
       <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
 
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
           <div v-for="category in categories" :key="category.id" class="py-8">
             <p class="text-xl text-sky-950">{{ category.name }}</p>
             <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>
+
+              {{ category.url }}
+
+              <div class="grid grid-cols-2">
+                <div v-for="product in products" :key="product.id">
+                  <div v-if="product.category == category.id">
+                    
+                    <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })" class="">
+                      <div class="flex gap-4">
+                        <div class="w-1/2">
+                          <img :src="product.image" class=" h-36" />
+                        </div>
+                        <div class="w-1/2">
+                          <p class="text-lg text-sky-950">{{ product.name }}</p>
+                          <p class="text-lg text-sky-950">{{ product.keywords }}</p>
+
+                          <div class="text-sm text-sky-900" v-html="product.description"></div>
+                        </div>
+                      </div>                    
+                    </nuxt-link>
+
+                  </div>
+                </div>                
+              </div>
+
+
           </div>
         </div>
+
+
 
       </div>
     </div>
@@ -318,7 +352,7 @@
 
           <div class="flex items-center">
             <div class="">
-              <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">Почему выбирают нас?</p>
+              <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">Почему выбирают нас ?</p>
               <p class="text-xl text-sky-950 se lect-none font-sans py-1">
                 {{ $t('pages.index.service-1' ) }}
               </p>

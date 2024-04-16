@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -126,9 +127,9 @@ USE_TZ = True
 
 PARLER_LANGUAGES = {
     None: (
-        {'code': 'ru',},
         {'code': 'en',},
         {'code': 'de',},
+        {'code': 'ru',},
     ),
     'default': {
         'fallbacks': ['en'],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
