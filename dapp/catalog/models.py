@@ -109,6 +109,7 @@ class ProductPropertiesModel(TranslatableModel):
     translations = TranslatedFields(
         name = models.CharField(verbose_name="Name", max_length=300, null=True, blank=True),
         value = models.CharField(verbose_name="Value", max_length=300, null=True, blank=True),
+        # meta = {'unique_together': [('language_code', 'slug')]},
     )
 
     class Meta:

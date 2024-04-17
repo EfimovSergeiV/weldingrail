@@ -8,7 +8,7 @@
 
   console.log(route.params)
 
-
+  const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
   const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.name}/`)
 
   const advantages = ref([  
@@ -141,7 +141,7 @@
     </div>
 
 
-    {{ product }}
+
 
 
     <div class="bg-white py-2 grid grid-cols-1 content-center">
@@ -183,14 +183,19 @@
                 <!-- <p class="text-lg font-semibold text-sky-950 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
                 <p class="text-lg font-semibold text-sky-950 text-center">{{ product.name }}</p>
               </div>
-              
+
               <div class="py-4 text-base text-sky-950">
-                <div class="" v-html="product.description"></div>
+                <div v-if="product.description.length > 1" class="" v-html="product.description"></div>
+                <div v-else class="">
+                  <div v-for="category in categories" :key="category.id">
+                    <div v-if="category.id === product.category" class="" v-html="category.description"></div>
+                  </div>
+                </div>
               </div>
 
               <div class="flex items-end justify-between gap-4 py-4">
                 <div class="">
-                  <div class="">
+                  <!-- <div class="">
                     <div class="">
                       <p class="text-sky-900 text-sm font-semibold">Вариант исполнения:</p>
                       <div class="flex gap-1 my-2">
@@ -204,7 +209,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- <div class="">
                     <div class="bg-white flex items-center gap-2 cursor-pointer">
                       <img src="/pngegg.webp" class="w-10 opacity-95" />
@@ -280,16 +285,16 @@
               <p class="text-base text-sky-950 se lect-none font-sans font-semibold">Технические параметры:</p>
             </div>
             <div class=" grid grid-cols-1 gap-2 py-4">
-              <div v-for="specification in specifications" :key="specification.id" class="">
-                <div v-if="specification.value" class="">
+              <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
+                <div v-if="propdata.value" class="">
                   <div class="flex items-center justify-between text-sm border-b border-sky-950/30 hover:border-sky-950/50 transition-all duration-300">
-                    <p class="text-sky-950 se lect-none font-sans">{{ specification.key }}</p>
-                    <p class="text-sky-950 se lect-none font-sans font-semibold">{{ specification.value }}</p>
+                    <p class="text-sky-950 se lect-none font-sans">{{ propdata.name }}</p>
+                    <p class="text-sky-950 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
                   </div>                
                 </div>
                 <div v-else class="">
                   <div class="flex items-center justify-start text-sm mt-6">
-                    <p class="text-sky-950 se lect-none font-sans font-semibold">{{ specification.key }}:</p>
+                    <p class="text-sky-950 se lect-none font-sans font-semibold">{{ propdata.name }}</p>
                   </div>
                 </div>
 
@@ -302,7 +307,7 @@
 
 
 
-    <div class=" bg-sky-950 grid grid-cols-1 content-center py-4 border-t border-black/10">
+    <div v-if="product.product_advantages.lenght > 0" class=" bg-sky-950 grid grid-cols-1 content-center py-4 border-t border-black/10">
       <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">
       
 

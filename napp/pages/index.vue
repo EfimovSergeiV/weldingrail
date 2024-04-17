@@ -39,8 +39,8 @@
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="flex">
               <div class="bg-white/50 backdrop-blur-sm px-16 py-4 border-l-8 border-sky-800/90">
-                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-800 text-[40px] md:text-[62px] uppercase se lect-none">{{ $t('title-1') }}</p>
-                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-600 text-[40px] md:text-[62px] uppercase se lect-none">{{ $t('title-2') }}</p>          
+                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-800 text-[40px] md:text-[82px] uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-600 text-[40px] md:text-[68px] uppercase se lect-none">{{ $t('title-2') }}</p>          
                 <div class="py-3">
                   <p class="text-xl text-sky-800 se lect-none font-sans">{{ $t('slogan') }}</p>
                 </div>          
@@ -102,12 +102,15 @@
 
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
           <div v-for="category in categories" :key="category.id" class="py-8">
-            <p class="text-xl text-sky-950">{{ category.name }}</p>
-            <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>
+            
+            <div class="grid grid-cols-1 gap-2">
+              <p class="text-2xl text-sky-950">{{ category.name }}</p>
+              <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>              
+            </div>
 
-              {{ category.url }}
 
-              <div class="grid grid-cols-2">
+
+              <div class="grid grid-cols-2 gap-4 py-8">
                 <div v-for="product in products" :key="product.id">
                   <div v-if="product.category == category.id">
                     
@@ -120,7 +123,7 @@
                           <p class="text-lg text-sky-950">{{ product.name }}</p>
                           <p class="text-lg text-sky-950">{{ product.keywords }}</p>
 
-                          <div class="text-sm text-sky-900" v-html="product.description"></div>
+                          <!-- <div class="text-sm text-sky-900" v-html="product.description"></div> -->
                         </div>
                       </div>                    
                     </nuxt-link>
