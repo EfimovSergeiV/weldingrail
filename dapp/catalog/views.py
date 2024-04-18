@@ -20,10 +20,30 @@ class CategoryModelView(APIView):
 class ProductsModelView(APIView):
     """ Products model view """
 
+    qs_properties = ProductPropertiesModel.objects.all()
+    qs_advantages = ProductAdvantageModel.objects.all()
+
     def get(self, request, lang):
+        response_data = []
+
         queryset = ProductModel.objects.language(lang).filter(show=True)
         serializer = ProductModelSerializer(queryset, many=True, context={'request': request})
-        return Response(serializer.data)
+
+        for data in serializer.data:
+            product_props_qs = self.qs_properties.language(lang).filter(product=data['id'])
+            product_adv_qs = self.qs_advantages.language(lang).filter(product=data['id'])
+
+            sr_props = ProductPropertiesSerializer(product_props_qs, many=True)
+            sr_adv = ProductPropertiesSerializer(product_adv_qs, many=True)
+
+            data['product_properties'] = sr_props.data
+            data['product_advantages'] = sr_adv.data
+
+            response_data.append(data)
+
+        
+
+        return Response(response_data)
     
 
 class ProductModelView(APIView):

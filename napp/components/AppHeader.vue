@@ -26,12 +26,12 @@
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-1 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/railwelding-logo.webp" class=" h-6" />
+              <img src="/railwelding-logo-2.webp" class=" h-6" />
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">
             <div class="group">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-xl text-center text-sky-900 h-[56px] flex items-center">{{ $t('railWeldingEquipment') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -176,7 +176,7 @@
 
 
             <div class="group">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-xl text-center text-sky-900 h-[56px] flex items-center">{{ $t('services') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -243,7 +243,7 @@
 
             
             <div class="relative group">
-              <p class="text-xl text-center text-main-primary h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
+              <p class="text-lg text-center font-semibold text-main-primary h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
               <div class="absolute right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[260px]">

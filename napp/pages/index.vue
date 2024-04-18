@@ -39,9 +39,9 @@
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="flex">
               <div class="bg-white/50 backdrop-blur-sm px-16 py-4 border-l-8 border-sky-800/90">
-                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-800 text-[40px] md:text-[82px] uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-800 text-[40px] md:text-[72px] uppercase se lect-none">{{ $t('title-1') }}</p>
                 <p class="font-sans font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-br from-sky-950 to-sky-600 text-[40px] md:text-[68px] uppercase se lect-none">{{ $t('title-2') }}</p>          
-                <div class="py-3">
+                <div class="py-4">
                   <p class="text-xl text-sky-800 se lect-none font-sans">{{ $t('slogan') }}</p>
                 </div>          
               </div>
@@ -100,8 +100,8 @@
 
       <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
 
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
-          <div v-for="category in categories" :key="category.id" class="py-8">
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+          <div v-for="category in categories" :key="category.id" class=" py-20">
             
             <div class="grid grid-cols-1 gap-2">
               <p class="text-2xl text-sky-950">{{ category.name }}</p>
@@ -110,23 +110,52 @@
 
 
 
-              <div class="grid grid-cols-2 gap-4 py-8">
+              <div class="grid grid-cols-2 py-4">
                 <div v-for="product in products" :key="product.id">
-                  <div v-if="product.category == category.id">
+                  <div v-if="product.category === category.id">
                     
-                    <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })" class="">
-                      <div class="flex gap-4">
-                        <div class="w-1/2">
-                          <img :src="product.image" class=" h-36" />
-                        </div>
-                        <div class="w-1/2">
-                          <p class="text-lg text-sky-950">{{ product.name }}</p>
-                          <p class="text-lg text-sky-950">{{ product.keywords }}</p>
+                    
+                    <div class="">
 
-                          <!-- <div class="text-sm text-sky-900" v-html="product.description"></div> -->
+                      <div class="py-4">
+                        <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })">
+                          <p class="text-xl text-sky-950">{{ product.name }}</p>
+                        </nuxt-link>                        
+                      </div>
+
+                      <div class="flex gap-8">
+                        <div class="py-2 w-[160px]">
+                          <img :src="product.image" class="w-[160px] h-[120px]" />
                         </div>
-                      </div>                    
-                    </nuxt-link>
+                        <div class="flex flex-col justify-between">
+                          
+                            <div class="grid grid-cols-1 gap-0.5">
+                              <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
+                                
+                                <div class="flex items-center gap-2">
+                                  <div class="mdi mdi-circle text-sky-800"></div>
+                                  <p class="text-sm text-sky-950">
+                                     {{ advantage.name }}
+                                     {{ advantage.name }}
+                                     {{ advantage.name }}
+                                     {{ advantage.name }}
+                                  
+                                  </p>
+                                </div>
+
+                              </div>
+                            </div>
+                          
+
+                          <div class="flex items-center gap-4 py-1">
+                            <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
+                            <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
+                          </div>
+                        </div>
+                      </div>                        
+                    </div>
+                  
+                    
 
                   </div>
                 </div>                
@@ -372,7 +401,7 @@
     </div>
 
 
-    <div class="border-t border-sky-950/30">
+    <!-- <div class="border-t border-sky-950/30">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
         <div class="flex items-center justify-center">
           <div class="grid grid-cols-3 gap-24 py-2">
@@ -413,23 +442,10 @@
               </div>
             </div>
 
-            <!-- <div class="text-sky-900 flex items-center gap-8">
-              <div>
-                <div class="mdi mdi-36px mdi-train text-sky-900"></div>
-              </div>
-              <div>
-                <p class="font-semibold text-sm">Материалы</p>
-                <div class="py-1 grid grid-cols-1 gap-0.5">
-                  <p class="text-xs cursor-pointer">Документы</p>
-                  <p class="text-xs cursor-pointer">Видеоматериалы</p>              
-                </div>              
-              </div>
-            </div> -->
-
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     
 

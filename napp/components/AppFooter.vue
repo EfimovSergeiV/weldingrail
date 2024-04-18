@@ -15,19 +15,24 @@
               <div class="">
                 <div class="flex items-center justify-center border-b border-gray-100/20">
                   <div class="py-4">
-                    <p class="text-4xl text-gray-100 uppercase">
+                    <p class="text-xl text-gray-100 uppercase">
                       {{ $t('pages.index.aboutus-title') }}
                     </p>
                   </div>
                 </div>
+
+
+
+
+
                 <div class="py-8">
                   <div class="">
-                    <p class="text-2xl text-gray-100 text-center font-sans">
+                    <p class="text-xl text-gray-100 text-center font-sans">
                       {{ $t('pages.index.aboutus-text-1') }}
                     </p>                  
                   </div>
                   <div class="">
-                    <p class="text-2xl text-gray-100 text-center font-sans">
+                    <p class="text-xl text-gray-100 text-center font-sans">
                       {{ $t('pages.index.aboutus-text-2') }}
                     </p>                  
                   </div>                  
@@ -35,15 +40,65 @@
 
 
                 <div class="my-4">
-                  <p class="text-2xl text-gray-100 text-center font-sans">
+                  <p class="text-xl text-gray-100 text-center font-sans">
                     {{ $t('pages.index.aboutus-text-3') }}
                   </p>                  
                 </div>
               </div>
-              <div class="">
+
+
                 <div class="flex items-center justify-center py-4">
-                  <p class="text-center text-2xl text-gray-100 se lect-none font-sans">{{ $t('pages.index.aboutus-promo') }}</p>
+                  <p class="text-center text-xl text-gray-100 se lect-none font-sans">{{ $t('pages.index.aboutus-promo') }}</p>
                 </div>
+
+
+              <div class="flex items-center justify-center">
+                <div class="grid grid-cols-3 gap-24 py-2">
+          
+                  <div class=" flex items-center gap-4">
+                    <div class="text-gray-100">
+                      <div class="mdi mdi-36px mdi-map-marker "></div>
+                    </div>
+                    <div class="text-gray-100">
+                      <p class="font-semibold text-sm">Axel Springer Neubau</p>
+                      <div class="py-1 grid grid-cols-1 gap-0.5">
+                        <p class="text-xs">Zimmerstraße 50, 10117 Berlin</p>                  
+                      </div>              
+                    </div>
+                  </div>
+
+                  <div class=" flex items-center gap-8">
+                    <div class="text-gray-100">
+                      <div class="mdi mdi-36px mdi-at "></div>
+                    </div>
+                    <div class="text-gray-100">
+                      <p class="font-semibold text-sm">Напишите нам</p>
+                      <div class="py-1 grid grid-cols-1 gap-0.5">
+                        <p class="text-xs">info@weldingrail.com</p>
+                      </div>              
+                    </div>
+                  </div>
+
+                  <div class=" flex items-center gap-8">
+                    <div class="text-gray-100">
+                      <div class="mdi mdi-36px mdi-book-open-page-variant"></div>
+                    </div>
+                    <div class="text-gray-100">
+                      <p class="font-semibold text-sm">Cкачать каталог</p>
+                      <div class="py-1 grid grid-cols-1 gap-1">
+                        <a href="#" class="text-xs cursor-pointer">catalog-railwelding.pdf</a>
+                      </div>              
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="">
+                <!-- <div class="flex items-center justify-center py-4">
+                  <p class="text-center text-xl text-gray-100 se lect-none font-sans">{{ $t('pages.index.aboutus-promo') }}</p>
+                </div> -->
                 <div class="flex items-end justify-center py-6">
                   <img src="/logo-white.png" class=" h-6"/>
                 </div>
