@@ -25,7 +25,7 @@
 
 
 
-                <div class="py-8">
+                <div class="py-4">
                   <div class="">
                     <p class="text-xl text-gray-100 text-center font-sans">
                       {{ $t('pages.index.aboutus-text-1') }}
@@ -39,7 +39,7 @@
                 </div>
 
 
-                <div class="my-4">
+                <div class="">
                   <p class="text-xl text-gray-100 text-center font-sans">
                     {{ $t('pages.index.aboutus-text-3') }}
                   </p>                  
@@ -53,16 +53,16 @@
 
 
               <div class="flex items-center justify-center">
-                <div class="grid grid-cols-3 gap-24 py-2">
+                <div class="grid grid-cols-3 gap-24 py-8">
           
                   <div class=" flex items-center gap-4">
                     <div class="text-gray-100">
                       <div class="mdi mdi-36px mdi-map-marker "></div>
                     </div>
                     <div class="text-gray-100">
-                      <p class="font-semibold text-sm">Axel Springer Neubau</p>
+                      <p class="font-semibold text-base">Axel Springer Neubau</p>
                       <div class="py-1 grid grid-cols-1 gap-0.5">
-                        <p class="text-xs">Zimmerstraße 50, 10117 Berlin</p>                  
+                        <p class="text-base">Zimmerstraße 50, 10117 Berlin</p>                  
                       </div>              
                     </div>
                   </div>
@@ -72,9 +72,9 @@
                       <div class="mdi mdi-36px mdi-at "></div>
                     </div>
                     <div class="text-gray-100">
-                      <p class="font-semibold text-sm">Напишите нам</p>
+                      <p class="font-semibold text-base">Напишите нам</p>
                       <div class="py-1 grid grid-cols-1 gap-0.5">
-                        <p class="text-xs">info@weldingrail.com</p>
+                        <p class="text-base">info@weldingrail.com</p>
                       </div>              
                     </div>
                   </div>
@@ -84,9 +84,9 @@
                       <div class="mdi mdi-36px mdi-book-open-page-variant"></div>
                     </div>
                     <div class="text-gray-100">
-                      <p class="font-semibold text-sm">Cкачать каталог</p>
+                      <p class="font-semibold text-base">Cкачать каталог</p>
                       <div class="py-1 grid grid-cols-1 gap-1">
-                        <a href="#" class="text-xs cursor-pointer">catalog-railwelding.pdf</a>
+                        <a href="#" class="text-base cursor-pointer">catalog-railwelding.pdf</a>
                       </div>              
                     </div>
                   </div>
@@ -119,7 +119,7 @@
                   <img src="/partners/2.png" class="h-12"/>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                  <p class="text-gray-100 text-xs">Kazakh Railways</p>
+                  <p class="text-gray-100 text-base">Kazakh Railways</p>
                 </div>
               </div>
               <div class="px-8">
@@ -127,7 +127,7 @@
                   <img src="/partners/1.png" class="h-12"/>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                  <p class="text-gray-100 text-xs">Lithuanian Railways</p>
+                  <p class="text-gray-100 text-base">Lithuanian Railways</p>
                 </div>
               </div>
               <div class="px-8">
@@ -135,7 +135,7 @@
                   <img src="/partners/3.png" class="h-12"/>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                  <p class="text-gray-100 text-xs">Ozbekiston temir yollari</p>
+                  <p class="text-gray-100 text-base">Ozbekiston temir yollari</p>
                 </div>
               </div>
               <div class="px-8">
@@ -143,7 +143,7 @@
                   <img src="/partners/4.png" class="h-12"/>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                  <p class="text-gray-100 text-xs">Belarusian railways</p>
+                  <p class="text-gray-100 text-base">Belarusian railways</p>
                 </div>
               </div>
             </div>

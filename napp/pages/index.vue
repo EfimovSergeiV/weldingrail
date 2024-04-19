@@ -117,13 +117,13 @@
                     
                     <div class="">
 
-                      <div class="py-4">
+                      <div class="">
                         <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })">
-                          <p class="text-xl text-sky-950">{{ product.name }}</p>
+                          <p class="text-center text-xl text-sky-950">{{ product.name }}</p>
                         </nuxt-link>                        
                       </div>
 
-                      <div class="flex gap-8">
+                      <div class="flex gap-8 py-6">
                         <div class="py-2 w-[160px]">
                           <img :src="product.image" class="w-[160px] h-[120px]" />
                         </div>
@@ -208,7 +208,7 @@
     </div>
 
 
-    <div id="repair" class="bg-fixed bg-no-repeat bg-[center_0px] bg-cover bg-[url('bg/bg-1.jpg')]">
+    <div id="repair" class="">
       <div class="bg-white/80 py-8 grid grid-cols-1 content-center border-t border-b border-sky-950/20">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
 
