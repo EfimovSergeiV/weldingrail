@@ -31,7 +31,7 @@
         <div></div>
 
         <div class="absolute h-screen   -z-10">
-          <img src="/backgrounds/bg-5.webp" class="h-screen object-cover" />
+          <img src="/backgrounds/bg-5.webp" class="w-screen h-screen object-cover" />
         </div>
 
         <div class="">
@@ -118,7 +118,7 @@
                     <div class="">
 
                       <div class="">
-                        <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })">
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })">
                           <p class="text-center text-xl text-sky-950">{{ product.name }}</p>
                         </nuxt-link>                        
                       </div>
@@ -149,20 +149,61 @@
 
                           <div class="flex items-center gap-4 py-1">
                             <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
-                            <nuxt-link :to="localePath({ name: 'ct-name', params: { ct: category.url, name: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
+                            <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
                           </div>
                         </div>
                       </div>                        
                     </div>
                   
-                    
-
                   </div>
                 </div>                
               </div>
 
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            <div class="">
+              <p class="text-2xl text-sky-950">Запасные части и комплектующие</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4">
+              <div class="">
+                <nuxt-link :to="localePath({ name: 'ct', params: { ct: 'components' } })">
+                  <p class="text-xl text-sky-950">Трансформаторы для сварочных машин</p>
+                </nuxt-link>                
+              </div>
+
+              <div class="">
+                <nuxt-link :to="localePath({ name: 'index'})">
+                  <p class="text-xl text-sky-950">Электроды контактной сварки</p>
+                </nuxt-link>                
+              </div>
+                  
+              <div class="">
+                <nuxt-link :to="localePath({ name: 'index'})">
+                  <p class="text-xl text-sky-950">Ножи гратоснимателя</p>
+                </nuxt-link>                
+              </div>
+              
+              <div class="">
+                <nuxt-link :to="localePath({ name: 'index'})">
+                  <p class="text-xl text-sky-950">Гибкие медные шины</p>
+                </nuxt-link>                
+              </div>
+         
+              <div class="">
+                <nuxt-link :to="localePath({ name: 'index'})">
+                  <p class="text-xl text-sky-950">Токопроводы</p>
+                </nuxt-link>                
+              </div>
+
+            </div>
 
           </div>
+          
+
+
+
         </div>
 
 
