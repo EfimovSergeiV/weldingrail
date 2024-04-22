@@ -30,7 +30,7 @@ class ProductModel(TranslatableModel):
 
     show = models.BooleanField(verbose_name="Activated", default=False)
     priority = models.IntegerField(verbose_name="Priority", default=50)
-    category = models.ForeignKey(CategoryModel, verbose_name="Category", on_delete=models.CASCADE, related_name="product_category")
+    category = models.ForeignKey(CategoryModel, verbose_name="Category", on_delete=models.SET_NULL, null=True, related_name="product_category")
 
     image = ResizedImageField(
         size = [320, 240],
