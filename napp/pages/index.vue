@@ -168,7 +168,7 @@
                   <div v-for="subct in category.children" :key="subct.id">
                     
                     <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
-                      <button class="text-base shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-4 font-semibold uppercase cut-corners w-full">{{ subct.name }}</button>
+                      <button class="text-base shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-6 font-semibold uppercase cut-corners w-full">{{ subct.name }}</button>
                     </nuxt-link>
                     
 

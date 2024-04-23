@@ -12,6 +12,12 @@
   const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.id}/`)
 
 
+  const currentCategory = ref(null)
+
+  if (product.value) {
+    currentCategory.value = categories.value.find(category => category.id === product.value.category)
+  }
+
   const materials = ref([
     { "id": 1, 'title': "Видеообзор 1", "link": "#", },
     { "id": 2, 'title': "Видеообзор 2", "link": "#", },
@@ -26,14 +32,14 @@
 
 <template>
   <div class="">
-    <div class="min-h-screen grid grid-cols-1 content-between">
+    <div class="grid grid-cols-1">
       <div></div>
 
-      <div class="absolute h-screen -z-10">
-        <img src="/backgrounds/bg-5.webp" class="h-screen object-cover" />
+      <div class="">
+        <img src="/backgrounds/bg-sm.webp" class="" />
       </div>
 
-      <div class="">
+      <!-- <div class="">
 
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           <div class="flex">
@@ -47,7 +53,7 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
 
       <div class="">
@@ -102,13 +108,12 @@
         <div class="my-4">
             <div class="flex items-center justify-start">
               <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
-              <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'c', hash: '#products' })" class="uppercase">Оборудование для сварки рельсов</nuxt-link></div>
+              <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
               <div v-if="product" class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
             </div>
           </div>
       </div>
     </div>
-
 
 
 
