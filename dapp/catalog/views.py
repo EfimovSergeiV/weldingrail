@@ -12,9 +12,22 @@ class CategoryModelView(APIView):
     """ Category model view """
 
     def get(self, request, lang):
-        queryset = CategoryModel.objects.language(lang).filter(show=True)
-        serializer = CategoryModelSerializer(queryset, many=True, context={'request': request})
-        return Response(serializer.data)
+        queryset = CategoryModel.objects.filter(level=0).language(lang).filter(activated=True)
+
+        response_data = []
+
+
+        for category_qs in queryset:
+            category_children_qs = category_qs.get_children().language(lang).filter(activated=True)
+
+            category = CategoryModelSerializer(category_qs, context={'request': request}).data    
+            category_children = CategoryModelSerializer(category_children_qs, many=True, context={'request': request}).data
+
+            category['children'] = category_children if category_children else None
+            response_data.append(category)
+        
+        return Response(response_data)
+
     
 
 class ProductsModelView(APIView):
@@ -26,7 +39,7 @@ class ProductsModelView(APIView):
     def get(self, request, lang):
         response_data = []
 
-        queryset = ProductModel.objects.language(lang).filter(show=True)
+        queryset = ProductModel.objects.language(lang).filter(activated=True)
         serializer = ProductModelSerializer(queryset, many=True, context={'request': request})
 
         for data in serializer.data:
@@ -58,7 +71,7 @@ class ProductModelView(APIView):
         product_properties = []
 
         try:
-            queryset = ProductModel.objects.language(lang).get(show=True, id=id)
+            queryset = ProductModel.objects.language(lang).get(activated=True, id=id)
 
             product_props_qs = self.qs_properties.language(lang).filter(product=queryset)
             product_adv_qs = self.qs_advantages.language(lang).filter(product=queryset)

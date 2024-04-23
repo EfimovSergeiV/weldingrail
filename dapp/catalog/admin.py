@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.forms import TextInput, CharField
 from django.utils.safestring import mark_safe
 from django_ckeditor_5.widgets import CKEditor5Widget
+from mptt.admin import DraggableMPTTAdmin
+from mptt.forms import MPTTAdminForm
 from parler import forms
 from parler.admin import TranslatableAdmin, TranslatableModelForm, TranslatableTabularInline
 
@@ -9,8 +11,7 @@ from catalog.models import CategoryModel, ProductModel, ProductAdvantageModel, P
 
 
 
-class CategoryAdminForm(forms.TranslatableModelForm):
-
+class CategoryAdminForm(MPTTAdminForm, TranslatableModelForm):
     name = forms.TranslatedField(widget=TextInput(attrs={'style': 'width: 100%;'}))
     url = CharField(widget=TextInput(attrs={'style': 'width: 100%;'}))
     description = forms.TranslatedField(widget=CKEditor5Widget(attrs={"class": "django_ckeditor_5"},))
@@ -20,20 +21,18 @@ class CategoryAdminForm(forms.TranslatableModelForm):
         fields = '__all__'
 
 
-class CategoryAdmin(TranslatableAdmin):
-
+class CategoryAdmin(TranslatableAdmin, DraggableMPTTAdmin):
     form = CategoryAdminForm
 
-    # prepopulated_fields = {'name': ('url',)}
-    list_display = ('id', 'name', 'priority','show',)
-    list_display_links = ('id', 'name',)
-    list_editable = ('priority','show',)
+    list_display = ('tree_actions', 'indented_title', 'activated',)
+    list_editable = ('activated',)
     fieldsets = (
-        (None, {'fields': (('priority','show',), 'name', 'url', ('description',))}),
+        (None, {'fields': (('parent','activated'),'name', 'url','description',)}),
     )
 
     def get_prepopulated_fields(self, request, obj=None):
         return {'url': ('name',)}
+
 
 
 class ProductAdminForm(forms.TranslatableModelForm):
@@ -87,29 +86,29 @@ class ProductAdmin(TranslatableAdmin):
         return mark_safe('<img style="background-color: white; padding: 15px; border-radius: 5px;" src="/media/%s" alt="Нет изображения" width="50" height="auto" />' % (obj.image))
     xs_image.short_description = 'Image'
 
-    def show_image(self, obj):
+    def activated_image(self, obj):
         return mark_safe('<img style="margin-right:-10vh; background-color: white; padding: 4px; border-radius: 5px;" src="/media/%s" alt="Нет изображения" width="100" height="auto" />' % (obj.image))
-    show_image.short_description = 'Image'
+    activated_image.short_description = 'Image'
 
     # prepopulated_fields = {'keywords': ('name',)}
 
 
     form = ProductAdminForm
 
-    list_display = ('id', 'xs_image', 'name', 'priority', 'show',)
+    list_display = ('id', 'xs_image', 'name', 'priority', 'activated',)
     list_display_links = ('id', 'xs_image', 'name')
-    list_editable = ('priority', 'show',)
+    list_editable = ('priority', 'activated',)
     list_filter = ('category',)
     search_fields = ('id', 'category', 'name',)
-    readonly_fields = ('show_image',)
+    readonly_fields = ('activated_image',)
     inlines = (ProductAdvantageInline, ProductPropertiesInline)
     fieldsets = (
-        (None, {'fields': (('priority', 'category', 'show',), ('show_image', 'image',), 'name', 'keywords', ('description',),)}),
+        (None, {'fields': (('priority', 'category', 'activated',), ('activated_image', 'image',), 'name', 'keywords', ('description',),)}),
     )
 
-    # def get_prepopulated_fields(self, request, obj=None):
+    def get_prepopulated_fields(self, request, obj=None):
         
-    #     return {'keywords': ('name',)}
+        return {'keywords': ('name',)}
 
 
 

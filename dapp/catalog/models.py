@@ -1,14 +1,16 @@
 from django.db import models
+from .managers import CategoryManager
 from django_resized import ResizedImageField
+from mptt.models import MPTTModel, TreeForeignKey
 from parler.models import TranslatableModel, TranslatedFields
 from django_ckeditor_5.fields import CKEditor5Field
 
 
-class CategoryModel(TranslatableModel):
+class CategoryModel(MPTTModel, TranslatableModel):
     """ Product categories """
 
-    show = models.BooleanField(verbose_name="show", default=False)
-    priority = models.IntegerField(verbose_name="Priority", default=50)
+    activated = models.BooleanField(verbose_name="activated", default=False)
+    parent = TreeForeignKey('self', verbose_name="Вложенность", on_delete=models.CASCADE, null=True, blank=True, related_name="children")
     url = models.SlugField(verbose_name="URL", max_length=300, unique=False)
 
     translations = TranslatedFields(
@@ -16,8 +18,9 @@ class CategoryModel(TranslatableModel):
         description = CKEditor5Field(verbose_name="Description",null=True, blank=True, config_name='extends')
     )
 
+    objects = CategoryManager()
+
     class Meta:
-        ordering = ['-priority',]
         verbose_name = "Category"
         verbose_name_plural = "Categories"
 
@@ -28,9 +31,9 @@ class CategoryModel(TranslatableModel):
 class ProductModel(TranslatableModel):
     """ Product model """
 
-    show = models.BooleanField(verbose_name="Activated", default=False)
+    activated = models.BooleanField(verbose_name="Activated", default=False)
     priority = models.IntegerField(verbose_name="Priority", default=50)
-    category = models.ForeignKey(CategoryModel, verbose_name="Category", on_delete=models.SET_NULL, null=True, related_name="product_category")
+    category = models.ForeignKey(CategoryModel, verbose_name="Category", on_delete=models.SET_NULL, null=True, blank=True, related_name="product_category")
 
     image = ResizedImageField(
         size = [320, 240],
