@@ -101,10 +101,10 @@
       <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
 
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-          <div v-for="category in categories" :key="category.id" class=" py-20">
+          <div v-for="category in categories" :key="category.id" class="py-8">
             
             <div class="grid grid-cols-1 gap-2">
-              <p class="text-2xl text-sky-950">{{ category.name }}</p>
+              <p class="text-4xl text-sky-950">{{ category.name }}</p>
               <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>              
             </div>
 
@@ -164,11 +164,11 @@
 
 
               <div v-if="category.children" class="">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-3 gap-x-6 gap-y-4">
                   <div v-for="subct in category.children" :key="subct.id">
                     
                     <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
-                      <p class="text-xl text-sky-950">{{ subct.name }}</p>
+                      <button class="text-base shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-4 font-semibold uppercase cut-corners w-full">{{ subct.name }}</button>
                     </nuxt-link>
                     
 

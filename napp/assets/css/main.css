@@ -17,7 +17,10 @@
   font-family: 'Proxima-Extrabold';
   src: url('./fonts/ProximaNova/ProximaNova-Extrabld.ttf') format('woff2');
 }
-
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('./fonts/ProximaNova/ProximaNova-Light.ttf') format('woff2');
+}
 .page-enter-active,
 .page-leave-active {
   transition: all 0.15s;

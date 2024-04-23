@@ -10,7 +10,7 @@ class CategoryModel(MPTTModel, TranslatableModel):
     """ Product categories """
 
     activated = models.BooleanField(verbose_name="activated", default=False)
-    parent = TreeForeignKey('self', verbose_name="Вложенность", on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+    parent = TreeForeignKey('self', verbose_name="Parent", on_delete=models.CASCADE, null=True, blank=True, related_name="children")
     url = models.SlugField(verbose_name="URL", max_length=300, unique=False)
 
     translations = TranslatedFields(

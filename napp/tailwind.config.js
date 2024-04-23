@@ -41,9 +41,9 @@ module.exports = {
         'main-light': '#4C80A9',
       },
       fontFamily: {
-        'sans': ['Proxima-Regular', 'Noto Sans', 'Open Sans', ],
-        'serif': ['Proxima-Regular', 'Noto Sans', 'Open Sans', ],
-        'opensans': ['Open Sans', ],
+        'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+        'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+        'opensans': ['ProximaNova-Light','Open Sans', ],
       },
     },
   },
