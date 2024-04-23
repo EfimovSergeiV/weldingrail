@@ -156,51 +156,31 @@
                     </div>
                   
                   </div>
+
                 </div>                
               </div>
 
-          </div>
 
-          <div class="grid grid-cols-1 gap-4">
-            <div class="">
-              <p class="text-2xl text-sky-950">Запасные части и комплектующие</p>
-            </div>
-            
-            <div class="grid grid-cols-3 gap-4">
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'ct', params: { ct: 'components' } })">
-                  <p class="text-xl text-sky-950">Трансформаторы для сварочных машин</p>
-                </nuxt-link>                
-              </div>
 
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'index'})">
-                  <p class="text-xl text-sky-950">Электроды контактной сварки</p>
-                </nuxt-link>                
-              </div>
-                  
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'index'})">
-                  <p class="text-xl text-sky-950">Ножи гратоснимателя</p>
-                </nuxt-link>                
-              </div>
-              
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'index'})">
-                  <p class="text-xl text-sky-950">Гибкие медные шины</p>
-                </nuxt-link>                
-              </div>
-         
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'index'})">
-                  <p class="text-xl text-sky-950">Токопроводы</p>
-                </nuxt-link>                
+
+              <div v-if="category.children" class="">
+                <div class="grid grid-cols-3 gap-4">
+                  <div v-for="subct in category.children" :key="subct.id">
+                    
+                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
+                      <p class="text-xl text-sky-950">{{ subct.name }}</p>
+                    </nuxt-link>
+                    
+
+                  </div>
+                </div>
+
               </div>
 
-            </div>
+
+
 
           </div>
-          
 
 
 

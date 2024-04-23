@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.forms import TextInput, CharField
 from django.utils.safestring import mark_safe
 from django_ckeditor_5.widgets import CKEditor5Widget
-from mptt.admin import DraggableMPTTAdmin
-from mptt.forms import MPTTAdminForm
+from mptt.admin import DraggableMPTTAdmin, TreeRelatedFieldListFilter
+from mptt.forms import MPTTAdminForm, TreeNodeChoiceField, TreeNodeMultipleChoiceField
 from parler import forms
 from parler.admin import TranslatableAdmin, TranslatableModelForm, TranslatableTabularInline
 
@@ -41,6 +41,7 @@ class ProductAdminForm(forms.TranslatableModelForm):
         super().__init__(*args, **kwargs)
         self.fields["description"].required = False
 
+    category = TreeNodeChoiceField(queryset=CategoryModel.objects.all(), label= 'Категория')
     name = forms.TranslatedField(widget=TextInput(attrs={'style': 'width: 100%;'}))
     keywords = forms.TranslatedField(widget=TextInput(attrs={'style': 'width: 100%;'}))
     description = forms.TranslatedField(widget=CKEditor5Widget(attrs={"class": "django_ckeditor_5"},))

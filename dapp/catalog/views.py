@@ -8,14 +8,13 @@ from catalog.serializers import CategoryModelSerializer, ProductModelSerializer,
 
 
 
-class CategoryModelView(APIView):
+class CategoriesModelView(APIView):
     """ Category model view """
 
     def get(self, request, lang):
         queryset = CategoryModel.objects.filter(level=0).language(lang).filter(activated=True)
 
         response_data = []
-
 
         for category_qs in queryset:
             category_children_qs = category_qs.get_children().language(lang).filter(activated=True)
@@ -28,7 +27,7 @@ class CategoryModelView(APIView):
         
         return Response(response_data)
 
-    
+
 
 class ProductsModelView(APIView):
     """ Products model view """

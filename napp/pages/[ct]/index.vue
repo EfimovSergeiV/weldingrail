@@ -97,6 +97,10 @@
         /c/index/
       </p>
 
+      <p class="text-center text-sky-950 text-2xl uppercase font-semibold">тут товары категории</p> 
+       
+      
+
       <p class="text-center text-red-800 text-2xl">
         {{ route.params }}
       </p>      
