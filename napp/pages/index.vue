@@ -34,6 +34,10 @@
           <img src="/backgrounds/bg-5.webp" class="w-screen h-screen object-cover" />
         </div>
 
+        <div class="absolute h-screen   z-10">
+          <img src="/backgrounds/bg-trn.webp" class="w-screen h-screen object-cover" />
+        </div>
+
         <div class="">
 
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
