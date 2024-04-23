@@ -60,12 +60,12 @@
                   <div class="">
                     <p class="text-white text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
                     <div class="grid grid-cols-3 gap-4 text-gray-100">
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-sm text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class="text-base text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
                     </div>                  
                   </div>
                   <div class="grid grid-cols-1 gap-2 text-right">
