@@ -3,6 +3,8 @@
   const localePath = useLocalePath()
   const switchLocalePath = useSwitchLocalePath()
 
+  const mainStore = useMainStore()
+
 
   const railmachines = ref([
     { 'id': 1, 'name': 'FBM-60', 'path': 'fbm-60' },
@@ -30,7 +32,7 @@
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">
-            <div class="group">
+            <div class="group hidden md:block">
               <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
@@ -175,7 +177,7 @@
 
 
 
-            <div class="group">
+            <div class="group hidden md:block">
               <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
@@ -242,7 +244,7 @@
 
 
             
-            <div class="relative group">
+            <div class="relative group hidden md:block">
               <p class="text-lg text-center font-semibold text-main-primary h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
               <div class="absolute right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
@@ -257,10 +259,13 @@
                 </div>
               </div>
             </div>
-            
-
           </div>
-          <div></div>
+
+          <div>
+            <div class="md:hidden py-2">
+              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu"></div>
+            </div>
+          </div>
         </div>
 
       </div>      

@@ -21,6 +21,8 @@
   font-family: 'ProximaNova-Light';
   src: url('./fonts/ProximaNova/ProximaNova-Light.ttf') format('woff2');
 }
+
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.15s;
@@ -38,6 +40,44 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+/* Появление фильтров товаров слева */
+/* .filter-enter-active {
+  transition: all 0.3s ease-out;
+}
+.filter-leave-active {
+  transition: all 0.2s ease-out;
+}
+.filter-enter-from,
+.filter-leave-to {
+  transform: translateX(-12em);
+  opacity: 0;
+  position: absolute;
+} */
+
+
+
+
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+}
+
+
+
 
 
 ::-webkit-scrollbar {

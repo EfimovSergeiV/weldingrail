@@ -34,9 +34,9 @@
           <img src="/backgrounds/bg-5.webp" class="w-screen h-screen object-cover" />
         </div>
 
-        <div class="absolute h-screen   z-10">
+        <!-- <div class="absolute h-screen   z-10">
           <img src="/backgrounds/bg-trn.webp" class="w-screen h-screen object-cover" />
-        </div>
+        </div> -->
 
         <div class="">
 
@@ -114,7 +114,7 @@
 
 
 
-              <div class="grid grid-cols-2 py-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 py-4">
                 <div v-for="product in products" :key="product.id">
                   <div v-if="product.category === category.id">
                     
@@ -168,7 +168,7 @@
 
 
               <div v-if="category.children" class="">
-                <div class="grid grid-cols-3 gap-x-6 gap-y-4">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4">
                   <div v-for="subct in category.children" :key="subct.id">
                     
                     <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
@@ -203,7 +203,7 @@
           <div class="bg-sky-950/70 hover:bg-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
             <div class="absolute w-full h-full">
 
-              <div class="flex items-center justify-center h-full">
+              <div class="flex items-center justify-center h-full px-6">
                 <div class="grid grid-cols-1 gap-8">
                   <p class="text-slate-200 font-semibold text-xl uppercase">
                     {{ $t('pages.index.quest-title') }}
@@ -243,7 +243,7 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="">
               <div class="flex">
                 <div class="bg-sky-800 z-20 rounded-sm px-8 py-2">
@@ -347,7 +347,7 @@
 
 
           <div class="">
-            <div class="grid grid-cols-2 gap-8 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8">
               <div class="bg-gradient-to-br from-gray-100/95 to-gray-50/90 border-l-8 border-sky-800/90 shadow-lg shadow-black/10 px-4">
                 <div class=" h-[6rem] flex items-center py-2">
                   <p class="text-md text-sky-800 font-sans">{{ $t('pages.index.service-2') }}</p>
@@ -382,9 +382,9 @@
 
 
 
-        <div class=" grid grid-cols-2 gap-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8">
 
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-center order-2 lg:order-1">
             <div class="w-full">
               <div class="grid grid-cols-1 gap-2">
                 <div class="relative">
@@ -407,7 +407,7 @@
           </div>
 
 
-          <div class="flex items-center">
+          <div class="flex items-center order-1 lg:order-2">
             <div class="">
               <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">Почему выбирают нас ?</p>
               <p class="text-xl text-sky-950 se lect-none font-sans py-1">

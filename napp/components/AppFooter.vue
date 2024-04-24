@@ -53,7 +53,7 @@
 
 
               <div class="flex items-center justify-center">
-                <div class="grid grid-cols-3 gap-24 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-24 py-8">
           
                   <div class=" flex items-center gap-4">
                     <div class="text-gray-100">
@@ -113,7 +113,7 @@
               <p class="text-white text-xl">Нашими партнёрами уже стали</p>
             </div>
 
-            <div class="grid grid-cols-4 gap-2">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
               <div class="px-8">
                 <div class="flex items-center justify-center py-2">
                   <img src="/partners/2.png" class="h-12"/>
