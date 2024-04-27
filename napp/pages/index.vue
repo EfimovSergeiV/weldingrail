@@ -34,34 +34,25 @@
         </div>  
       </div>
 
+
       <div class="min-h-screen grid grid-cols-1 content-between">
 
         <div></div>
 
-
         <div class="">
-
-            <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            
-              <div class="flex items-center">
-
-
-                <div class="mt-32">
-                  <div class="py-2">
-                    <p class="text-5xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
-                  </div>     
-                  <div class="grid grid-cols-1 gap-0">
-                    <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-1') }}</p>
-                    <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-2') }}</p>
-  
-                  </div>
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <div class="flex items-center">
+              <div class="mt-32">
+                <div class="py-2">
+                  <p class="text-5xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
+                </div>     
+                <div class="grid grid-cols-1 gap-0">
+                  <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-1') }}</p>
+                  <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-2') }}</p>
                 </div>
-
-
-            
               </div>
             </div>
-
+          </div>
         </div>
 
 
@@ -92,7 +83,6 @@
                       <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 mt-2 cut-corners">{{ $t('requestCall') }}</button>
                     </div>
                   </div>
-
                   
                 </div>
               </div>
@@ -111,9 +101,9 @@
             </div>
 
           </div>
-
         </div>
       </div>
+
 
 
       <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
