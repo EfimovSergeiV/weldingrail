@@ -36,15 +36,15 @@
           <div class="grid grid-cols-1 md:flex items-center justify-between">
             <div class="pt-20 md:py-20">
               <div class="py-2">
-                <p class="text-3xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
+                <p class="text-2xl md:text-lg lg:text-3xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
               </div>     
               <div class="grid grid-cols-1 gap-0">
-                <p class="text-4xl md:leading-[4rem] md:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-1') }}</p>
-                <p class="text-4xl md:leading-[4rem] md:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p>
+                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p>
               </div>
             </div>
             <div class="py-8">
-              <img src="/backgrounds/container-edd.webp" class="" />
+              <img :src="`/backgrounds/container-edd.webp`" class="" />
             </div>
           </div>
 
@@ -69,7 +69,7 @@
                   <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
                 </div>                  
               </div>
-              <div class="flex items-center justify-center">
+              <div class="flex items-center justify-center py-4">
                 <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 mt-2 cut-corners">{{ $t('requestCall') }}</button>
               </div>
             </div>
