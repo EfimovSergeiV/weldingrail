@@ -14,8 +14,8 @@
   src: url('./fonts/ProximaNova/ProximaNova-Bold.ttf') format('woff2');
 }
 @font-face {
-  font-family: 'Proxima-Extrabold';
-  src: url('./fonts/ProximaNova/ProximaNova-Extrabld.ttf') format('woff2');
+  font-family: 'ProximaNova-Bold';
+  src: url('./fonts/ProximaNova/ProximaNova-Bold.ttf') format('woff2');
 }
 @font-face {
   font-family: 'ProximaNova-Light';

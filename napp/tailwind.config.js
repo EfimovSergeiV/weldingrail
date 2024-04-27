@@ -44,6 +44,7 @@ module.exports = {
         'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
         'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
         'opensans': ['ProximaNova-Light','Open Sans', ],
+        'extra': ['ProximaNova-Bold', ]
       },
     },
   },

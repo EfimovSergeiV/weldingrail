@@ -24,16 +24,16 @@
   <div class="">
 
     <div class=" ">
-      <div id="navbar" class="bg-white md:bg-white/60 border-b border-main-primary/40 shadow-sm shadow-main-primary/40 w-full absolute z-50 backdrop-blur-sm duration-700 transition-all">
+      <div id="navbar" class="bg-sky-800/0 w-full absolute z-50 duration-50 transition-all">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-1 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/railwelding-logo-2.webp" class=" h-6" />
+              <img src="/logo-weldingrail-white.webp" class=" h-24" />
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-white h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -178,7 +178,7 @@
 
 
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-900 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-white h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -245,7 +245,7 @@
 
             
             <div class="relative group hidden md:block">
-              <p class="text-lg text-center font-semibold text-main-primary h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
+              <p class="text-lg text-center font-semibold text-white h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
               <div class="absolute right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[260px]">
@@ -263,7 +263,7 @@
 
           <div>
             <div class="md:hidden py-2">
-              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu"></div>
+              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-white"></div>
             </div>
           </div>
         </div>
