@@ -26,9 +26,9 @@
     <div class=" ">
       <div id="navbar" class="bg-sky-800/0 w-full absolute z-50 duration-50 transition-all">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
-          <div class="py-1 ">
+          <div class="py-4 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/logo-weldingrail-white.webp" class=" h-24" />
+              <img src="/logo-white.webp" class="h-6 md:h-12" />
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">

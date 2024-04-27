@@ -33,14 +33,14 @@
 
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           
-          <div class="flex items-center justify-between">
-            <div class="">
+          <div class="grid grid-cols-1 md:flex items-center justify-between">
+            <div class="pt-20 md:py-20">
               <div class="py-2">
                 <p class="text-3xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
               </div>     
               <div class="grid grid-cols-1 gap-0">
-                <p class="leading-[4rem] font-extra text-transparent text-[56px] text-white uppercase se lect-none">{{ $t('title-1') }}</p>
-                <p class="leading-[4rem] font-extra text-transparent text-[56px] text-white uppercase se lect-none">{{ $t('title-2') }}</p>
+                <p class="text-4xl md:leading-[4rem] md:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="text-4xl md:leading-[4rem] md:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p>
               </div>
             </div>
             <div class="py-8">
@@ -49,7 +49,7 @@
           </div>
 
           <div class="flex items-end justify-end">
-            <p class="text-white leading-[0rem] text-5xl font-semibold">info@weldingrail.com</p>
+            <p class="text-white md:leading-[0rem] text-4xl md:text-5xl font-semibold">info@weldingrail.com</p>
           </div>          
         </div>
 
