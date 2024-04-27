@@ -26,82 +26,67 @@
     
 
     
-    <div class=" bg-sky-800">
-
-      <div class="w-[1200px] absolute right-0 z-0">
-        <div class="">
-          <img src="/backgrounds/container-edd.webp" class="w-full" />
-        </div>  
-      </div>
+    <div class="">
 
 
-      <div class="min-h-screen grid grid-cols-1 content-between">
+      <div class="min-h-screen content-end bg-sky-800">
 
-        <div></div>
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+          
+          <div class="flex items-center justify-between">
+            <div class="">
+              <div class="py-2">
+                <p class="text-3xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
+              </div>     
+              <div class="grid grid-cols-1 gap-0">
+                <p class="leading-[4rem] font-extra text-transparent text-[56px] text-white uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="leading-[4rem] font-extra text-transparent text-[56px] text-white uppercase se lect-none">{{ $t('title-2') }}</p>
+              </div>
+            </div>
+            <div class="py-8">
+              <img src="/backgrounds/container-edd.webp" class="" />
+            </div>
+          </div>
+
+          <div class="flex items-end justify-end">
+            <p class="text-white leading-[0rem] text-5xl font-semibold">info@weldingrail.com</p>
+          </div>          
+        </div>
+
+
 
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="flex items-center">
-              <div class="mt-32">
-                <div class="py-2">
-                  <p class="text-5xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
-                </div>     
-                <div class="grid grid-cols-1 gap-0">
-                  <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-1') }}</p>
-                  <p class="leading-[4rem] font-extra text-transparent text-[58px] text-white uppercase se lect-none">{{ $t('title-2') }}</p>
-                </div>
+            <div class="grid grid-cols-1 lg:flex justify-between py-4">
+              <div class="">
+                <p class="text-white text-2xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-gray-100 text-sm md:text-base">
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                </div>                  
+              </div>
+              <div class="flex items-center justify-center">
+                <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 mt-2 cut-corners">{{ $t('requestCall') }}</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" bg-sky-800 border-t border-white/10">
+            <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+              <div class="grid grid-cols-1 lg:flex items-center min-h-20 justify-between">
+                <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+150</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
+                <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+3500</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
+                <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+560Ha</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
+                <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+200</span><p class="text-gray-100 text-base font-semibold">Клиентов</p></div>
               </div>
             </div>
           </div>
         </div>
 
-
-        <div class="">
-          <div class="">
-
-            <div class="">
-              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
-                <div class="flex items-end justify-end">
-                  <p class="text-white leading-[0rem] text-5xl font-semibold">info@weldingrail.com</p>
-                </div>
-                <div class="grid grid-cols-1 lg:flex items-end justify-between">
-                  
-                  <div class="">
-                    <p class="text-white text-2xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-gray-100 text-sm md:text-base">
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                      <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-gray-200 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
-                    </div>                  
-                  </div>
-
-                  <div class="">
-                    <div class=" shadow-xl shadow-gray-900/10">
-                      <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 mt-2 cut-corners">{{ $t('requestCall') }}</button>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-
-
-            <div class=" bg-sky-800 border-t border-white/10">
-              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-                <div class="grid grid-cols-1 lg:flex items-center min-h-20 justify-between">
-                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+150</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
-                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+3500</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
-                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+560Ha</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
-                  <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+200</span><p class="text-gray-100 text-base font-semibold">Клиентов</p></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
       </div>
 
 
