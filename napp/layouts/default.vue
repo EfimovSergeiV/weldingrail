@@ -31,12 +31,10 @@
     <AppFooter />
 
     <div id="move-up" class="invisible transition-all duration-900">
-      <div class="fixed bottom-0 right-0 z-40">
-        <div class="flex items-center justify-center">
-          <div class="px-6 py-6">
-            <div @click="moveUp()" class="mdi mdi-48px mdi-arrow-up-bold-hexagon-outline cursor-pointer text-sky-600">
-
-            </div>
+      <div class="fixed bottom-4 right-4 z-40">
+        <div class="bg-white h-[48px] w-[48px] rounded-full border-2 border-sky-800">
+          <div class="flex items-center justify-center h-full w-full">
+            <p @click="moveUp()" class="mdi mdi-36px mdi-arrow-up-bold cursor-pointer text-sky-800"></p>
           </div>
         </div>
       </div>

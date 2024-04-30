@@ -4,14 +4,14 @@ export default defineNuxtConfig({
   
   app: {
     head: {
-      title: 'Rail Welding',
+      title: 'WeldingRail Equipment',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 
           hid: 'description', 
           name: 'description', 
-          content: 'Rail Welding'
+          content: 'WeldingRail Equipment'
         },
         { name: 'format-detection', content: 'telephone=yes' }
       ],
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL || 'http://192.168.60.201:8080/',
+      baseURL: process.env.BASE_URL || 'http://127.0.0.1:8000/' ///'http://192.168.60.201:8080/', 
     },
   },
 
