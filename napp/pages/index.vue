@@ -34,17 +34,15 @@
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           
           <div class="grid grid-cols-1 md:flex items-center justify-between">
-            <div class="pt-20 md:py-20">
-              <div class="py-2">
-                <p class="text-2xl md:text-lg lg:text-3xl text-white se lect-none font-sans">{{ $t('slogan') }}</p>
-              </div>     
-              <div class="grid grid-cols-1 gap-0">
-                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-1') }}</p>
-                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p>
+            <div class="pt-20 md:py-20  w-full">  
+              <div class="grid grid-cols-1">
+                <p class="text-2xl md:text-lg lg:text-[42px] text-white py-4 font-sans">{{ $t('slogan') }}</p>
+                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[3.5rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-1') }}</p>
+                <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[3.5rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p>
               </div>
             </div>
-            <div class="py-8">
-              <img :src="`/backgrounds/container-edd.webp`" class="" />
+            <div class="py-8 lg:-ml-[20vw]">
+              <img :src="`/backgrounds/container-t.webp`" class="" />
             </div>
           </div>
 
@@ -126,7 +124,7 @@
                               <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
 
                                 <div class="flex items-center gap-2">
-                                  <div class="mdi mdi-circle text-sky-800"></div>
+                                  <div class="mdi mdi-check text-sky-800"></div>
                                   <p class="text-sm text-sky-950">
                                      {{ advantage.name }}
                                      {{ advantage.name }}

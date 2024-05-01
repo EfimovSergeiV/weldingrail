@@ -157,7 +157,7 @@
                       </div>
 
 
-                      <div class="px-4 bg-sky-800 border border-sky-800 w-[640px] py-4 flex items-center">
+                      <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
                             <p class="text-white font-semibold text-2xl">Рельсосварочое оборудование</p>
@@ -222,7 +222,7 @@
                       </div>
 
 
-                      <div class="px-4 bg-sky-800 border border-sky-800 w-[640px] py-4 flex items-center">
+                      <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
                             <p class="text-white font-semibold text-2xl">Наши услуги</p>

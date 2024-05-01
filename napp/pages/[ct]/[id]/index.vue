@@ -45,7 +45,7 @@
               <div class="grid grid-cols-1 gap-0">
                 <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[52px] font-extra text-transparent text-white uppercase se lect-none">{{ product.name }}</p>
                 <!-- <p class="text-4xl md:leading-[2rem] md:text-[24px] lg:leading-[4rem] lg:text-[56px] font-extra text-transparent text-white uppercase se lect-none">{{ $t('title-2') }}</p> -->
-                <div class="text-white" v-html="product.description" ></div>
+                <div class="text-white py-4" v-html="product.description" ></div>
               </div>
             </div>
             <div class="py-8">
@@ -80,6 +80,17 @@
           </div>
       </div>
     </div>
+
+
+
+    <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <div class="py-8 grid grid-cols-6 gap-8">
+        <div class="" v-for="image in 8" :key="image">
+          <img src="/prod/hercules300.webp" class="w-full" />
+        </div>
+      </div>
+    </div>
+
 
 
 
