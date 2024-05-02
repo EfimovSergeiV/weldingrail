@@ -7,7 +7,11 @@ import { TransitionGroup } from 'vue';
 
 
   const onSlideChange = (swiper) => {
-    currentSlide.value = swiper.activeIndex
+    console.log('onSlideChange')
+    console.log(swiper)
+
+    // currentSlide.value = swiper.activeIndex
+    currentSlide.value = swiper.realIndex
   };
 
 
@@ -22,14 +26,12 @@ import { TransitionGroup } from 'vue';
   const showSlideData = ref([])
 
   const onSwiper = (swiper) => {
+    console.log('onSwiper')
     let text = slides[0]
-
     showSlideData.value = []
-
     /// с задержкой в 500 мсек добавляем текст в массив
     setTimeout(() => {
       showSlideData.value.push(text.toptext)
-      
     }, 500)
     setTimeout(() => {
       showSlideData.value.push(text.bottomtext)
@@ -37,24 +39,18 @@ import { TransitionGroup } from 'vue';
   };
 
   watch(currentSlide, (newVal) => {
-
+    console.log(newVal)
     let text = slides[newVal]
-
     showSlideData.value = []
-
     /// с задержкой в 500 мсек добавляем текст в массив
     setTimeout(() => {
       showSlideData.value.push(text.toptext)
-      
     }, 500)
     setTimeout(() => {
       showSlideData.value.push(text.bottomtext)
     }, 1000)
-
     // showSlideData.value.push(text.toptext)
     // showSlideData.value.push(text.bottomtext)
-
-    
   })
 
 
@@ -64,6 +60,7 @@ import { TransitionGroup } from 'vue';
 
 <template>
     <div class="relative">
+      currentSlide: {{ currentSlide }}
       <Swiper
         class=""
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
@@ -76,7 +73,7 @@ import { TransitionGroup } from 'vue';
           clickable: true,
         }"
         :autoplay="{
-          delay: 16000,
+          delay: 8000,
           disableOnInteraction: true
         }"
       >
