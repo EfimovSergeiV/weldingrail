@@ -8,6 +8,9 @@ dependencies:
   nuxt:
     specifier: ^3.11.2
     version: 3.11.2(@unocss/reset@0.59.2)(floating-vue@5.2.2)(rollup@4.14.3)(unocss@0.59.2)(vite@5.2.8)
+  nuxt-swiper:
+    specifier: ^1.2.2
+    version: 1.2.2(rollup@4.14.3)
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -5170,6 +5173,16 @@ packages:
       fsevents: 2.3.3
     dev: false
 
+  /nuxt-swiper@1.2.2(rollup@4.14.3):
+    resolution: {integrity: sha512-y4s/srISP4OuhXbYg9/W1/6EWnbcoHRGEKBKAvGP0I2h0b3enhqZNEk7854M3F89ys8waacBXektPzamgl5xwQ==}
+    dependencies:
+      '@nuxt/kit': 3.11.2(rollup@4.14.3)
+      swiper: 10.3.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /nuxt@3.11.2(@unocss/reset@0.59.2)(floating-vue@5.2.2)(rollup@4.14.3)(unocss@0.59.2)(vite@5.2.8):
     resolution: {integrity: sha512-Be1d4oyFo60pdF+diBolYDcfNemoMYM3R8PDjhnGrs/w3xJoDH1YMUVWHXXY8WhSmYZI7dyBehx/6kTfGFliVA==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -6603,6 +6616,11 @@ packages:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.0.0
+    dev: false
+
+  /swiper@10.3.1:
+    resolution: {integrity: sha512-24Wk3YUdZHxjc9faID97GTu6xnLNia+adMt6qMTZG/HgdSUt4fS0REsGUXJOgpTED0Amh/j+gRGQxsLayJUlBQ==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /system-architecture@0.1.0:

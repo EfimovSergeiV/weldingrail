@@ -24,16 +24,16 @@
   <div class="">
 
     <div class=" ">
-      <div id="navbar" class="bg-sky-800/0 w-full absolute z-50 duration-50 transition-all">
+      <div id="navbar" class="bg-white w-full absolute z-50 duration-50 transition-all">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-4 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/logo-white.webp" class="h-6 md:h-10" />
+              <img src="/logo-blue.webp" class="h-6 md:h-10" />
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-white h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -160,7 +160,7 @@
                       <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
-                            <p class="text-white font-semibold text-2xl">Рельсосварочое оборудование</p>
+                            <p class="text-sky-800 font-semibold text-2xl">Рельсосварочое оборудование</p>
                           </div>
                           <div class="my-4 py-4 border-t border-white/50">
                             <p class="text-sm text-gray-100">Представляем вашему вниманию наши решения для сварки рельсов. Наше оборудование является сертифицированным по самим жёстким стандартам и проверенное временем</p>
@@ -178,7 +178,7 @@
 
 
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-white h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -225,7 +225,7 @@
                       <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
-                            <p class="text-white font-semibold text-2xl">Наши услуги</p>
+                            <p class="text-sky-800 font-semibold text-2xl">Наши услуги</p>
                           </div>
                           <div class="my-4 py-4 border-t border-white/50">
                             <p class="text-sm text-gray-100">С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding</p>
@@ -245,7 +245,7 @@
 
             
             <div class="relative group hidden md:block">
-              <p class="text-lg text-center font-semibold text-white h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
+              <p class="text-lg text-center font-semibold text-sky-800 h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
               <div class="absolute right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[260px]">
@@ -263,7 +263,7 @@
 
           <div>
             <div class="md:hidden py-2">
-              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-white cursor-pointer"></div>
+              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-800 cursor-pointer"></div>
             </div>
           </div>
         </div>
