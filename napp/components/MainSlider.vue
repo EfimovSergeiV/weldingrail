@@ -55,19 +55,38 @@
   ]
 
 
-  const showSlideData = ref([])
+  const showSlideData = ref({
+    "id": null,
+    "image": null,
+    "title": null,
+    "texts": [],
+    "url": null,
+  })
 
   const onSwiper = (swiper) => {
     console.log('onSwiper')
     let data = slides[0]
     showSlideData.value = []
 
+    showSlideData.value = {
+      "id": 1,
+      "image": "/slides/1.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+
+      ],
+      "url": null,
+    }
 
     data.texts.forEach((text) => {
       setTimeout(() => {
-        showSlideData.value.push(text)
+        showSlideData.value.texts.push(text)
       }, 500 * data.texts.indexOf(text))
     })
+    setTimeout(() => {
+      showSlideData.value.url = data.url
+    }, 2000)
+
   };
 
   watch(currentSlide, (newVal) => {
@@ -132,17 +151,32 @@
 
       </Swiper>
 
-      <div class="absolute left-0 bottom-1/2 z-40 p-3">
+      <div class="absolute left-0 top-0 h-full z-40 p-3">
+        <!-- <div class="bg-white">
+          {{  showSlideData }}
+        </div> -->
+        <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
         
         <transition-group tag="div" name="list">
           
-          <div v-for="slide, pk in showSlideData" :key="pk" >
+          <div v-for="text, pk in showSlideData.texts" :key="pk" >
             <div :id="pk" class="bg-white p-2 my-2">
-              <p>{{ slide }}</p>
+              <p>{{ text }}</p>
             </div>
           </div>
 
         </transition-group>
+
+        <div class="py-2">
+          <transition name="list">
+            <div v-if="showSlideData.url" class="">
+              <nuxt-link :to="showSlideData.url" class="bg-white p-2 my-2">Learn more</nuxt-link>
+            </div>          
+          </transition>          
+        </div>
+
+
+        
         
       </div>
 
