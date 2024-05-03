@@ -64,7 +64,7 @@
   })
 
   const onSwiper = (swiper) => {
-    console.log('onSwiper')
+    /// при загрузке страницы показываем первый слайд
     let data = slides[0]
     showSlideData.value = []
 
@@ -90,18 +90,28 @@
   };
 
   watch(currentSlide, (newVal) => {
-    console.log(newVal)
-    let text = slides[newVal]
+
+    let data = slides[newVal]
     showSlideData.value = []
-    /// с задержкой в 500 мсек добавляем текст в массив
+
+    showSlideData.value = {
+      "id": 1,
+      "image": "/slides/1.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+
+      ],
+      "url": null,
+    }
+
+    data.texts.forEach((text) => {
+      setTimeout(() => {
+        showSlideData.value.texts.push(text)
+      }, 500 * data.texts.indexOf(text))
+    })
     setTimeout(() => {
-      showSlideData.value.push(text.top_text)
-    }, 500)
-    setTimeout(() => {
-      showSlideData.value.push(text.bottom_text)
-    }, 1000)
-    // showSlideData.value.push(text.toptext)
-    // showSlideData.value.push(text.bottomtext)
+      showSlideData.value.url = data.url
+    }, 2000)
   })
 
 
@@ -123,7 +133,7 @@
           clickable: true,
         }"
         :autoplay="{
-          delay: 8000,
+          delay: 48000,
           disableOnInteraction: true
         }"
       >
@@ -151,33 +161,35 @@
 
       </Swiper>
 
-      <div class="absolute left-0 top-0 h-full z-40 p-3">
-        <!-- <div class="bg-white">
-          {{  showSlideData }}
-        </div> -->
-        <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
+      <div class="absolute left-0 bottom-6 h-full z-40 p-3">
         
-        <transition-group tag="div" name="list">
+        <div class="grid grid-cols-1 content-between bg-red-500 h-2/3">
           
-          <div v-for="text, pk in showSlideData.texts" :key="pk" >
-            <div :id="pk" class="bg-white p-2 my-2">
-              <p>{{ text }}</p>
-            </div>
+          <div class="">
+            <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
+          </div>
+          
+          <div class="">
+            <transition-group tag="div" name="list">
+              <div v-for="text, pk in showSlideData.texts" :key="pk" >
+                <div :id="pk" class="bg-white p-2 my-2">
+                  <p>{{ text }}</p>
+                </div>
+              </div>
+            </transition-group>            
           </div>
 
-        </transition-group>
 
-        <div class="py-2">
-          <transition name="list">
-            <div v-if="showSlideData.url" class="">
-              <nuxt-link :to="showSlideData.url" class="bg-white p-2 my-2">Learn more</nuxt-link>
-            </div>          
-          </transition>          
+          <div class="py-2">
+            <transition name="list">
+              <div v-if="showSlideData.url" class="">
+                <nuxt-link :to="showSlideData.url" class="bg-white p-2 my-2">Learn more</nuxt-link>
+              </div>          
+            </transition>          
+          </div>
+
         </div>
 
-
-        
-        
       </div>
 
     </div>
