@@ -3,12 +3,10 @@
 
 
 
-  const currentSlide = ref(0)
+  
 
 
-  const onSlideChange = (swiper) => {
-    currentSlide.value = swiper.realIndex
-  };
+
 
 
   const slides = [
@@ -63,11 +61,21 @@
     "url": null,
   })
 
+  const currentSlide = ref(0)
+  const onSlideChange = (swiper) => {
+    showSlideData.value = {
+    "id": null,
+    "image": null,
+    "title": null,
+    "texts": [],
+    "url": null,
+  }
+    currentSlide.value = swiper.realIndex
+  };
+
   const onSwiper = (swiper) => {
     /// при загрузке страницы показываем первый слайд
     let data = slides[0]
-    showSlideData.value = []
-
     showSlideData.value = {
       "id": data.id,
       "image": data.image,
@@ -77,7 +85,6 @@
       ],
       "url": null,
     }
-
     data.texts.forEach((text) => {
       setTimeout(() => {
         showSlideData.value.texts.push(text)
@@ -86,14 +93,10 @@
     setTimeout(() => {
       showSlideData.value.url = data.url
     }, 1000)
-
   };
 
   watch(currentSlide, (newVal) => {
-
     let data = slides[newVal]
-    showSlideData.value = []
-
     showSlideData.value = {
       "id": data.id,
       "image": data.title,
