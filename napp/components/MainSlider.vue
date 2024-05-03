@@ -1,13 +1,4 @@
 <script setup>
-  // import { TransitionGroup } from 'vue';
-
-
-
-  
-
-
-
-
 
   const slides = [
     {
@@ -166,18 +157,19 @@
                 </div>
               </transition>
 
-              <div class=" h-36">
+              <div class=" md:h-36">
 
-                <div class="flex">
-                  <transition-group tag="div" name="list">
-                    <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
-                      <div :id="pk" class="bg-white p-2 my-0.5">
-                        <p>{{ text }}</p>
+                <div class="hidden md:block">
+                  <div class="flex">
+                    <transition-group tag="div" name="list">
+                      <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
+                        <div :id="pk" class="bg-white p-2 my-0.5">
+                          <p>{{ text }}</p>
+                        </div>
                       </div>
-                    </div>
-                  </transition-group>            
+                    </transition-group>
+                  </div>                  
                 </div>
-
 
                 <div class="py-4">
                   <transition name="list">
