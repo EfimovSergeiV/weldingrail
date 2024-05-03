@@ -69,9 +69,9 @@
     showSlideData.value = []
 
     showSlideData.value = {
-      "id": 1,
-      "image": "/slides/1.webp",
-      "title": "RAIL WELDING",
+      "id": data.id,
+      "image": data.image,
+      "title": data.title,
       "texts": [
 
       ],
@@ -85,7 +85,7 @@
     })
     setTimeout(() => {
       showSlideData.value.url = data.url
-    }, 1500)
+    }, 1000)
 
   };
 
@@ -95,9 +95,9 @@
     showSlideData.value = []
 
     showSlideData.value = {
-      "id": 1,
-      "image": "/slides/1.webp",
-      "title": "RAIL WELDING",
+      "id": data.id,
+      "image": data.title,
+      "title": data.title,
       "texts": [
 
       ],
@@ -111,7 +111,7 @@
     })
     setTimeout(() => {
       showSlideData.value.url = data.url
-    }, 2000)
+    }, 1000)
   })
 
 
@@ -148,37 +148,47 @@
 
       </Swiper>
 
+      
+      <div class="absolute left-0 bottom-12 h-full w-full z-40 py-2 ">
 
-      <div class="absolute left-0 bottom-12 h-full w-full z-40 bg-red-500 p-3">
         
-        <div class="bg-green-500/10 h-full w-full content-end">
-          
-          <div class="">
-            <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
-          </div>
-          
-          <div class="h-24">
-            <transition-group tag="div" name="list">
-              <div v-for="text, pk in showSlideData.texts" :key="pk" class="" >
-                <div :id="pk" class="bg-white p-2 my-2">
-                  <p>{{ text }}</p>
+        <div class="h-full content-end bg-red-500/0">
+
+
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <div class="">
+              <transition name="fade">
+                <div v-if="showSlideData.title" class="">
+                  <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
                 </div>
+              </transition>
+          
+              <div class="flex h-24">
+                <transition-group tag="div" name="list">
+                  <div v-for="text, pk in showSlideData.texts" :key="pk" class="" >
+                    <div :id="pk" class="bg-white p-2 my-2">
+                      <p>{{ text }}</p>
+                    </div>
+                  </div>
+                </transition-group>            
               </div>
-            </transition-group>            
+
+
+              <div class="py-4 h-12">
+                <transition name="list">
+                  <div v-if="showSlideData.url" class="">
+                    <nuxt-link :to="showSlideData.url" class="bg-blue-500 text-white p-2 my-2">Learn more</nuxt-link>
+                  </div>          
+                </transition>          
+              </div>
+            </div>
+
+
           </div>
-
-
-          <div class="py-2 h-12">
-            <transition name="list">
-              <div v-if="showSlideData.url" class="">
-                <nuxt-link :to="showSlideData.url" class="bg-white p-2 my-2">Learn more</nuxt-link>
-              </div>          
-            </transition>          
-          </div>
-
         </div>
 
       </div>
+
 
     </div>
 </template>
