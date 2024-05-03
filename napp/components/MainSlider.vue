@@ -158,29 +158,34 @@
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="">
               <transition name="fade">
-                <div v-if="showSlideData.title" class="">
+                <div v-if="showSlideData.title" class="py-2">
                   <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
                 </div>
               </transition>
-          
-              <div class="flex h-24">
-                <transition-group tag="div" name="list">
-                  <div v-for="text, pk in showSlideData.texts" :key="pk" class="" >
-                    <div :id="pk" class="bg-white p-2 my-2">
-                      <p>{{ text }}</p>
+
+              <div class=" h-36">
+
+                <div class="flex">
+                  <transition-group tag="div" name="list">
+                    <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
+                      <div :id="pk" class="bg-white p-2 my-0.5">
+                        <p>{{ text }}</p>
+                      </div>
                     </div>
-                  </div>
-                </transition-group>            
-              </div>
+                  </transition-group>            
+                </div>
 
 
-              <div class="py-4 h-12">
-                <transition name="list">
-                  <div v-if="showSlideData.url" class="">
-                    <nuxt-link :to="showSlideData.url" class="bg-blue-500 text-white p-2 my-2">Learn more</nuxt-link>
-                  </div>          
-                </transition>          
+                <div class="py-4">
+                  <transition name="list">
+                    <div v-if="showSlideData.url" class="">
+                      <nuxt-link :to="showSlideData.url" class="bg-blue-500 text-white p-2 my-2">Learn more</nuxt-link>
+                    </div>          
+                  </transition>          
+                </div>
               </div>
+                 
+
             </div>
 
 
