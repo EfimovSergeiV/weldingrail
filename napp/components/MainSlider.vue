@@ -133,7 +133,7 @@
           clickable: true,
         }"
         :autoplay="{
-          delay: 48000,
+          delay: 8000,
           disableOnInteraction: true
         }"
       >
