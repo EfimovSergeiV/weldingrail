@@ -1,5 +1,5 @@
 <script setup>
-import { TransitionGroup } from 'vue';
+  // import { TransitionGroup } from 'vue';
 
 
 
@@ -7,19 +7,51 @@ import { TransitionGroup } from 'vue';
 
 
   const onSlideChange = (swiper) => {
-    console.log('onSlideChange')
-    console.log(swiper)
-
-    // currentSlide.value = swiper.activeIndex
     currentSlide.value = swiper.realIndex
   };
 
 
   const slides = [
-    { "id": 1, "image": "/slides/1.webp", "toptext": "1 All types of high quality plastic materials which are used in the worlds most modern fastest", "bottomtext": "paper machines are manufactured on our Jäger weaving machines. " },
-    { "id": 2, "image": "/slides/2.webp", "toptext": "2 All types of high quality plastic materials which are used in the worlds most modern fastest", "bottomtext": "paper machines are manufactured on our Jäger weaving machines. " },
-    { "id": 3, "image": "/slides/3.webp", "toptext": "3 All types of high quality plastic materials which are used in the worlds most modern fastest", "bottomtext": "paper machines are manufactured on our Jäger weaving machines. " },
-    { "id": 4, "image": "/slides/4.webp", "toptext": "4 All types of high quality plastic materials which are used in the worlds most modern fastest", "bottomtext": "paper machines are manufactured on our Jäger weaving machines. " },
+    {
+      "id": 1,
+      "image": "/slides/1.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+        "All types of high quality plastic materials which are used in the worlds most modern fastest",
+        "paper machines are manufactured on our Jäger weaving machines."
+      ],
+      "url": "/stationary-machines/1",
+    },
+    {
+      "id": 2,
+      "image": "/slides/2.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+        "All types of high quality plastic materials which are used in the worlds most modern fastest",
+        "paper machines are manufactured on our Jäger weaving machines."
+      ],
+      "url": "/stationary-machines/2",
+    },
+    {
+      "id": 3,
+      "image": "/slides/3.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+        "All types of high quality plastic materials which are used in the worlds most modern fastest",
+        "paper machines are manufactured on our Jäger weaving machines."
+      ],
+      "url": "/stationary-machines/3",
+    },
+    {
+      "id": 4,
+      "image": "/slides/4.webp",
+      "title": "RAIL WELDING",
+      "texts": [
+        "All types of high quality plastic materials which are used in the worlds most modern fastest",
+        "paper machines are manufactured on our Jäger weaving machines."
+      ],
+      "url": "/stationary-machines/4",
+    }
   ]
 
 
@@ -27,15 +59,15 @@ import { TransitionGroup } from 'vue';
 
   const onSwiper = (swiper) => {
     console.log('onSwiper')
-    let text = slides[0]
+    let data = slides[0]
     showSlideData.value = []
-    /// с задержкой в 500 мсек добавляем текст в массив
-    setTimeout(() => {
-      showSlideData.value.push(text.toptext)
-    }, 500)
-    setTimeout(() => {
-      showSlideData.value.push(text.bottomtext)
-    }, 1000)
+
+
+    data.texts.forEach((text) => {
+      setTimeout(() => {
+        showSlideData.value.push(text)
+      }, 500 * data.texts.indexOf(text))
+    })
   };
 
   watch(currentSlide, (newVal) => {
@@ -44,10 +76,10 @@ import { TransitionGroup } from 'vue';
     showSlideData.value = []
     /// с задержкой в 500 мсек добавляем текст в массив
     setTimeout(() => {
-      showSlideData.value.push(text.toptext)
+      showSlideData.value.push(text.top_text)
     }, 500)
     setTimeout(() => {
-      showSlideData.value.push(text.bottomtext)
+      showSlideData.value.push(text.bottom_text)
     }, 1000)
     // showSlideData.value.push(text.toptext)
     // showSlideData.value.push(text.bottomtext)
@@ -60,7 +92,6 @@ import { TransitionGroup } from 'vue';
 
 <template>
     <div class="relative">
-      currentSlide: {{ currentSlide }}
       <Swiper
         class=""
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
