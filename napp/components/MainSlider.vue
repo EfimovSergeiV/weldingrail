@@ -15,7 +15,7 @@
     {
       "id": 1,
       "image": "/slides/1.webp",
-      "title": "RAIL WELDING",
+      "title": "WIRE PRODUCTION",
       "texts": [
         "All types of high quality plastic materials which are used in the worlds most modern fastest",
         "paper machines are manufactured on our Jäger weaving machines."
@@ -25,7 +25,7 @@
     {
       "id": 2,
       "image": "/slides/2.webp",
-      "title": "RAIL WELDING",
+      "title": "A RELIABLE PARTNER",
       "texts": [
         "All types of high quality plastic materials which are used in the worlds most modern fastest",
         "paper machines are manufactured on our Jäger weaving machines."
@@ -45,7 +45,7 @@
     {
       "id": 4,
       "image": "/slides/4.webp",
-      "title": "RAIL WELDING",
+      "title": "PMC WEAVING MACHINES",
       "texts": [
         "All types of high quality plastic materials which are used in the worlds most modern fastest",
         "paper machines are manufactured on our Jäger weaving machines."
@@ -85,7 +85,7 @@
     })
     setTimeout(() => {
       showSlideData.value.url = data.url
-    }, 2000)
+    }, 1500)
 
   };
 
@@ -144,34 +144,22 @@
           </div>
         </SwiperSlide>
 
-        <!-- <div class="absolute bottom-0 right-0 z-40 p-3">
-          <SwiperControls :slides="4" class="" />
-        </div> -->
-
-        
-        <div class="fixed bottom-0 z-50">
-          <div class="mx-8 px-2 bg-red-500">
-            <div class="">
-              
-              <SwiperPagination class="" />
-            </div>
-          </div>
-        </div>
-        
+        <SwiperPagination class="" /> 
 
       </Swiper>
 
-      <div class="absolute left-0 bottom-6 h-full z-40 p-3">
+
+      <div class="absolute left-0 bottom-12 h-full w-full z-40 bg-red-500 p-3">
         
-        <div class="grid grid-cols-1 content-between bg-red-500 h-2/3">
+        <div class="bg-green-500/10 h-full w-full content-end">
           
           <div class="">
             <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
           </div>
           
-          <div class="">
+          <div class="h-24">
             <transition-group tag="div" name="list">
-              <div v-for="text, pk in showSlideData.texts" :key="pk" >
+              <div v-for="text, pk in showSlideData.texts" :key="pk" class="" >
                 <div :id="pk" class="bg-white p-2 my-2">
                   <p>{{ text }}</p>
                 </div>
@@ -180,7 +168,7 @@
           </div>
 
 
-          <div class="py-2">
+          <div class="py-2 h-12">
             <transition name="list">
               <div v-if="showSlideData.url" class="">
                 <nuxt-link :to="showSlideData.url" class="bg-white p-2 my-2">Learn more</nuxt-link>
