@@ -78,7 +78,7 @@
 
 ////del
 /* Исчезновение влево и стили корзины !!!НЕРАБОЧИЙ СТАРТ */
-/* .left-emergence-enter,
+.left-emergence-enter,
 .left-emergence-leave-to {
   opacity: 0;
   transform: translateX(-12em);
@@ -99,7 +99,7 @@
 }
 .right-emergence-leave-active {
   transition: all 0.2s ease-out;
-} */
+}
 ////
 
 

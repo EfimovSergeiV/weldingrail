@@ -55,12 +55,12 @@
   const currentSlide = ref(0)
   const onSlideChange = (swiper) => {
     showSlideData.value = {
-    "id": null,
-    "image": null,
-    "title": null,
-    "texts": [],
-    "url": null,
-  }
+      "id": null,
+      "image": null,
+      "title": null,
+      "texts": [],
+      "url": null,
+    }
     currentSlide.value = swiper.realIndex
   };
 
@@ -108,6 +108,10 @@
     }, 1000)
   })
 
+  const slideNext = () => {
+    swiper.realIndex = 4
+  }
+
 
 </script>
 
@@ -120,12 +124,12 @@
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
-        :slides-per-view="1"
-        :loop="true"
-        :effect="'fade'"
         :pagination="{
           clickable: true,
         }"
+        :slides-per-view="1"
+        :loop="true"
+        :effect="'fade'"
         :autoplay="{
           delay: 8000,
           disableOnInteraction: true
@@ -138,12 +142,10 @@
           </div>
         </SwiperSlide>
 
-        <SwiperPagination class="" /> 
-
       </Swiper>
 
       
-      <div class="absolute left-0 bottom-12 h-full w-full z-40 py-2 ">
+      <div class="absolute left-0 bottom-0 h-full w-full z-40 py-2 ">
 
         
         <div class="h-full content-end bg-red-500/0">
@@ -151,14 +153,12 @@
 
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="">
-              <transition name="fade">
+              <transition name="right-emergence">
                 <div v-if="showSlideData.title" class="py-2">
                   <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
                 </div>
               </transition>
-
               <div class=" md:h-36">
-
                 <div class="hidden md:block">
                   <div class="flex">
                     <transition-group tag="div" name="list">
@@ -170,7 +170,6 @@
                     </transition-group>
                   </div>                  
                 </div>
-
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
@@ -179,13 +178,18 @@
                   </transition>          
                 </div>
               </div>
-                 
-
             </div>
-
-
           </div>
+
+
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <button @click="slideNext" class="bg-blue-500 text-white p-2 my-2">Next</button>
+          </div>
+
         </div>
+
+
+
 
       </div>
 
@@ -193,32 +197,3 @@
     </div>
 </template>
 
-
-<style>
-  .swiper-pagination {
-    position: absolute;
-    text-align: left;
-    margin-left: 6vw;
-    transition: 300ms opacity;
-    transform: translate3d(0, 0, 0);
-    z-index: 10;
-  }
-  .swiper-pagination-bullet {
-    width: 18px;
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 18px));
-    height: 18px;
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 18px));
-    display: inline-block;
-    border-radius: 50%;
-    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
-    background: #0369a1;
-    background: var(--swiper-pagination-bullet-inactive-color, #0369a1);
-    opacity: 0.5;
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.5);
-  }
-  .swiper-pagination-bullet-active {
-    opacity: 1;
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: #082f49;
-  }
-</style>
