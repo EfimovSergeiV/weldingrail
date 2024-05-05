@@ -24,11 +24,11 @@
   <div class="">
 
     <div class=" ">
-      <div id="navbar" class="bg-white w-full absolute z-50 duration-50 transition-all">
+      <div id="navbar" class="bg-white w-full absolute z-50 duration-50 transition-all border-b border-sky-800/50">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-4 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/logo-blue.webp" class="h-6 md:h-10" />
+              <img src="/logo-blue.webp" class="h-4 md:h-6" />
             </nuxt-link>                
           </div>
           <div class="flex gap-8 items-center">

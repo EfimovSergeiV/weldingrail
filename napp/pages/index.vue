@@ -49,7 +49,7 @@
           </div>
         </div>
       </div>
-      <div class=" bg-sky-950 border-t border-sky-950/20 border-white">
+      <div class=" bg-sky-950 border-t border-white/40">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           <div class="grid grid-cols-1 lg:flex items-center min-h-20 justify-between">
             <div class="flex items-center gap-2"><span class="font-bold text-gray-100 text-[36px]">+150</span><p class="text-gray-100 text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
