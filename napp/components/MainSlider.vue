@@ -175,7 +175,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-blue-500 text-white p-2 my-2">Learn more</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-sky-700 text-white px-6 py-2 my-2">Learn more</nuxt-link>
                     </div>          
                   </transition>          
                 </div>
@@ -195,3 +195,31 @@
     </div>
 </template>
 
+
+<style>
+  .swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+  .swiper-pagination-bullet {
+    width: 18px;
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 18px));
+    height: 18px;
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 18px));
+    display: inline-block;
+    border-radius: 50%;
+    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+    background: #fff;
+    background: var(--swiper-pagination-bullet-inactive-color, #fff);
+    opacity: 0.5;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.5);
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #fff;
+  }
+</style>
