@@ -22,9 +22,6 @@
       </div>
     </transition>
 
-    <div class="h-[30px] bg-sky-800">
-
-    </div>
 
     <AppHeader />
 
