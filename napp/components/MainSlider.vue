@@ -108,8 +108,12 @@
     }, 1000)
   })
 
-  const slideNext = () => {
-    swiper.realIndex = 4
+
+  const pagination = {
+    "clickable": true,
+    renderBullet: function (index, className) {
+      return '<span class="p-2 ' + className + '">' + '</span>';
+    },
   }
 
 
@@ -124,9 +128,7 @@
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
-        :pagination="{
-          clickable: true,
-        }"
+        :pagination="pagination"
         :slides-per-view="1"
         :loop="true"
         :effect="'fade'"
@@ -145,7 +147,7 @@
       </Swiper>
 
       
-      <div class="absolute left-0 bottom-0 h-full w-full z-40 py-2 ">
+      <div class="absolute left-0 bottom-8 h-full w-full z-40 py-2 ">
 
         
         <div class="h-full content-end bg-red-500/0">
@@ -181,10 +183,6 @@
             </div>
           </div>
 
-
-          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <button @click="slideNext" class="bg-blue-500 text-white p-2 my-2">Next</button>
-          </div>
 
         </div>
 
