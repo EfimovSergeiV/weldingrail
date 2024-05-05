@@ -18,6 +18,8 @@
 
 <template>
   <div class="">
+
+  <div class="h-[48px]"></div>
     
   <MainSlider />
 
