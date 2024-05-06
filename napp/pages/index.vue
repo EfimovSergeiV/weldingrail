@@ -66,6 +66,19 @@
 
 
 
+  <div class="py-8">
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div class="flex items-center justify-center">
+        <div class="grid grid-cols-1 gap-4 max-w-4xl">
+          <p class="text-2xl text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+          <p class="text-base text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+
+
   <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
