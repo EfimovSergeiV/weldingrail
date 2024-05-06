@@ -31,9 +31,9 @@
               <img src="/logo-blue.webp" class="h-4 md:h-6" />
             </nuxt-link>                
           </div>
-          <div class="flex gap-8 items-center">
+          <div class="flex gap-4 items-center justify-end">
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-sm uppercase text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('railWeldingEquipment') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -178,7 +178,7 @@
 
 
             <div class="group hidden md:block">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-lg text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'index'})" class="text-sm uppercase text-center text-sky-800 h-[56px] flex items-center font-semibold">{{ $t('services') }}</nuxt-link>
               <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
                   <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
@@ -240,32 +240,32 @@
               </div>
             </div>
 
-
-
-
             
             <div class="relative group hidden md:block">
-              <p class="text-lg text-center font-semibold text-sky-800 h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
-              <div class="absolute right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+              <p class="text-sm text-center font-semibold text-sky-800 h-[56px] flex items-center cursor-pointer">{{ $t('language') }}</p>
+              <div class="absolute right-0 in visible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 <div class="py-1">
-                  <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[260px]">
-                    <div class="grid grid-cols-1 gap-2 px-10 py-2">
-                      <nuxt-link :to="switchLocalePath('ru')" class="text-right text-sm text-main-primary font-semibold px-2 py-2">Русский</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('en')" class="text-right text-sm text-main-primary font-semibold px-2 py-2">English</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('pt')" class="text-right text-sm text-main-primary font-semibold px-2 py-2">Português</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('de')" class="text-right text-sm text-main-primary font-semibold px-2 py-2">Deutsch</nuxt-link>
+                  <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[120px]">
+                    <div class="grid grid-cols-1">
+                      <nuxt-link :to="switchLocalePath('ru')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">Русский</nuxt-link>
+                      <nuxt-link :to="switchLocalePath('en')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">English</nuxt-link>
+                      <nuxt-link :to="switchLocalePath('pt')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">Português</nuxt-link>
+                      <nuxt-link :to="switchLocalePath('de')" class="text-center text-sm text-main-primary font-semibold py-2">Deutsch</nuxt-link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="md:hidden py-2">
+              <div>
+                <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-800 cursor-pointer"></div>
+              </div>
+            </div>
+
           </div>
 
-          <div>
-            <div class="md:hidden py-2">
-              <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-800 cursor-pointer"></div>
-            </div>
-          </div>
+
         </div>
 
       </div>      

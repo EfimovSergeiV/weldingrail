@@ -1,9 +1,10 @@
 {
-  "railWeldingEquipment": "Оборудование",
+  "railWeldingEquipment": "Рельсосварочное оборудование",
   "testEquipment": "Испытательное оборудование",
+  "components": "Запасные части и комплектующие",
   "about": "О компании",
-  "services": "Услуги",
-  "language": "Сменить язык",
+  "services": "Запасные части и комплектующие",
+  "language": "RU",
   "write-us": "Напишите нам",
 
   "title-1": "Рельсосварочного",
