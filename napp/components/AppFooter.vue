@@ -10,7 +10,7 @@ const currentData = new Date().getFullYear()
 
     <div class="bg-sky-950 h-[320px]">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        sadasd
+        
       </div>
     </div>
 

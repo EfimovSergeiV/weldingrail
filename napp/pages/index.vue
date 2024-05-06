@@ -181,25 +181,41 @@
 
 
 
-
-
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
 
       <div class="flex items-center justify-center">
         <div class="text-center">
-          <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">Почему выбирают нас ?</p>
+          <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">О КОМПАНИИ</p>
+
           <p class="text-xl text-sky-950 se lect-none font-sans py-1">
-            {{ $t('pages.index.service-1' ) }}
+            Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления. 
+          </p>  
+
+          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+            Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.  
+          </p>  
+
+          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+            Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. 
+          </p>   
+
+          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+            Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. 
           </p>
-          <div class="my-4">
-            <p class="text-xl text-sky-950 se lect-none font-sans">
-              {{ $t('pages.index.service-6') }}
-            </p>
-          </div>
+
+          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+            Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.
+          </p>
+
         </div>
       </div>
 
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-between mt-8">
+
+        <div class="w-[300px]">
+          <img src="/logo-blue.webp" class=""/>
+        </div>
+
         <div class="grid grid-cols-1 gap-4 w-[46rem]">
           <div class="relative">
             <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-950/90"></p>
