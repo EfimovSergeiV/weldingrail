@@ -91,12 +91,16 @@
     showSlideData.value = {
       "id": data.id,
       "image": data.title,
-      "title": data.title,
+      "title": null,
       "texts": [
 
       ],
       "url": null,
     }
+
+    setTimeout(() => {
+      showSlideData.value.title = data.title
+    }, 500)
 
     data.texts.forEach((text) => {
       setTimeout(() => {
@@ -155,7 +159,7 @@
 
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="">
-              <transition name="right-emergence">
+              <transition name="right">
                 <div v-if="showSlideData.title" class="py-2">
                   <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
                 </div>

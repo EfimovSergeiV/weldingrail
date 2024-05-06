@@ -72,6 +72,18 @@
 }
 
 
+.right-move, /* apply transition to moving elements */
+.right-enter-active,
+.right-leave-active {
+  transition: all 0.5s ease;
+}
+
+.right-enter-from,
+.right-leave-to {
+  opacity: 0;
+  transform: translateX(80px);
+}
+
 .cut-corners {
   clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px, 10px 0);
 }
