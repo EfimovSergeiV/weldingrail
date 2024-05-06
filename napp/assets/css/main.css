@@ -23,6 +23,23 @@
 }
 
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #202020;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2A72A9;
+  border-radius: 6px;
+  box-shadow: inset 1px 1px 10px #2A72A9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2A72A9;
+}
+
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.15s;
@@ -41,22 +58,6 @@
   opacity: 0;
 }
 
-/* Появление фильтров товаров слева */
-/* .filter-enter-active {
-  transition: all 0.3s ease-out;
-}
-.filter-leave-active {
-  transition: all 0.2s ease-out;
-}
-.filter-enter-from,
-.filter-leave-to {
-  transform: translateX(-12em);
-  opacity: 0;
-  position: absolute;
-} */
-
-
-
 
 .list-move, /* apply transition to moving elements */
 .list-enter-active,
@@ -69,60 +70,6 @@
   opacity: 0;
   transform: translateY(30px);
 }
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
-  /* position: absolute; */
-}
-
-////del
-/* Исчезновение влево и стили корзины !!!НЕРАБОЧИЙ СТАРТ */
-.left-emergence-enter,
-.left-emergence-leave-to {
-  opacity: 0;
-  transform: translateX(-12em);
-}
-.left-emergence-enter-active,
-.left-emergence-leave-active {
-  transition: all 0.3s ease;
-}
-
-
-.right-emergence-enter-from,
-.right-emergence-leave-to {
-  transform: translateX(12em);
-  opacity: 0;
-}
-.right-emergence-enter-active {
-  transition: all 0.3s ease-out;
-}
-.right-emergence-leave-active {
-  transition: all 0.2s ease-out;
-}
-////
-
-
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: #202020;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #2A72A9;
-  border-radius: 6px;
-  box-shadow: inset 1px 1px 10px #2A72A9;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #2A72A9;
-}
-
-
-
-
 
 
 .cut-corners {
