@@ -1,6 +1,14 @@
 <script setup>
 
-const currentData = new Date().getFullYear()
+  const currentData = new Date().getFullYear()
+
+  const moveUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
 
 </script>
 
@@ -9,8 +17,30 @@ const currentData = new Date().getFullYear()
   <div>
 
     <div class="bg-sky-950 h-[320px]">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 h-full">        
+        <div class="grid grid-cols-1 content-between h-full">
+
+          <div class="text-white py-8">
+            <div class="flex items-center justify-between">
+              <div class="">
+                <p class="">Hallo welt</p>
+              </div>
+              <div class="">
+                <p class="">Hallo welt</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center lg:max-w-7xl py-4">
+            <div id="subscriebe" class="flex gap-0.5">
+              <input type="email" class="w-[640px] text-center h-12 px-4 text-2xl text-sky-800 bg-white border border-white/0 
+              focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800
+              " placeholder="Enter your email address" />
+              <button class="h-12 px-4 text-lg text-white bg-sky-700 w-[260px]">Subscribe to news</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -20,7 +50,7 @@ const currentData = new Date().getFullYear()
         <div class="">
           <div class="flex items-end justify-center py-4">
             <div class="grid grid-cols-1 gap-2 text-center">
-              <img src="/logo-white.webp" class="h-8"/>        
+              <img @click="moveUp()" src="/logo-white.webp" class="h-8 cursor-pointer"/>        
               <p class="text-xs text-gray-100">weldingrail.com | {{ currentData }} (c)</p>
             </div>
           </div>

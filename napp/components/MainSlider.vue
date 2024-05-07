@@ -4,42 +4,42 @@
     {
       "id": 1,
       "image": "/slides/1.webp",
-      "title": "WIRE PRODUCTION",
+      "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
       "texts": [
-        "All types of high quality plastic materials which are used in the worlds most modern fastest",
-        "paper machines are manufactured on our Jäger weaving machines."
+        "Применяются для изготовления рельсовых путей на заводах.",
+        "Сварка рельсов с площадью поперечного сечения до 18000 мм."
       ],
-      "url": "/stationary-machines/1",
+      "url": "/stationary-machines/",
     },
     {
       "id": 2,
       "image": "/slides/2.webp",
-      "title": "A RELIABLE PARTNER",
+      "title": "МОБИЛЬНЫЕ МАШИНЫ",
       "texts": [
-        "All types of high quality plastic materials which are used in the worlds most modern fastest",
-        "paper machines are manufactured on our Jäger weaving machines."
+        "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
+        "Процесс сварки стыка осуществляется автоматически по заданной программе."
       ],
-      "url": "/stationary-machines/2",
+      "url": "/mobile-machines/",
     },
     {
       "id": 3,
-      "image": "/slides/3.webp",
-      "title": "RAIL WELDING",
+      "image": "/slides/5.webp",
+      "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
       "texts": [
-        "All types of high quality plastic materials which are used in the worlds most modern fastest",
-        "paper machines are manufactured on our Jäger weaving machines."
+        "Предназначены для контактной стыковой сварки в полевых условиях",
+        "Оборудование компактно размещается в небольшом 20-футовом контейнере."
       ],
-      "url": "/stationary-machines/3",
+      "url": "/railwelding-complexes/",
     },
     {
       "id": 4,
       "image": "/slides/4.webp",
-      "title": "PMC WEAVING MACHINES",
+      "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
       "texts": [
-        "All types of high quality plastic materials which are used in the worlds most modern fastest",
-        "paper machines are manufactured on our Jäger weaving machines."
+        "Компактные размеры и масса пресса позволяют использовать его как в условиях стационарной установки",
+        ",так и в составе переносных рельсосварочных машин."
       ],
-      "url": "/stationary-machines/4",
+      "url": "/testing-equipment/",
     }
   ]
 

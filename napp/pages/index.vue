@@ -26,23 +26,23 @@
 
   <div class="">
     <div class="">
-      <div class="bg-white">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
+      <div class="bg-gray-100">
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
           <div class="grid grid-cols-1 lg:flex items-end justify-between">
             <div class="">
-              <p class="text-white text-2xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-100 text-sm md:text-base">
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-800 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
+              <p class="text-sky-900 text-2xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sky-900 text-sm md:text-base">
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
               </div>                  
             </div>
-            <div class="grid grid-cols-1 gap-0.5 text-right">
-              <div class="grid grid-cols-1 gap-1">
-                <p class="text-sky-950 text-xl font-semibold">info@weldingrail.com</p>
+            <div class="grid grid-cols-1 gap-2 text-right">
+              <div class="">
+                <p class="text-sky-950 text-2xl font-semibold">info@weldingrail.com</p>
               </div>
               <div class=" shadow-xl shadow-gray-900/10">
                 <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2">{{ $t('requestCall') }}</button>
@@ -51,13 +51,13 @@
           </div>
         </div>
       </div>
-      <div class=" bg-white border-t border-white/40">
+      <div class=" bg-sky-900 border-t border-white/40">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
-            <div class="flex items-center gap-2"><span class="font-bold text-sky-800 text-[36px]">+150</span><p class="text-sky-800 text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-sky-800 text-[36px]">+3500</span><p class="text-sky-800 text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-sky-800 text-[36px]">+560Ha</span><p class="text-sky-800 text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-sky-800 text-[36px]">+200</span><p class="text-sky-800 text-base font-semibold">Клиентов</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+3500</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+200</span><p class="text-white text-base font-semibold">Клиентов</p></div>
           </div>
         </div>
       </div>
@@ -69,9 +69,9 @@
   <div class="py-8">
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center">
-        <div class="grid grid-cols-1 gap-4 max-w-4xl">
-          <p class="text-2xl text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-          <p class="text-base text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
+        <div class="grid grid-cols-1 gap-4 px-10">
+          <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+          <p class="text-base text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
         </div>      
       </div>
     </div>
@@ -85,7 +85,7 @@
       <div v-for="category in categories" :key="category.id" class="py-8">
         
         <div class="grid grid-cols-1 gap-2">
-          <p class="text-4xl text-sky-950">{{ category.name }}</p>
+          <p class="text-4xl font-semibold text-sky-950">{{ category.name }}</p>
           <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>              
         </div>
 
@@ -157,7 +157,7 @@
     <div class="">
       <div class="bg-white">
 
-        <div class="bg-[url('images/rails-bg.jpg')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
+        <div class="bg-[url('images/rails-bg.webp')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
           <div class="bg-sky-950/70 hover:bg-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
             <div class="absolute w-full h-full">
 
