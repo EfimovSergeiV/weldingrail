@@ -30,7 +30,7 @@ class CategoriesModelView(APIView):
 
 
 class ProductsModelView(APIView):
-    """ Products model view """
+    """ All products model view """
 
     qs_properties = ProductPropertiesModel.objects.all()
     qs_advantages = ProductAdvantageModel.objects.all()
@@ -59,7 +59,7 @@ class ProductsModelView(APIView):
     
 
 class ProductModelView(APIView):
-    """ Product model view """
+    """ Select product model view """
 
     qs_properties = ProductPropertiesModel.objects.all()
     qs_advantages = ProductAdvantageModel.objects.all()

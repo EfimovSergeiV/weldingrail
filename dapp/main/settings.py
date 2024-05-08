@@ -131,6 +131,7 @@ PARLER_LANGUAGES = {
         {'code': 'en',},
         {'code': 'de',},
         {'code': 'ru',},
+        {'code': 'zh-hans',},
     ),
     'default': {
         'fallbacks': ['en'],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE

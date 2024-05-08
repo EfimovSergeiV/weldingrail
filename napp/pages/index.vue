@@ -30,19 +30,19 @@
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
           <div class="grid grid-cols-1 lg:flex items-end justify-between">
             <div class="">
-              <p class="text-sky-900 text-2xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sky-900 text-sm md:text-base">
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold ">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1"><p class=" text-sky-900 font-semibold "> {{ $t('pages.index.chooseUs-6') }}</p></div>
+              <p class="text-sky-900 text-xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm md:text-base font-semibold">
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
               </div>                  
             </div>
             <div class="grid grid-cols-1 gap-2 text-right">
               <div class="">
-                <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-950 text-2xl font-semibold">info@weldingrail.com</a>
+                <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
               </div>
               <div class=" shadow-xl shadow-gray-900/10">
                 <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2">{{ $t('requestCall') }}</button>
@@ -66,12 +66,12 @@
 
 
 
-  <div class="py-8">
+  <div class="py-16">
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center">
         <div class="grid grid-cols-1 gap-4 px-10">
           <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-          <p class="text-base text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
+          <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
         </div>      
       </div>
     </div>
@@ -205,25 +205,25 @@
 
       <div class="flex items-center justify-center">
         <div class="text-center">
-          <p class="text-4xl font-semibold text-sky-900 se lect-none font-sans uppercase py-1">О КОМПАНИИ</p>
+          <p class="text-4xl font-semibold text-sky-900 uppercase py-1">О КОМПАНИИ</p>
 
-          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+          <p class="text-xl text-sky-900 py-1">
             Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления. 
           </p>  
 
-          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+          <p class="text-xl text-sky-900 py-1">
             Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.  
           </p>  
 
-          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+          <p class="text-xl text-sky-900 py-1">
             Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. 
           </p>   
 
-          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+          <p class="text-xl text-sky-900 py-1">
             Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. 
           </p>
 
-          <p class="text-xl text-sky-950 se lect-none font-sans py-1">
+          <p class="text-xl text-sky-900 py-1">
             Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.
           </p>
 

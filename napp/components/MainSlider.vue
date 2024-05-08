@@ -170,7 +170,7 @@
                     <transition-group tag="div" name="list">
                       <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
                         <div :id="pk" class="bg-white/60 p-2 my-0.5">
-                          <p>{{ text }}</p>
+                          <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
                         </div>
                       </div>
                     </transition-group>
@@ -179,7 +179,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-sky-700 text-white px-6 py-2 my-2">Узнать больше</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-sky-700 text-white text-base px-6 py-2 my-2">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

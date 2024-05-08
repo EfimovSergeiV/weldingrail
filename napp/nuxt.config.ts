@@ -67,9 +67,9 @@ export default defineNuxtConfig({
         file: 'en-US.json'
       },
       {
-        code: 'pt',
-        iso: 'pt-PT',
-        file: 'pt-PT.json'
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.json'
       },
       {
         code: 'de',
