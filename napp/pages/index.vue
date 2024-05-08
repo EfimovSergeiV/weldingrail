@@ -42,7 +42,7 @@
             </div>
             <div class="grid grid-cols-1 gap-2 text-right">
               <div class="">
-                <p class="text-sky-950 text-2xl font-semibold">info@weldingrail.com</p>
+                <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-950 text-2xl font-semibold">info@weldingrail.com</a>
               </div>
               <div class=" shadow-xl shadow-gray-900/10">
                 <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2">{{ $t('requestCall') }}</button>
@@ -85,8 +85,15 @@
       <div v-for="category in categories" :key="category.id" class="py-8">
         
         <div class="grid grid-cols-1 gap-2">
-          <p class="text-4xl font-semibold text-sky-950">{{ category.name }}</p>
-          <div v-if="category.description" class="text-base text-sky-900" v-html="category.description"></div>              
+          <p class="text-4xl font-semibold text-sky-900">{{ category.name }}</p>
+          
+          <div v-if="category.description" class="grid grid-cols-1 gap-4">
+            <div class="text-base text-sky-900" v-html="category.description"></div>
+            <div class="">
+              <nuxt-link to="/showSlideData/" class="bg-sky-700 text-white px-6 py-2 my-2">Узнать больше</nuxt-link>
+            </div>
+          </div>
+
         </div>
 
 
@@ -100,7 +107,7 @@
 
                   <div class="">
                     <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })">
-                      <p class="text-center text-xl text-sky-950 font-semibold">{{ product.name }}</p>
+                      <p class="text-center text-xl text-sky-900 font-semibold">{{ product.name }}</p>
                     </nuxt-link>                        
                   </div>
 
