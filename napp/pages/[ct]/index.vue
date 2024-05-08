@@ -6,12 +6,13 @@
   const router = useRouter()
 
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
-  const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
+  const products = ref(null)
 
   const currentCategory = ref(null)
 
   if (route.params.ct) {
     currentCategory.value = categories.value.find(category => category.url === route.params.ct)
+    products.value = await $fetch(`${ config.public.baseURL }${locale.value}/c/products/${ currentCategory.value.id }/`)
   }
 
 </script>
@@ -21,7 +22,7 @@
   <div class="">
 
     
-    <div class="min-h-screen grid grid-cols-1 content-between">
+    <div class="">
       <div class="h-[48px]"></div>
 
       <div class="relative">
@@ -32,10 +33,12 @@
               
               <div class="">
                 <p class="text-4xl text-white">Мобильные рельсосварочные комплексы </p>
-                <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
-                  <div :id="pk" class="bg-white/60 p-2 my-0.5">
-                    <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
-                  </div>
+                <div class="hidden md:block">
+                  <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
+                    <div :id="pk" class="bg-white/60 p-2 my-0.5">
+                      <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
+                    </div>
+                  </div>                  
                 </div>
               </div>
             
@@ -62,42 +65,44 @@
       </div>
 
 
-      <!-- <div class="h-screen flex items-center justify-center">
-        <div class="">
-          
-          <p class="text-center text-red-800 text-2xl">
-            /c/index/
-          </p>
 
-          <p class="text-center text-sky-950 text-2xl uppercase font-semibold">тут товары категории</p> 
-          
-          
+      <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-          <p class="text-center text-red-800 text-2xl">
-            {{ route.params }}
-          </p>      
+        <div v-if="products" class="py-8">
+
+          <div class="grid grid-cols-1 gap-8">
+            <div class="" v-for="product in products" :key="product.id">
+              <div class="flex gap-8">
+                <div class="flex-none w-[340px]">
+                  <img :src="product.image" class="w-[320px]" />
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                  <p class="text-xl">{{ product.name }}</p>
+                  <div class="" v-html="product.description"></div>
+                  <div class="flex items-center gap-4 py-1">
+                    <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: `category.url`, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+
+
+
+
         </div>
 
-      </div> -->
 
-
-
-      <div class="">
-
-        <div class="" v-for="product in products" :key="product.id">
-          <div class="container mx-auto lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <p>{{ product }}</p>
-            </div>
+        <div v-else class="min-h-[24vh]">
+          <div class="flex items-center justify-center">
+            <p class="text-4xl text-sky-900 py-8">Нет товаров для отображения</p>
           </div>
         </div>
 
       </div>
 
 
-
     </div>
-
-
   </div>
 </template>
