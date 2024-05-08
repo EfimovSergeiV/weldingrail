@@ -77,7 +77,7 @@
                   <img :src="product.image" class="w-[320px]" />
                 </div>
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-xl">{{ product.name }}</p>
+                  <p class="text-xl text-sky-900 font-semibold">{{ product.name }}</p>
                   <div class="" v-html="product.description"></div>
                   <div class="flex items-center gap-4 py-1">
                     <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
@@ -87,9 +87,6 @@
               </div>
             </div>
           </div>          
-
-
-
 
         </div>
 
