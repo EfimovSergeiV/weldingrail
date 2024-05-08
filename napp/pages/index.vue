@@ -66,7 +66,7 @@
 
 
 
-  <div class="py-16 hidden">
+  <!-- <div class="py-16 hidden">
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center">
         <div class="grid grid-cols-1 gap-4 px-10">
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -89,16 +89,13 @@
           
           <div v-if="category.description" class="grid grid-cols-1 gap-4">
             <div class="text-base text-sky-900" v-html="category.description"></div>
-            <div class="">
-              <nuxt-link to="/showSlideData/" class="bg-sky-700 text-white px-6 py-2 my-2">Узнать больше</nuxt-link>
-            </div>
           </div>
 
         </div>
 
 
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 py-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 py-6">
           <div v-for="product in products" :key="product.id">
             <div v-if="product.category === category.id">
               <div class="">
