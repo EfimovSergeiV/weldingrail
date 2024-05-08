@@ -66,13 +66,13 @@
 
 
 
-  <div class="py-16">
+  <div class="py-16 hidden">
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center">
         <div class="grid grid-cols-1 gap-4 px-10">
           <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-          <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
-        </div>      
+          <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -98,49 +98,42 @@
 
 
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 py-4">
-            <div v-for="product in products" :key="product.id">
-              <div v-if="product.category === category.id">
-                
-                
+        <div class="grid grid-cols-1 lg:grid-cols-2 py-14">
+          <div v-for="product in products" :key="product.id">
+            <div v-if="product.category === category.id">
+              <div class="">
                 <div class="">
+                  <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })">
+                    <p class="text-center text-xl text-sky-900 font-semibold">{{ product.name }}</p>
+                  </nuxt-link>                        
+                </div>
 
-                  <div class="">
-                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })">
-                      <p class="text-center text-xl text-sky-900 font-semibold">{{ product.name }}</p>
-                    </nuxt-link>                        
+                <div class="grid grid-cols-1 md:flex gap-8 py-6">
+                  <div class="py-2 flex items-center justify-center md:w-[160px]">
+                    <img :src="product.image" class="w-[160px] h-[120px]" />
                   </div>
 
-                  <div class="grid grid-cols-1 md:flex gap-8 py-6">
-                    <div class="py-2 flex items-center justify-center md:w-[160px]">
-                      <img :src="product.image" class="w-[160px] h-[120px]" />
-                    </div>
-                    <div class="flex flex-col justify-between">
-                      
-                        <div class="grid grid-cols-1 gap-0.5 pb-4">
-                          <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
-
-                            <div class="flex items-center gap-2">
-                              <div class="mdi mdi-circle text-sky-800"></div>
-                              <p class="text-sm text-sky-950">
-                                {{ advantage.name }}
-                                {{ advantage.name }}
-                                {{ advantage.name }}
-                                {{ advantage.name }}
-
-                              </p>
-                            </div>
-
+                  <div class="flex flex-col justify-between">
+                    <div class="grid grid-cols-1 gap-0.5 pb-4">
+                      <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
+                        <div class="flex items-center gap-2">
+                          <div class="mdi mdi-circle text-sky-800"></div>
+                            <p class="text-sm text-sky-950">
+                              {{ advantage.name }}
+                              {{ advantage.name }}
+                              {{ advantage.name }}
+                              {{ advantage.name }}
+                            </p>
                           </div>
                         </div>
-                      
-
+                      </div>
                       <div class="flex items-center gap-4 py-1">
                         <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
                         <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
                       </div>
                     </div>
-                  </div>                        
+                  </div>
+
                 </div>
               </div>
             </div>                
@@ -204,24 +197,14 @@
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
 
       <div class="flex items-center justify-center">
-        <div class="text-center">
-          <p class="text-4xl font-semibold text-sky-900 uppercase py-1">О КОМПАНИИ</p>
+        <div class="text-center py-12">
 
-          <p class="text-xl text-sky-900 py-1">
-            Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления. 
-          </p>  
-
-          <p class="text-xl text-sky-900 py-1">
-            Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.  
-          </p>  
-
-          <p class="text-xl text-sky-900 py-1">
-            Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. 
-          </p>   
-
-          <p class="text-xl text-sky-900 py-1">
-            Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. 
-          </p>
+          <div class="flex items-center justify-center">
+            <div class="grid grid-cols-1 gap-4 px-2">
+              <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+              <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
+            </div>
+          </div>
 
           <p class="text-xl text-sky-900 py-1">
             Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.
