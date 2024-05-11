@@ -59,15 +59,17 @@
 
 
 
-    <div id="breadcrumbs" class="bg-gray-300 grid grid-cols-1 content-center ">
-      <div class="container mx-auto lg:max-w-7xl lg:px-8">
-        <div class="my-4">
+    <div class=" bg-sky-900 border-t border-white/40">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
+          <div class="flex items-center justify-start">
             <div class="flex items-center justify-start">
-              <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
-              <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
-              <div v-if="product" class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
+              <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
+              <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
+              <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
             </div>
           </div>
+        </div>
       </div>
     </div>
 
