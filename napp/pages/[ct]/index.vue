@@ -26,7 +26,7 @@
 
 
       <div class="relative">
-        <img src="/slides/5.webp" alt="logo" class="" />
+        <img src="/slides/3.webp" alt="logo" class="" />
         <div class="absolute bottom-0 left-0 w-full h-full ">
           <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
             <div class="h-full flex items-center justify-start">

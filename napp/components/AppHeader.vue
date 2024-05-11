@@ -48,7 +48,7 @@
                           </div>
                           
                           <div class="grid grid-cols-2 gap-2">
-                            <div v-for="machine in railmachines.slice(0, 3)" :key="machine.id" class="">
+                            <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
                               <div class="">
                                 <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
                                   <div class="px-2 py-2">
@@ -160,7 +160,7 @@
                       <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
-                            <p class="text-sky-800 font-semibold text-2xl">Рельсосварочое оборудование</p>
+                            <p class="text-white font-semibold text-4xl">Рельсосварочое оборудование</p>
                           </div>
                           <div class="my-4 py-4 border-t border-white/50">
                             <p class="text-sm text-gray-100">Представляем вашему вниманию наши решения для сварки рельсов. Наше оборудование является сертифицированным по самим жёстким стандартам и проверенное временем</p>
@@ -225,7 +225,7 @@
                       <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
                         <div class="">
                           <div class="">
-                            <p class="text-sky-800 font-semibold text-2xl">Наши услуги</p>
+                            <p class="text-white font-semibold text-4xl">Запасные части и комплектующие</p>
                           </div>
                           <div class="my-4 py-4 border-t border-white/50">
                             <p class="text-sm text-gray-100">С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding</p>

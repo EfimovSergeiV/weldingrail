@@ -52,10 +52,10 @@
       <div class=" bg-sky-900 border-t border-white/40">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+3500</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
             <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+200</span><p class="text-white text-base font-semibold">Клиентов</p></div>
+            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold">Клиентов</p></div>
           </div>
         </div>
       </div>
@@ -134,11 +134,11 @@
             </div>                
           </div>
 
-          <div v-if="category.children" class="">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0.5">
-              <div v-for="subct in category.children" :key="subct.id">
+          <div v-if="category.children" class="-mt-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <div v-for="subct in category.children" :key="subct.id" class="">
                 <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
-                  <button class="text-base bg-sky-800 text-gray-100 px-4 py-10 font-semibold uppercase w-full">{{ subct.name }}</button>
+                  <p class="text-left text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
                 </nuxt-link>
               </div>
             </div>
