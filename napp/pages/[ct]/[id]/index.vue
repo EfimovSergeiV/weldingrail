@@ -31,44 +31,31 @@
 
 <template>
   <div class="">
-    <div class="">
-      <div class="h-[600px] content-end bg-sky-800">
-
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-
-          <div class="grid grid-cols-1 md:flex items-center justify-between">
-            <div class="pt-20 md:py-20 w-full">
-              <div class="py-2">
-                <p class="text-2xl text-white">{{ currentCategory.name }}</p>
-              </div>     
-              <div class="grid grid-cols-1 gap-0">
-                <p class="text-4xl font-semibold text-white uppercase se lect-none">{{ product.name }}</p>
-                <div class="text-white text-lg py-4" v-html="product.description" ></div>
-              </div>
-            </div>
-            <div class="py-8 w-[40vw]">
-              <div class="px-16">
-                <img :src="`/prod/hercules300.webp`" class=" w-full" />
-              </div>
+    <div class="relative">
+        <img src="/slides/5.webp" alt="logo" class="" />
+        <div class="absolute bottom-0 left-0 w-full h-full ">
+          <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
+            <div class="h-full flex items-center justify-start">
               
+              <div class="">
+                <p class="text-4xl text-white">Мобильные рельсосварочные комплексы </p>
+                <div class="hidden md:block">
+                  <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
+                    <div :id="pk" class="bg-white/60 p-2 my-0.5">
+                      <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            
+            
             </div>
+
+            
           </div>
-
-          <div class="flex items-end justify-end py-2">
-            <div class="grid grid-cols-1 gap-0.5 text-right">
-              <div class="grid grid-cols-1 gap-1">
-                <p class="text-white text-xl font-semibold">info@weldingrail.com</p>
-              </div>
-              <div class=" shadow-xl shadow-gray-900/10">
-                <button class="bg-gradient-to-tr from-white via-gray-200 to-gray-200 font-semibold text-main-secondary w-60 py-2 cut-corners">{{ $t('requestCall') }}</button>
-              </div>
-            </div>
-          </div>     
-
+          
         </div>
       </div>
-
-    </div>
 
 
 

@@ -23,7 +23,7 @@
 
     
     <div class="">
-      <div class="h-[48px]"></div>
+
 
       <div class="relative">
         <img src="/slides/5.webp" alt="logo" class="" />

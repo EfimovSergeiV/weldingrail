@@ -18,8 +18,6 @@
 
 <template>
   <div class="">
-
-  <div class="h-[48px]"></div>
     
   <MainSlider />
 
@@ -125,7 +123,7 @@
                         </div>
                       </div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
+                        <button class="text-sm bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white  px-6 py-2  uppercase cut-corners">Request price</button>
                         <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
                       </div>
                     </div>
@@ -137,10 +135,10 @@
           </div>
 
           <div v-if="category.children" class="">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0.5">
               <div v-for="subct in category.children" :key="subct.id">
                 <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
-                  <button class="text-base shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-6 font-semibold uppercase cut-corners w-full">{{ subct.name }}</button>
+                  <button class="text-base bg-sky-800 text-gray-100 px-4 py-10 font-semibold uppercase w-full">{{ subct.name }}</button>
                 </nuxt-link>
               </div>
             </div>
@@ -159,8 +157,8 @@
             <div class="absolute w-full h-full">
 
               <div class="flex items-center justify-center h-full px-6">
-                <div class="grid grid-cols-1 gap-8">
-                  <p class="text-slate-200 font-semibold text-xl uppercase">
+                <div class="grid grid-cols-1 gap-4">
+                  <p class="text-slate-200 font-semibold text-4xl uppercase">
                     {{ $t('pages.index.quest-title') }}
                   </p>
                   <p class="text-4xl text-white uppercase">
@@ -193,30 +191,37 @@
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
 
-      <div class="flex items-center justify-center">
-        <div class="text-center py-12">
 
-          <div class="flex items-center justify-center">
-            <div class="grid grid-cols-1 gap-4 px-2">
-              <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-              <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-            </div>
+
+      <div class="py-4">
+        <div class="flex items-center justify-start">
+          <p class="text-4xl text-sky-900 font-semibold">О компании</p>
+        </div>        
+        <div class="py-4">
+          <div class="grid grid-cols-1 gap-0.5">
+            <p class="text-lg text-sky-900 font-semibold py-2">WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+            <p class="text-base text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
           </div>
-
-          <p class="text-xl text-sky-900 py-1">
-            Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.
-          </p>
-
         </div>
       </div>
 
-      <div class="flex items-center justify-between mt-8">
 
-        <div class="w-[300px]">
-          <img src="/logo-blue.webp" class=""/>
+      <div class="grid grid-cols-2 gap-4">
+
+        <div class=" flex items-start justify-center">
+          <div class="grid grid-cols-1 gap-2">
+
+            <p class="text-base text-sky-900">Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+            <p class="text-base text-sky-900">Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
+            <p class="text-base text-sky-900 py-1">Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+            
+            <div class="flex items-center justify-center py-8">
+              <img src="/logo-blue.webp" class="w-[50%]"/>
+            </div>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-4 w-[46rem]">
+        <div class="grid grid-cols-1 gap-2 w-[46rem]">
           <div class="relative">
             <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-950/90"></p>
             <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
@@ -229,9 +234,9 @@
             <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-950/90"></p>
             <textarea type="text" id="person" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.yourmess')"></textarea>
           </div>
-          <div class="flex items-center justify-center py-2 ">
-            <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Отправить сообщение</button>
-          </div>          
+          <div class="flex items-center justify-end">
+            <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
+          </div>
         </div>
 
       </div>

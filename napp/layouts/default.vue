@@ -23,7 +23,10 @@
     </transition>
 
 
-    <AppHeader />
+    
+    <div class="min-h-[48px]">
+      <AppHeader />
+    </div>
 
 
     
