@@ -158,7 +158,7 @@
 
               <div class="flex items-center justify-center h-full px-6">
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-slate-200 font-semibold text-4xl uppercase">
+                  <p class="text-white text-3xl uppercase">
                     {{ $t('pages.index.quest-title') }}
                   </p>
                   <p class="text-4xl text-white uppercase">
@@ -209,9 +209,14 @@
         <div class=" flex items-start justify-center">
           <div class="grid grid-cols-1 gap-2">
 
-            <p class="text-base text-sky-900">Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
-            <p class="text-base text-sky-900">Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-            <p class="text-base text-sky-900 py-1">Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+            <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
+              <p class="text-base"> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+            </div>
+            <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
+              <p class="text-base"> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
+            </div>
+
+            <p class="text-base text-sky-900 py-1"> Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
             
             <div class="flex items-center justify-center py-8">
               <img src="/logo-blue.webp" class="w-[50%]"/>

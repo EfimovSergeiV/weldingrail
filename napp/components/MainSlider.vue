@@ -159,7 +159,7 @@
 
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="">
-              <transition name="right">
+              <transition name="slide-fade">
                 <div v-if="showSlideData.title" class="py-2">
                   <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
                 </div>

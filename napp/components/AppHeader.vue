@@ -227,9 +227,9 @@
                           <div class="">
                             <p class="text-white font-semibold text-4xl">Запасные части и комплектующие</p>
                           </div>
-                          <div class="my-4 py-4 border-t border-white/50">
+                          <!-- <div class="my-4 py-4 border-t border-white/50">
                             <p class="text-sm text-gray-100">С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding</p>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
 

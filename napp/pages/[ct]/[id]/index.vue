@@ -75,26 +75,31 @@
 
 
 
-    <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="flex items-center gap-4">
+    <div class="container mx-auto lg:max-w-7xl lg:px-8 pt-8">
+      <div class="flex items-center gap-8">
         <div class=" flex-none">
           <img :src="product.image" class="w-[320px]" />
         </div>
         <div class="grid grid-cols-1 gap-4">
-          <div class=""><p class="text-sky-800 text-4xl">{{ product.name }}</p></div>
-          <div class=""><div v-html="product.description" class="text-sky-800 text-base"></div></div>
+          <div class="">
+            <p class="text-sky-900 text-4xl">{{ product.name }}</p>
+          </div>
+          <div class="">
+            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-800 text-base"></div>
+            <div v-else class="">
+            <div v-for="category in categories" :key="category.id" class="text-sky-800 text-base">
+              <div v-if="category.id === product.category" class="" v-html="category.description"></div>
+            </div>
+          </div>
+          </div>
         </div>
-
       </div>
-      
-      
-
     </div>
 
 
 
 
-    <div v-if="product" class="">
+    <div v-if="true" class="">
       <div class="bg-white py-2 grid grid-cols-1 content-center">
         <div class="container mx-auto lg:max-w-7xl lg:px-8 hidden">
 
@@ -107,35 +112,15 @@
                 </div>
 
 
-                <!-- <div class="">
-                  <Swiper
-                    class="rounded-md relative h-[28rem] flex items-center justify-center"
-                    :modules="[]"
-                    :direction="'vertical'"
-                    :slides-per-view="4"
-                    :loop="true"
-                    :effect="'fade'"
-                    >
-                    <SwiperSlide v-for="slide in 9" :key="slide" class="bg-white">
-                      <img
-                        src="/prod/fbm-140.png"
-                        class="w-12"
-                      />             
-                    </SwiperSlide>
-                    <div class="absolute bottom-0 right-0 z-40 p-3">
-                      <SwiperControls class="bg-gray-100/80 rounded-full border border-gray-200/50 hover:border-gray-300 dark:border-gray-600/50 dark:hover:border-gray-500 dark:bg-gray-700/80 transition-all duration-500 px-1" />
-                    </div>
-                  </Swiper>
-                </div> -->
 
               </div>               
               <div class="grid grid-cols-1 content-between py-20">
                 <div class="flex items-center justify-start">
-                  <!-- <p class="text-lg font-semibold text-sky-950 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
-                  <p class="text-xl font-semibold text-sky-950 text-center">{{ product.name }}</p>
+                  <!-- <p class="text-lg font-semibold text-sky-900 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
+                  <p class="text-xl font-semibold text-sky-900 text-center">qqq{{ product.name }}</p>
                 </div>
 
-                <div class="py-4 text-lg text-sky-950">
+                <div class="py-4 text-lg text-sky-900">
                   <div v-if="product.description.length > 1" class="" v-html="product.description"></div>
                   <div v-else class="">
                     <div v-for="category in categories" :key="category.id">
@@ -165,11 +150,11 @@
           <div class=" flex gap-8 py-8">
             <div class=" w-1/3">
               <div class="my-2">
-                <p class="text-xl text-sky-950 se lect-none font-sans font-semibold">Материалы:</p>
+                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold">Материалы:</p>
               </div>
               
               <div class="py-2 ">
-                <div class="grid grid-cols-1 gap-2 text-sky-950">
+                <div class="grid grid-cols-1 gap-2 text-sky-900">
                   <div v-for="material in materials" :key="material.id" class="">
                     <a :href="material.link">
                       <div class="flex items-center gap-1">
@@ -185,19 +170,19 @@
             </div>
             <div class="w-full text-sm">
               <div class="my-2">
-                <p class="text-xl text-sky-950 se lect-none font-sans font-semibold">Технические параметры:</p>
+                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold">Технические параметры:</p>
               </div>
               <div class=" grid grid-cols-1 gap-2 py-4">
                 <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
                   <div v-if="propdata.value" class="">
                     <div class="flex items-center justify-between text-base border-b border-sky-950/30 hover:border-sky-950/50 transition-all duration-300">
-                      <p class="text-sky-950 se lect-none font-sans">{{ propdata.name }}</p>
-                      <p class="text-sky-950 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
+                      <p class="text-sky-900 se lect-none font-sans">{{ propdata.name }}</p>
+                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
                     </div>                
                   </div>
                   <div v-else class="">
                     <div class="flex items-center justify-start text-base mt-6">
-                      <p class="text-sky-950 se lect-none font-sans font-semibold">{{ propdata.name }}</p>
+                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.name }}</p>
                     </div>
                   </div>
 
