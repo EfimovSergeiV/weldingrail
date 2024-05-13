@@ -28,7 +28,7 @@
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-4 ">
             <nuxt-link :to="localePath('index')">
-              <img src="/logo-blue.webp" class="h-4 md:h-6" />
+              <img src="/logo-blue.webp" class="h-4 md:h-8" />
             </nuxt-link>                
           </div>
           <div class="flex gap-4 items-center justify-end">

@@ -76,11 +76,19 @@
 
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="py-8 grid grid-cols-6 gap-8">
-        <div class="" v-for="image in 8" :key="image">
-          <img src="/prod/hercules300.webp" class="w-full" />
+      <div class="flex items-center gap-4">
+        <div class=" flex-none">
+          <img :src="product.image" class="w-[320px]" />
         </div>
+        <div class="grid grid-cols-1 gap-4">
+          <div class=""><p class="text-sky-800 text-4xl">{{ product.name }}</p></div>
+          <div class=""><div v-html="product.description" class="text-sky-800 text-base"></div></div>
+        </div>
+
       </div>
+      
+      
+
     </div>
 
 

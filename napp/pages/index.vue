@@ -123,8 +123,8 @@
                         </div>
                       </div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="text-sm bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white  px-6 py-2  uppercase cut-corners">Request price</button>
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
+                        <button class="text-base bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white  px-6 py-2 uppercase ">Request price</button>
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-800 font-semibold">Read more</nuxt-link>
                       </div>
                     </div>
                   </div>
@@ -191,8 +191,6 @@
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
 
-
-
       <div class="py-4">
         <div class="flex items-center justify-start">
           <p class="text-4xl text-sky-900 font-semibold">О компании</p>
@@ -221,7 +219,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-2 w-[46rem]">
+        <div class="grid grid-cols-1 gap-2">
           <div class="relative">
             <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-950/90"></p>
             <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
