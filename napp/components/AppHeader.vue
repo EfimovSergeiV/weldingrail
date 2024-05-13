@@ -43,7 +43,7 @@
                       <div class="border border-white px-2 py-4 w-full">
 
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Стационарные рельсосварочные машины</p>
                           </div>
                           
@@ -58,9 +58,9 @@
                                       </div>
                                       
                                       <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-950 py-1">{{  machine.name }}</p>
+                                        <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
                                         <div class="flex justify-start">
-                                          <p class="text-xs text-sky-950">перейти к машине</p>
+                                          <p class="text-xs text-sky-900">перейти к машине</p>
                                         </div>
                                       </div>
                                       
@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Мобильные рельсосварочные машины</p>
                           </div>
                           
@@ -96,9 +96,9 @@
                                       </div>
                                       
                                       <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-950 py-1">{{  machine.name }}</p>
+                                        <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
                                         <div class="flex justify-start">
-                                          <p class="text-xs text-sky-950">перейти к машине</p>
+                                          <p class="text-xs text-sky-900">перейти к машине</p>
                                         </div>
                                       </div>
                                       
@@ -118,7 +118,7 @@
                           </div>
                         </div>
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Испытательное оборудование</p>
                           </div>
                           
@@ -133,9 +133,9 @@
                                       </div>
                                       
                                       <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-950 py-1">ГЕРКУЛЕС 300</p>
+                                        <p class=" text-sm text-sky-900 py-1">ГЕРКУЛЕС 300</p>
                                         <div class="flex justify-start">
-                                          <p class="text-xs text-sky-950">перейти к машине</p>
+                                          <p class="text-xs text-sky-900">перейти к машине</p>
                                         </div>
                                       </div>
                                       
@@ -188,33 +188,33 @@
                       <div class="border border-white px-2 py-4 w-full">
 
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Капитальный ремонт оборудования</p>
                           </div>
                           
                           <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-800">
+                            <p class="text-sm text-sky-900">
                               Мы готовы не только осуществить полное восстановление бывшего в эксплуатации оборудования, но и улучшить его технические характеристики, необходимые для введения вашей устаревшей рельсосварочной машины в современное производство.                            </p>
                           </div>
                         </div>
 
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Обучение и техническая поддержка</p>
                           </div>
                           
                           <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-800">
+                            <p class="text-sm text-sky-900">
                               Наша команда состоит из опытных инженеров и квалифицированных рабочих, которые всегда готовы и рады поделиться своими знаниями с другими профессионалами в этой области.                            </p>
                           </div>
                         </div>
                         <div class="">
-                          <div class="border-b border-sky-950/50 px-4 mx-4">
+                          <div class="border-b border-sky-900/50 px-4 mx-4">
                             <p class="text-sky-900 text-sm font-semibold">Ремонт и техническое обслуживание</p>
                           </div>
                           
                           <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-800">
+                            <p class="text-sm text-sky-900">
                               С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding. Независимо от того, имеется ли у вас оборудование для сварки рельсов, электропередвижные сварочные машины или другие товары из нашего разнообразного ассортимента, мы обеспечиваем полное техническое обслуживание и оперативное устранение любых возможных неисправностей.
                             </p>
                           </div>
@@ -259,7 +259,7 @@
 
             <div class="md:hidden py-2">
               <div>
-                <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-800 cursor-pointer"></div>
+                <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-900 cursor-pointer"></div>
               </div>
             </div>
 

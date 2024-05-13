@@ -23,7 +23,7 @@
 
 
       <div class="py-4 px-4">
-        <p class="text-2xl text-sky-800 font-bold">Привет мир </p>
+        <p class="text-2xl text-sky-900 font-bold">Привет мир </p>
               
       </div>
 

@@ -16,7 +16,7 @@
 <template>
   <div>
 
-    <div class="bg-sky-950 min-h-[320px]">
+    <div class="bg-sky-900 min-h-[320px]">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 h-full">        
         <div class="grid grid-cols-1 content-between h-full">
 

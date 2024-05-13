@@ -56,8 +56,8 @@
         <div class="container mx-auto lg:max-w-7xl lg:px-8">
           <div class="my-4">
               <div class="flex items-center justify-start">
-                <div class="flex gap-1 text-sm font-semibold text-sky-950 text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
-                <div v-if="currentCategory" class="flex gap-1 text-sm font-semibold text-sky-950 text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ currentCategory.name }}</p></div>
+                <div class="flex gap-1 text-sm font-semibold text-sky-900 text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
+                <div v-if="currentCategory" class="flex gap-1 text-sm font-semibold text-sky-900 text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ currentCategory.name }}</p></div>
               </div>
             </div>
         </div>
@@ -89,10 +89,10 @@
                 </div>
                 <div class="grid grid-cols-1 gap-4">
                   <p class="text-xl text-sky-900 font-semibold">{{ product.name }}</p>
-                  <div class="text-sky-800" v-html="product.description"></div>
+                  <div class="text-sky-900" v-html="product.description"></div>
                   <div class="flex items-center gap-4 py-1">
-                    <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
-                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: `category.url`, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
+                    <button class="text-sm shadow-md shadow-black/50 bg-sky-900 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: `category.url`, id: product.id } })" class="text-sm text-sky-900 font-semibold">Read more</nuxt-link>
                   </div>
                 </div>
               </div>

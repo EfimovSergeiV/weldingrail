@@ -43,7 +43,7 @@
                 <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
               </div>
               <div class=" shadow-xl shadow-gray-900/10">
-                <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2">{{ $t('requestCall') }}</button>
+                <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">{{ $t('requestCall') }}</button>
               </div>
             </div>
           </div>
@@ -112,8 +112,8 @@
                     <div class="grid grid-cols-1 gap-0.5 pb-4">
                       <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
                         <div class="flex items-center gap-2">
-                          <div class="mdi mdi-circle text-sky-800"></div>
-                            <p class="text-sm text-sky-950">
+                          <div class="mdi mdi-circle text-sky-900"></div>
+                            <p class="text-sm text-sky-900">
                               {{ advantage.name }}
                               {{ advantage.name }}
                               {{ advantage.name }}
@@ -123,8 +123,8 @@
                         </div>
                       </div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="text-base bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white  px-6 py-2 uppercase ">Request price</button>
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-800 font-semibold">Read more</nuxt-link>
+                        <button class="text-base bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white  px-6 py-2 uppercase ">Request price</button>
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Read more</nuxt-link>
                       </div>
                     </div>
                   </div>
@@ -153,7 +153,7 @@
       <div class="bg-white">
 
         <div class="bg-[url('images/rails-bg.webp')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
-          <div class="bg-sky-950/70 hover:bg-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
+          <div class="bg-sky-900/70 hover:bg-sky-900/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
             <div class="absolute w-full h-full">
 
               <div class="flex items-center justify-center h-full px-6">
@@ -174,7 +174,7 @@
       </div>
     </div>
 
-    <div class="bg-sky-950 border-t border-b border-white/20">
+    <div class="bg-sky-900 border-t border-b border-white/20">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
         <div class="">
           <a href="#" class="flex items-center justify-center gap-2 py-6">
@@ -209,13 +209,15 @@
         <div class=" flex items-start justify-center">
           <div class="grid grid-cols-1 gap-2">
 
-            <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
+            <!-- <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
               <p class="text-base"> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
             </div>
             <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
               <p class="text-base"> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-            </div>
+            </div> -->
 
+            <p class="text-base text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+            <p class="text-base text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
             <p class="text-base text-sky-900 py-1"> Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
             
             <div class="flex items-center justify-center py-8">
@@ -226,15 +228,15 @@
 
         <div class="grid grid-cols-1 gap-2">
           <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-950/90"></p>
+            <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
             <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
           </div>
           <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-at text-sky-950/90"></p>
+            <p class="absolute px-2 py-1 mdi mdi-16px mdi-at text-sky-900/90"></p>
             <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.youremail')" />
           </div>
           <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-950/90"></p>
+            <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p>
             <textarea type="text" id="person" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.yourmess')"></textarea>
           </div>
           <div class="flex items-center justify-end">
@@ -249,7 +251,7 @@
 
 
 
-    <div class=" bg-sky-950">
+    <div class=" bg-sky-900">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-2">
 
         <div class="flex items-center justify-center py-6">

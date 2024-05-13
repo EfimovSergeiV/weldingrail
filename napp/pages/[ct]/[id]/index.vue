@@ -85,9 +85,9 @@
             <p class="text-sky-900 text-4xl">{{ product.name }}</p>
           </div>
           <div class="">
-            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-800 text-base"></div>
+            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-base"></div>
             <div v-else class="">
-            <div v-for="category in categories" :key="category.id" class="text-sky-800 text-base">
+            <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
               <div v-if="category.id === product.category" class="" v-html="category.description"></div>
             </div>
           </div>
@@ -175,7 +175,7 @@
               <div class=" grid grid-cols-1 gap-2 py-4">
                 <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
                   <div v-if="propdata.value" class="">
-                    <div class="flex items-center justify-between text-base border-b border-sky-950/30 hover:border-sky-950/50 transition-all duration-300">
+                    <div class="flex items-center justify-between text-base border-b border-sky-900/30 hover:border-sky-900/50 transition-all duration-300">
                       <p class="text-sky-900 se lect-none font-sans">{{ propdata.name }}</p>
                       <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
                     </div>                
@@ -195,7 +195,7 @@
 
 
 
-      <div v-if="product.product_advantages.length > 0" class=" bg-sky-950 grid grid-cols-1 content-center py-4 border-t border-black/10">
+      <div v-if="product.product_advantages.length > 0" class=" bg-sky-900 grid grid-cols-1 content-center py-4 border-t border-black/10">
         <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">
         
 
