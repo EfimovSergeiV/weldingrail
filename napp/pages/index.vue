@@ -19,122 +19,114 @@
 <template>
   <div class="">
     
-  <MainSlider />
+    <MainSlider />
 
 
-  <div class="">
     <div class="">
-      <div class="bg-gray-100">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
-          <div class="grid grid-cols-1 lg:flex items-end justify-between">
-            <div class="">
-              <p class="text-sky-900 text-xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm md:text-base font-semibold">
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
-              </div>                  
-            </div>
-            <div class="grid grid-cols-1 gap-2 text-right">
+      <div class="">
+        <div class="bg-gray-100">
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
+            <div class="grid grid-cols-1 lg:flex items-end justify-between">
               <div class="">
-                <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
+                <p class="text-sky-900 text-xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm md:text-base font-semibold">
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                </div>                  
               </div>
-              <div class=" shadow-xl shadow-gray-900/10">
-                <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">{{ $t('requestCall') }}</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class=" bg-sky-900 border-t border-white/40">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
-            <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold">Клиентов</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- <div class="py-16 hidden">
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="flex items-center justify-center">
-        <div class="grid grid-cols-1 gap-4 px-10">
-          <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-          <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-
-  <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
-
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div v-for="category in categories" :key="category.id" class="py-8">
-        
-        <div class="grid grid-cols-1 gap-2">
-          <p class="text-4xl font-semibold text-sky-900">{{ category.name }}</p>
-          
-          <div v-if="category.description" class="grid grid-cols-1 gap-4">
-            <div class="text-base text-sky-900" v-html="category.description"></div>
-          </div>
-
-        </div>
-
-
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 py-6">
-          <div v-for="product in products" :key="product.id">
-            <div v-if="product.category === category.id">
-              <div class="">
+              <div class="grid grid-cols-1 gap-2 text-right">
                 <div class="">
-                  <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })">
-                    <p class="text-center text-xl text-sky-900 font-semibold">{{ product.name }}</p>
-                  </nuxt-link>                        
+                  <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
                 </div>
+                <div class=" shadow-xl shadow-gray-900/10">
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">{{ $t('requestCall') }}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" bg-sky-900 border-t border-white/40">
+          <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
+              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
+              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
+              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
+              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold">Клиентов</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="grid grid-cols-1 md:flex gap-8 py-6">
-                  <div class="py-2 flex items-center justify-center md:w-[160px]">
-                    <img :src="product.image" class="w-[160px] h-[120px]" />
-                  </div>
 
-                  <div class="flex flex-col justify-between">
-                    <div class="grid grid-cols-1 gap-0.5 pb-4">
-                      <div v-for="advantage in [{'id': 1, 'name': 'Квадратный'},{'id': 2, 'name': 'Практичный'},{'id': 2, 'name': 'Хороший'}, ]" :key="advantage.id" class="">
-                        <div class="flex items-center gap-2">
-                          <div class="mdi mdi-circle text-sky-900"></div>
-                            <p class="text-sm text-sky-900">
-                              {{ advantage.name }}
-                              {{ advantage.name }}
-                              {{ advantage.name }}
-                              {{ advantage.name }}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+
+    <!-- <div class="py-16 hidden">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+        <div class="flex items-center justify-center">
+          <div class="grid grid-cols-1 gap-4 px-10">
+            <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+            <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
+
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+        <div v-for="category in categories" :key="category.id" class="py-8">
+          
+          <div class="grid grid-cols-1 gap-2">
+            <p class="text-4xl font-semibold text-sky-900">{{ category.name }}</p>
+            
+            <div v-if="category.description" class="grid grid-cols-1 gap-4">
+              <div class="text-base text-sky-900" v-html="category.description"></div>
+            </div>
+
+          </div>
+
+
+
+          <div class="grid grid-cols-1">
+            <div v-for="product in products" :key="product.id">
+              <div v-if="product.category === category.id" class="py-8">
+                
+
+
+                <div class="">
+                  <div class="flex gap-4">
+                    <div class="flex-none w-[340px]">
+                      <img :src="product.image" class="w-[280px]" />
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                      <p class="text-xl text-sky-900 font-semibold">{{ product.name }}</p>
+                      <div class="text-sky-900" v-html="product.description"></div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="text-base bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white  px-6 py-2 uppercase ">Request price</button>
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Read more</nuxt-link>
+                        <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Request price</button>
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-sm text-sky-800 font-semibold">Read more</nuxt-link>
                       </div>
                     </div>
                   </div>
-
                 </div>
+
+              
+
+
               </div>
             </div>                
           </div>
 
-          <div v-if="category.children" class="-mt-12">
+
+
+
+
+          <div v-if="category.children" class="mt-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div v-for="subct in category.children" :key="subct.id" class="">
                 <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
@@ -146,6 +138,9 @@
         </div>
       </div>
     </div>
+
+
+
 
 
 
@@ -246,6 +241,11 @@
 
       </div>
     </div>
+
+
+
+
+
 
 
 
