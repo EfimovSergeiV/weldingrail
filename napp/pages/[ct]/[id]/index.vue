@@ -32,30 +32,29 @@
 <template>
   <div class="">
     <div class="relative">
-        <img src="/slides/3.webp" alt="logo" class="" />
-        <div class="absolute bottom-0 left-0 w-full h-full ">
-          <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
-            <div class="h-full flex items-center justify-start">
-              
-              <div class="">
-                <p class="text-white text-4xl font-semibold">Мобильные рельсосварочные комплексы </p>
-                <div class="hidden md:block">
-                  <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
-                    <div :id="pk" class="bg-white/60 p-2 my-0.5">
-                      <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
-                    </div>
-                  </div>                  
-                </div>
+      <img src="/slides/1.webp" alt="logo" class="" />
+      <div class="absolute bottom-0 left-0 w-full h-full ">
+        <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
+          <div class="h-full flex items-center justify-start">
+            
+            <div class="">
+              <p class="text-white text-4xl font-semibold">СТАЦИОНАРНЫЕ МАШИНЫ </p>
+              <div class="hidden md:block">
+                <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
+                  <div :id="pk" class="bg-white/60 p-2 my-0.5">
+                    <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
+                  </div>
+                </div>                  
               </div>
-            
-            
             </div>
 
-            
           </div>
+
           
         </div>
+        
       </div>
+    </div>
 
 
 

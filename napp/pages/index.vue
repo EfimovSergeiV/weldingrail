@@ -83,11 +83,11 @@
         <div v-for="category in categories" :key="category.id" class="py-8">
           
           <div class="grid grid-cols-1 gap-2">
-            <p class="text-4xl font-semibold text-sky-900">{{ category.name }}</p>
+            <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" class="text-4xl font-semibold text-sky-900">{{ category.name }}</nuxt-link>
             
-            <div v-if="category.description" class="grid grid-cols-1 gap-4">
+            <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
               <div class="text-base text-sky-900 px-0.5" v-html="category.description"></div>
-            </div>
+            </div> -->
 
           </div>
 
@@ -105,11 +105,11 @@
                       <img :src="product.image" class="w-[280px]" />
                     </div>
                     <div class="grid grid-cols-1 gap-4">
-                      <p class="text-xl text-sky-900 font-semibold">{{ product.name }}</p>
+                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
                       <div class="text-sky-900" v-html="product.description"></div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">{{ $t('requestCall') }}</button>
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Read more</nuxt-link>
+                        <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">Запросить стоимость</button>
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                       </div>
                     </div>
                   </div>
@@ -138,8 +138,6 @@
         </div>
       </div>
     </div>
-
-
 
 
 
