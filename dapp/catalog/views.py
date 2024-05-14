@@ -11,7 +11,7 @@ from catalog.serializers import CategoryModelSerializer, ProductModelSerializer,
 class CategoriesModelView(APIView):
     """ Category model view """
 
-    def get(self, request, lang):
+    def get(self, request, lang, id=None, url=None):
         queryset = CategoryModel.objects.filter(level=0).language(lang).filter(activated=True)
 
         response_data = []
@@ -26,6 +26,32 @@ class CategoriesModelView(APIView):
             response_data.append(category)
         
         return Response(response_data)
+    
+
+
+class CategoryModelView(APIView):
+
+    def get(self, request, lang, id=None, url=None):
+        response_data = []
+
+        if id:
+            try:
+                queryset = CategoryModel.objects.language(lang).get(activated=True, id=id)
+                serializer = CategoryModelSerializer(queryset, context={'request': request})
+                response_data = serializer.data
+            except CategoryModel.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
+        elif url:
+            try:
+                queryset = CategoryModel.objects.language(lang).get(activated=True, url=url)
+                serializer = CategoryModelSerializer(queryset, context={'request': request})
+                response_data = serializer.data
+            except CategoryModel.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        return Response(response_data)
 
 
 
@@ -35,13 +61,13 @@ class ProductsModelView(APIView):
     qs_properties = ProductPropertiesModel.objects.all()
     qs_advantages = ProductAdvantageModel.objects.all()
 
-    def get(self, request, lang, category_id=None):
+    def get(self, request, lang, url=None):
         response_data = []
 
         queryset = ProductModel.objects.language(lang).filter(activated=True)
 
-        if category_id:
-            queryset = queryset.filter(category=category_id)
+        if url:
+            queryset = queryset.filter(category__url=url)
 
         serializer = ProductModelSerializer(queryset, many=True, context={'request': request})
 

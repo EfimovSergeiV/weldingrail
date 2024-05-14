@@ -38,7 +38,7 @@
             <div class="h-full flex items-center justify-start">
               
               <div class="">
-                <p class="text-4xl text-white">Мобильные рельсосварочные комплексы </p>
+                <p class="text-white text-4xl font-semibold">Мобильные рельсосварочные комплексы </p>
                 <div class="hidden md:block">
                   <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
                     <div :id="pk" class="bg-white/60 p-2 my-0.5">
