@@ -38,7 +38,7 @@
           <div class="h-full flex items-center justify-start">
             
             <div class="">
-              <p class="text-white text-4xl font-semibold">СТАЦИОНАРНЫЕ МАШИНЫ </p>
+              <p class="text-white text-4xl font-semibold">СТАЦИОНАРНЫЕ МАШИНЫ</p>
               <div class="hidden md:block">
                 <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
                   <div :id="pk" class="bg-white/60 p-2 my-0.5">

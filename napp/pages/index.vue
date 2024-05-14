@@ -83,7 +83,10 @@
         <div v-for="category in categories" :key="category.id" class="py-8">
           
           <div class="grid grid-cols-1 gap-2">
-            <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" class="text-4xl font-semibold text-sky-900">{{ category.name }}</nuxt-link>
+            
+            <div class="">
+              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" class="text-4xl text-sky-900">{{ category.name }}</nuxt-link>
+            </div>
             
             <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
               <div class="text-base text-sky-900 px-0.5" v-html="category.description"></div>
@@ -96,13 +99,11 @@
           <div class="grid grid-cols-1">
             <div v-for="product in products" :key="product.id">
               <div v-if="product.category === category.id" class="py-8">
-                
-
 
                 <div class="">
                   <div class="flex items-center gap-4">
-                    <div class="flex-none w-[340px]">
-                      <img :src="product.image" class="w-[280px]" />
+                    <div class="flex-none w-[280px]">
+                      <img :src="product.image" class="w-[220px]" />
                     </div>
                     <div class="grid grid-cols-1 gap-4">
                       <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
@@ -114,9 +115,6 @@
                     </div>
                   </div>
                 </div>
-
-              
-
 
               </div>
             </div>                
