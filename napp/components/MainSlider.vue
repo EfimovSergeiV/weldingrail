@@ -179,7 +179,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-sky-900 font-semibold text-white text-base px-6 py-2 my-2">Узнать больше</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

@@ -34,10 +34,10 @@
           <div class="flex items-center justify-center lg:max-w-7xl py-4">
             <div class="grid grid-cols-1 gap-2">
               <p class="text-white text-4xl text-center">Подписывайтесь на нашу новостную рассылку</p>
-              <p class="text-white text-xl text-center py-2">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p>
-              <div id="subscriebe" class="flex gap-0.5 py-4">
-                <input type="email" class="w-[640px] text-center h-12 px-4 text-2xl text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" placeholder="Ваша электронная почта" /> 
-                <button class="h-12 px-4 text-lg text-white bg-sky-700 w-[260px]">Подписаться</button>
+              <p class="text-white text-xl text-center">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p>
+              <div id="subscriebe" class="flex items-center justify-center gap-0.5 py-4">
+                <input type="email" class="w-[440px] text-center h-12 px-4 text-2xl text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" placeholder="Ваша электронная почта" /> 
+                <button class="h-12 px-4 text-lg bg-sky-800 font-semibold text-white py-2 shadow-xl shadow-gray-900/10 w-[210px]">Подписаться</button>
               </div>
             </div>
           </div>

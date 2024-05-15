@@ -43,7 +43,7 @@
                   <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
                 </div>
                 <div class=" shadow-xl shadow-gray-900/10">
-                  <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">{{ $t('requestCall') }}</button>
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10">{{ $t('requestCall') }}</button>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@
                       <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
                       <div class="text-sky-900" v-html="product.description"></div>
                       <div class="flex items-center gap-4 py-1">
-                        <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2">Запросить стоимость</button>
+                        <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10">Запросить стоимость</button>
                         <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                       </div>
                     </div>
@@ -188,10 +188,10 @@
         </div>        
         <div class="py-4">
           <div class="grid grid-cols-1 gap-0.5">
-            <p class="text-xl text-sky-900">WELDINGRAIL – один из лидирующих мировых производителей оборудования <br /> для контактной стыковой сварки рельсов методом оплавления.</p>
-            <p class="text-xl text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
-            <p class="text-xl text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
-            <p class="text-xl text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
+            <p class="text-base text-sky-900">WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+            <p class="text-base text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
+            <p class="text-base text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+            <p class="text-base text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
           </div>
         </div>
       </div>
@@ -256,7 +256,7 @@
               <label for="text-6" class="text-sm text-sky-900">Комментарий: (необязательно)</label>
               <div class="relative">
                 <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p>
-                <textarea type="text" id="text-6" rows="6" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " placeholder="Ваш текст"></textarea>
+                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " placeholder="Ваш текст"></textarea>
               </div>              
             </div>
 
@@ -285,24 +285,13 @@
           </div>
           <div class="">
             <div class="flex items-center justify-end">
-              <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
+              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
             </div>
           </div>
         </div>
 
-
-
-
       </div>
     </div>
-
-
-
-
-
-
-
-
 
 
     <div class=" bg-sky-900">
