@@ -188,52 +188,83 @@
         </div>        
         <div class="py-4">
           <div class="grid grid-cols-1 gap-0.5">
-            <p class="text-lg text-sky-900 font-semibold py-2">WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+            <p class="text-base text-sky-900">WELDINGRAIL – один из лидирующих мировых производителей оборудования <br /> для контактной стыковой сварки рельсов методом оплавления.</p>
             <p class="text-base text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
+            <p class="text-base text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+            <p class="text-base text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
           </div>
         </div>
       </div>
 
 
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 gap-4">
 
         <div class=" flex items-start justify-center">
-          <div class="grid grid-cols-1 gap-2">
+          <p class="text-base text-sky-900 py-1"> Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+        </div>
 
-            <!-- <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
-              <p class="text-base"> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
+
+
+        <div class="grid grid-cols-2 gap-4">
+          
+          <div class="flex flex-col gap-2">
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
+              <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
             </div>
-            <div class="flex items-center gap-2 text-sky-900 mdi mdi-24px mdi-checkbox-marked-outline">
-              <p class="text-base"> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-            </div> -->
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
+              <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
+            </div>
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
+              <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
+            </div>
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
+              <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
+            </div>
+          </div>
 
-            <p class="text-base text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
-            <p class="text-base text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-            <p class="text-base text-sky-900 py-1"> Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
-            
-            <div class="flex items-center justify-center py-8">
-              <img src="/logo-blue.webp" class="w-[50%]"/>
+          <div class="flex flex-col gap-2">
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
+              <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
+            </div>
+            <div class="relative">
+              <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p>
+              <textarea type="text" id="person" rows="6" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.yourmess')"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-end gap-4">
+          <div class="flex gap-4">
+            <div class=""></div>
+            <div class="flex items-center gap-8 max-w-[50rem]">
+              <input 
+                id="privacy"
+                type="checkbox"
+                class="w-4 h-4 
+                  rounded text-gray-700 focus:ring-0 
+                  focus:ring-gray-300 ring-offset-gray-300 bg-gray-700 border-gray-300
+                  dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700
+                " >
+              <label for="privacy" class="text-sm text-sky-900">
+                Согласен с правилами сайта и на обработку моих персональных данных в соответствии с требованиями Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»
+              </label>
+            </div>
+          </div>
+          <div class="">
+            <div class="flex items-center justify-end">
+              <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
             </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-2">
-          <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-            <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " :placeholder="$t('pages.index.yorname')" />
-          </div>
-          <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-at text-sky-900/90"></p>
-            <input type="text" id="person" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.youremail')" />
-          </div>
-          <div class="relative">
-            <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p>
-            <textarea type="text" id="person" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " :placeholder="$t('pages.index.yourmess')"></textarea>
-          </div>
-          <div class="flex items-center justify-end">
-            <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
-          </div>
-        </div>
+
+
 
       </div>
     </div>
