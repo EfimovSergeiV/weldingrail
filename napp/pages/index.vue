@@ -24,7 +24,7 @@
 
     <div class="">
       <div class="">
-        <div class="bg-gray-100">
+        <div class="bg-gray-white">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
             <div class="grid grid-cols-1 lg:flex items-end justify-between">
               <div class="">
@@ -210,34 +210,34 @@
           <div class="flex flex-col gap-2">
 
             <div class="">
-              <label for="text-1" class="text-sm text-sky-900">ФИО: (необязательно)</label>
+              <label for="text-1" class="text-sm text-sky-900">ФИО:</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " placeholder="Иванов Иван Иванович" />
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Иванов Иван Иванович" />
               </div>              
             </div>
 
             <div class="">
               <label for="text-2" class="text-sm text-sky-900">Компания: (необязательно)</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-                <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " placeholder="ООО Название компании" />
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="ООО Название компании" />
               </div>              
             </div>
 
             <div class="">
               <label for="text-3" class="text-sm text-sky-900">Телефон: (необязательно)</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-                <input type="text" id="text-3" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " placeholder="+47 123 456 78 90" />
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                <input type="text" id="text-3" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="+47 123 456 78 90" />
               </div>
             </div>
 
             <div class="">
-              <label for="text-4" class="text-sm text-sky-900">Email: (необязательно)</label>
+              <label for="text-4" class="text-sm text-sky-900">Email:</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-                <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " placeholder="example@example.ru" />
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="example@example.ru" />
               </div>              
             </div>
 
@@ -247,16 +247,16 @@
             <div class="">
               <label for="text-5" class="text-sm text-sky-900">Страна: (необязательно)</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p>
-                <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 py-1.5 " placeholder="Россия" />
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Россия" />
               </div>              
             </div>
 
             <div class="">
-              <label for="text-6" class="text-sm text-sky-900">Комментарий: (необязательно)</label>
+              <label for="text-6" class="text-sm text-sky-900">Комментарий:</label>
               <div class="relative">
-                <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p>
-                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-8 p-1.5 " placeholder="Ваш текст"></textarea>
+                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p> -->
+                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 p-1.5 " placeholder="Ваш текст"></textarea>
               </div>              
             </div>
 
@@ -268,7 +268,6 @@
           <div class="flex gap-4">
             <div class=""></div>
             <div class="flex items-center gap-4 max-w-[50rem]">
-              
               <label for="privacy" class="text-sm text-sky-900 text-right">
                 Согласен с правилами сайта и на обработку моих персональных данных в соответствии с требованиями Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»
               </label>              
@@ -278,9 +277,8 @@
                 class="w-4 h-4 
                   rounded text-gray-700 focus:ring-0 
                   focus:ring-gray-300 ring-offset-gray-300 bg-gray-700 border-gray-300
-                  dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700
-                " />
-
+                  dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700" 
+                />
             </div>
           </div>
           <div class="">

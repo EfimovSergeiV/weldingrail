@@ -30,7 +30,7 @@
               <div class="">
                 <p class="text-white text-4xl font-semibold">СТАЦИОНАРНЫЕ МАШИНЫ</p>
                 <div class="hidden md:block">
-                  <div v-for="text, pk in ['Предназначены для контактной стыковой сварки в полевых условиях', 'Оборудование компактно размещается в небольшом 20-футовом контейнере.']" :key="pk" class="flex" >
+                  <div v-for="text, pk in ['Машины могут объединяться с другим оборудованием для сварки рельсов', 'в единый производственный комплекс на сварочных производствах.']" :key="pk" class="flex" >
                     <div :id="pk" class="bg-white/60 p-2 my-0.5">
                       <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
                     </div>
