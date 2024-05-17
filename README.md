@@ -1,1 +1,31 @@
-?: (ckeditor.W001) django-ckeditor bundles CKEditor 4.22.1 which isn't supported anmyore and which does have unfixed security issues, see for example https://ckeditor.com/cke4/release/CKEditor-4.24.0-LTS . You should consider strongly switching to a different editor (maybe CKEditor 5 respectively django-ckeditor-5 after checking whether the CKEditor 5 license terms work for you) or switch to the non-free CKEditor 4 LTS package. See https://ckeditor.com/ckeditor-4-support/ for more on this. (Note! This notice has been added by the django-ckeditor developers and we are not affiliated with CKSource and were not involved in the licensing change, so please refrain from complaining to us. Thanks.)
+### Установка джанго
+
+```bash
+cd dapp
+
+python3 -m venv venv 
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py runserver
+```
+
+Админка
+http://127.0.0.1:8000/adm/
+admin:adminpassword
+
+
+### Установка nuxtjs
+
+Версия nodejs==v20.12.2
+
+Запуск дев сервера
+
+```bash
+cd napp
+
+pnpm install
+pnpm run dev
+
+```
+
+http://localhost:3000/ru - адрес сайта
