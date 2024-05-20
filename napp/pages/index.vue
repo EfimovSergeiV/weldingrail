@@ -13,11 +13,17 @@
   const mashineDescription = ref('The machine is designed for flash butt welding of rails with cross-sectional area of from 6,500 mm to 10,000 mm in field conditions, through continuous or pulsating flashing, and removes flash immediately after welding. Due to the increased upsetting force of 140 tons, the welding machine is capable of welding long rail strings into tracks and tightening the strings. The welding machine can hold the welded joint within the time necessary for the joint to cool down after welding and removing flash. The welding machine is equipped with a welding process control system, which allows monitoring the welding process and and issues data sheets for every welded joint.')
 
 
+  const fontClass = computed(() => {
+    const currentLocale = locale.value
+    console.log(currentLocale)
+    return `font-${currentLocale}`
+  })
+
 </script>
 
 
 <template>
-  <div class="">
+  <div :class="`${fontClass}`">
     
     <MainSlider />
 
@@ -77,6 +83,10 @@
 
 
 
+
+    <!-- РЕДАКТИРУЕМ ТУТ!!! -->
+
+
     <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
 
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
@@ -85,7 +95,7 @@
           <div class="grid grid-cols-1 gap-2">
             
             <div class="">
-              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" class="text-4xl text-sky-900">{{ category.name }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 ${fontClass}`">1 {{ fontClass }}/ {{ category.name }}</nuxt-link>
             </div>
             
             <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">

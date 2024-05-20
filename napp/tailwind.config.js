@@ -40,12 +40,12 @@ module.exports = {
         'main-info': '#2A72A9',
         'main-light': '#4C80A9',
       },
-      fontFamily: {
-        'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
-        'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
-        'opensans': ['ProximaNova-Light','Open Sans', ],
-        'extra': ['ProximaNova-Bold', ]
-      },
+      // fontFamily: {
+      //   'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+      //   'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+      //   'opensans': ['ProximaNova-Light','Open Sans', ],
+      //   'extra': ['ProximaNova-Bold', ]
+      // },
     },
   },
   plugins: [

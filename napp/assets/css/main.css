@@ -22,6 +22,30 @@
   src: url('./fonts/ProximaNova/ProximaNova-Light.ttf') format('woff2');
 }
 
+@font-face {
+  font-family: 'SimSun';
+  src: url('./fonts/China/SimSun.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'SimSunB';
+  src: url('./fonts/China/SimSunB.ttf') format('woff2');
+}
+
+
+.font-ru {
+  font-family: 'ProximaNova-Light', 'Noto Sans', 'Open Sans';
+}
+
+.font-en {
+  font-family: 'ProximaNova-Light', 'Noto Sans', 'Open Sans';
+}
+
+.font-zh {
+  font-family: 'SimSun', 'SimSunB', 'Noto Sans', 'Open Sans';
+}
+
+
 
 ::-webkit-scrollbar {
   width: 6px;
