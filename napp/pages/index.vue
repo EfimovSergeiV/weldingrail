@@ -95,7 +95,7 @@
           <div class="grid grid-cols-1 gap-2">
             
             <div class="">
-              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 ${fontClass}`">1 {{ fontClass }}/ {{ category.name }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 ${fontClass}`">{{ category.name }}</nuxt-link>
             </div>
             
             <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
@@ -197,7 +197,7 @@
           <p class="text-4xl text-sky-900 font-semibold">О компании</p>
         </div>        
         <div class="py-4">
-          <div class="grid grid-cols-1 gap-0.5">
+          <div class="grid grid-cols-1 gap-2">
             <p class="text-base text-sky-900">WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
             <p class="text-base text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
             <p class="text-base text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
