@@ -24,8 +24,10 @@
 
 <template>
   <div :class="`${fontClass}`">
-    
-    <MainSlider />
+
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
+      <MainSlider />
+    </div>
 
 
     <div class="">
@@ -34,14 +36,14 @@
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-8">
             <div class="grid grid-cols-1 lg:flex items-end justify-between">
               <div class="">
-                <p class="text-sky-900 text-xl md:text-4xl my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('pages.index.chooseUs-title') }}</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm md:text-base font-semibold">
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80"><p class=" text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
+                  <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
                 </div>                  
               </div>
               <div class="grid grid-cols-1 gap-2 text-right">
@@ -49,15 +51,15 @@
                   <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-xl font-semibold">info@weldingrail.com</a>
                 </div>
                 <div class=" shadow-xl shadow-gray-900/10">
-                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10">{{ $t('requestCall') }}</button>
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">{{ $t('requestCall') }}</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class=" bg-sky-900 border-t border-white/40">
+        <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-4">
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
@@ -95,7 +97,7 @@
           <div class="grid grid-cols-1 gap-2">
             
             <div class="">
-              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 ${fontClass}`">{{ category.name }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic ${fontClass}`">{{ category.name }}</nuxt-link>
             </div>
             
             <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
@@ -106,20 +108,20 @@
 
 
 
-          <div class="grid grid-cols-1">
+          <div class="grid grid-cols-2">
             <div v-for="product in products" :key="product.id">
               <div v-if="product.category === category.id" class="py-8">
 
                 <div class="">
                   <div class="flex items-center gap-4">
-                    <div class="flex-none w-[280px]">
+                    <div class="flex-none w-[220px]">
                       <img :src="product.image" class="w-[220px]" />
                     </div>
                     <div class="grid grid-cols-1 gap-4">
                       <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
-                      <div class="text-sky-900" v-html="product.description"></div>
+                      <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                       <div class="flex items-center gap-4 py-1">
-                        <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10">Запросить стоимость</button>
+                        <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
                         <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                       </div>
                     </div>
@@ -194,7 +196,7 @@
 
       <div class="py-14">
         <div class="flex items-center justify-start">
-          <p class="text-4xl text-sky-900 font-semibold uppercase italic">Профессиональное сварочное оборудование</p>
+          <p class="text-4xl text-sky-900 font-bold uppercase italic">Профессиональное сварочное оборудование</p>
         </div>        
         <div class="py-4">
           <div class="grid grid-cols-1 gap-2">

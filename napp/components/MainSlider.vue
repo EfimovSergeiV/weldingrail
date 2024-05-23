@@ -128,7 +128,7 @@
 <template>
     <div class="relative">
       <Swiper
-        class=""
+        class=" rounded-md"
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
@@ -161,7 +161,7 @@
             <div class="">
               <transition name="slide-fade">
                 <div v-if="showSlideData.title" class="py-2">
-                  <p class="text-white text-4xl font-semibold">{{ showSlideData.title }}</p>
+                  <p class="text-white text-4xl font-bold uppercase italic">{{ showSlideData.title }}</p>
                 </div>
               </transition>
               <div class=" md:h-36">
@@ -179,7 +179,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2">Узнать больше</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>
