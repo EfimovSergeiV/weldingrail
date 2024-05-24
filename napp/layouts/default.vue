@@ -29,6 +29,11 @@
     </div>
 
 
+    <!-- <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
+      <MainSlider />
+    </div> -->
+
+
     
     <slot />
     <AppFooter />

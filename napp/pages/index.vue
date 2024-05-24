@@ -59,10 +59,10 @@
         </div>
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-8">
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+560Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
+              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold">Клиентов</p></div>
             </div>
           </div>
@@ -89,7 +89,7 @@
     <!-- РЕДАКТИРУЕМ ТУТ!!! -->
 
 
-    <div class="bg-white py-10 min-h-screen grid grid-cols-1 content-center">
+    <div class="bg-white py-4 min-h-screen grid grid-cols-1 content-center">
 
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
         <div v-for="category in categories" :key="category.id" class="py-8">
@@ -113,12 +113,17 @@
               <div v-if="product.category === category.id" class="py-8">
 
                 <div class="">
+
+                  <div class="text-center">
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
+                  </div>
+
                   <div class="flex items-center gap-4">
-                    <div class="flex-none w-[220px]">
-                      <img :src="product.image" class="w-[220px]" />
+                    <div class="flex-none w-[200px]">
+                      <img :src="product.image" class="w-[180px]" />
                     </div>
-                    <div class="grid grid-cols-1 gap-4">
-                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
+                    <div class="grid grid-cols-1 gap-8">
+                      <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
                       <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                       <div class="flex items-center gap-4 py-1">
                         <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
@@ -126,6 +131,13 @@
                       </div>
                     </div>
                   </div>
+
+
+                  <!-- <div class="text-center">
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
+                  </div> -->
+
+
                 </div>
 
               </div>
@@ -161,10 +173,10 @@
 
               <div class="flex items-center justify-center h-full px-6">
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-white text-3xl uppercase">
+                  <p class="text-white text-4xl font-bold uppercase italic">
                     {{ $t('pages.index.quest-title') }}
                   </p>
-                  <p class="text-4xl text-white uppercase">
+                  <p class="text-4xl text-white font-bold uppercase italic">
                     {{ $t('pages.index.quest-text') }}
                   </p>
                 </div>
@@ -177,7 +189,9 @@
       </div>
     </div>
 
-    <div class="bg-sky-900 border-t border-b border-white/20">
+
+    
+    <div class="bg-sky-900 border-t border-b border-white/20 rounded-b-md">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
         <div class="">
           <a href="#" class="flex items-center justify-center gap-2 py-6">
@@ -196,7 +210,7 @@
 
       <div class="py-14">
         <div class="flex items-center justify-start">
-          <p class="text-4xl text-sky-900 font-bold uppercase italic">Профессиональное сварочное оборудование</p>
+          <p class="text-4xl text-sky-900 font-bold uppercase italic">Рельсосварочное оборудование</p>
         </div>        
         <div class="py-4">
           <div class="grid grid-cols-1 gap-2">
@@ -212,7 +226,11 @@
       <div class="grid grid-cols-1 gap-4">
 
         <div class=" flex items-start justify-center">
-          <p class="text-xl text-sky-900 py-1"> Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
+          <p class="text-xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке стыков - десятки тысяч стыков?!</p>
+        </div>
+
+        <div class=" flex items-start justify-center">
+          <p class="text-xl text-sky-900 py-1"> Свяжитесь с нами прямо сейчас!</p>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
@@ -293,7 +311,7 @@
           </div>
           <div class="">
             <div class="flex items-center justify-end">
-              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10">Отправить сообщение</button>
+              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Отправить сообщение</button>
             </div>
           </div>
         </div>
@@ -302,47 +320,53 @@
     </div>
 
 
-    <div class=" bg-sky-900">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-2">
+    <div class="py-8">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
 
-        <div class="flex items-center justify-center py-6">
-          <p class="text-white text-xl">Нашими партнёрами уже стали</p>
+        <div class="">
+          <div class="flex items-center justify-center py-6">
+            <p class="text-sky-900 text-xl">Нашими партнёрами уже стали</p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+            <div class="px-8">
+              <div class="flex items-center justify-center py-2">
+                <img src="/partners/2.png" class="h-12"/>
+              </div>
+              <div class="flex items-center justify-center py-2">
+                <p class="text-sky-900 text-base">Kazakh Railways</p>
+              </div>
+            </div>
+            <div class="px-8">
+              <div class="flex items-center justify-center py-2">
+                <img src="/partners/1.png" class="h-12"/>
+              </div>
+              <div class="flex items-center justify-center py-2">
+                <p class="text-sky-900 text-base">Lithuanian Railways</p>
+              </div>
+            </div>
+            <div class="px-8">
+              <div class="flex items-center justify-center py-2">
+                <img src="/partners/3.png" class="h-12"/>
+              </div>
+              <div class="flex items-center justify-center py-2">
+                <p class="text-sky-900 text-base">Ozbekiston temir yollari</p>
+              </div>
+            </div>
+            <div class="px-8">
+              <div class="flex items-center justify-center py-2">
+                <img src="/partners/4.png" class="h-12"/>
+              </div>
+              <div class="flex items-center justify-center py-2">
+                <p class="text-sky-900 text-base">Belarusian railways</p>
+              </div>
+            </div>
+          </div>          
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
-          <div class="px-8">
-            <div class="flex items-center justify-center py-2">
-              <img src="/partners/2.png" class="h-12"/>
-            </div>
-            <div class="flex items-center justify-center py-2">
-              <p class="text-gray-100 text-base">Kazakh Railways</p>
-            </div>
-          </div>
-          <div class="px-8">
-            <div class="flex items-center justify-center py-2">
-              <img src="/partners/1.png" class="h-12"/>
-            </div>
-            <div class="flex items-center justify-center py-2">
-              <p class="text-gray-100 text-base">Lithuanian Railways</p>
-            </div>
-          </div>
-          <div class="px-8">
-            <div class="flex items-center justify-center py-2">
-              <img src="/partners/3.png" class="h-12"/>
-            </div>
-            <div class="flex items-center justify-center py-2">
-              <p class="text-gray-100 text-base">Ozbekiston temir yollari</p>
-            </div>
-          </div>
-          <div class="px-8">
-            <div class="flex items-center justify-center py-2">
-              <img src="/partners/4.png" class="h-12"/>
-            </div>
-            <div class="flex items-center justify-center py-2">
-              <p class="text-gray-100 text-base">Belarusian railways</p>
-            </div>
-          </div>
-        </div>
+
+
+
       </div>
     </div>
 

@@ -31,7 +31,7 @@
 
 <template>
   <div class="">
-    <div class="relative">
+    <!-- <div class="relative">
       <img src="/slides/1.webp" alt="logo" class="" />
       <div class="absolute bottom-0 left-0 w-full h-full ">
         <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
@@ -54,18 +54,23 @@
         </div>
         
       </div>
+    </div> -->
+
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
+      <MainSlider />
     </div>
 
 
-
-    <div class=" bg-sky-900 border-t border-white/40">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
-          <div class="flex items-center justify-start">
+    <div class="pb-4">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
+        <div class="bg-sky-900 rounded-md px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
             <div class="flex items-center justify-start">
-              <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
-              <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
-              <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
+              <div class="flex items-center justify-start">
+                <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
+                <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
+                <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,14 +82,14 @@
     <div class="container mx-auto lg:max-w-7xl lg:px-8 pt-8">
       <div class="flex items-center gap-8">
         <div class=" flex-none">
-          <img :src="product.image" class="w-[320px]" />
+          <img :src="product.image" class="w-[295px]" />
         </div>
         <div class="grid grid-cols-1 gap-4">
           <div class="">
-            <p class="text-sky-900 text-4xl">{{ product.name }}</p>
+            <p class="text-4xl text-sky-900 font-bold uppercase italic">{{ product.name }}</p>
           </div>
           <div class="">
-            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-base"></div>
+            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-xl"></div>
             <div v-else class="">
             <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
               <div v-if="category.id === product.category" class="" v-html="category.description"></div>
@@ -106,7 +111,7 @@
 
             <div class="flex items-center gap-8 py-2">
               <div class="flex gap-2">
-                <div class="bg-white w-[400px] flex items-center justify-center">
+                <div class="bg-white w-1/3 flex items-center justify-center">
                   <img :src="product.image" class=" py-4" />
                 </div>
 
@@ -116,7 +121,7 @@
               <div class="grid grid-cols-1 content-between py-20">
                 <div class="flex items-center justify-start">
                   <!-- <p class="text-lg font-semibold text-sky-900 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
-                  <p class="text-xl font-semibold text-sky-900 text-center">qqq{{ product.name }}</p>
+                  <p class="text-xl font-semibold text-sky-900 text-center">{{ product.name }}</p>
                 </div>
 
                 <div class="py-4 text-lg text-sky-900">
@@ -147,9 +152,9 @@
       <div class=" bg-white grid grid-cols-1 content-center py-2">
         <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">
           <div class=" flex gap-8 py-8">
-            <div class=" w-1/3">
+            <div class=" w-1/3 invisible">
               <div class="my-2">
-                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold">Материалы:</p>
+                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold uppercase">Материалы:</p>
               </div>
               
               <div class="py-2 ">
@@ -169,7 +174,7 @@
             </div>
             <div class="w-full text-sm">
               <div class="my-2">
-                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold">Технические параметры:</p>
+                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold uppercase">Технические параметры:</p>
               </div>
               <div class=" grid grid-cols-1 gap-2 py-4">
                 <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
