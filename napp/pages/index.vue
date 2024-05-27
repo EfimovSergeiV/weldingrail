@@ -13,6 +13,48 @@
 
 
   const showParams = ref(null)
+  const slides = [
+    {
+      "id": 1,
+      "image": "/slides/blue-1.webp",
+      "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
+      "texts": [
+        "Машины могут объединяться с другим оборудованием для сварки рельсов ",
+        "в единый производственный комплекс на сварочных производствах"
+      ],
+      "url": "ru/stationary-machines/",
+    },
+    {
+      "id": 2,
+      "image": "/slides/blue-2.webp",
+      "title": "МОБИЛЬНЫЕ МАШИНЫ",
+      "texts": [
+        "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
+        "Процесс сварки стыка осуществляется автоматически по заданной программе."
+      ],
+      "url": "ru/mobile-machines/",
+    },
+    {
+      "id": 3,
+      "image": "/slides/blue-3.webp",
+      "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
+      "texts": [
+        "Предназначены для контактной стыковой сварки в полевых условиях",
+        "Оборудование компактно размещается в небольшом 20-футовом контейнере."
+      ],
+      "url": "ru/railwelding-complexes/",
+    },
+    {
+      "id": 4,
+      "image": "/slides/blue-4.webp",
+      "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
+      "texts": [
+        "Компактные размеры и масса пресса позволяют использовать",
+        "как стационарно, так и в составе переносных рельсосварочных машин."
+      ],
+      "url": "ru/testing-equipment/",
+    }
+  ]
 
 </script>
 
@@ -21,7 +63,7 @@
   <div>
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
-      <MainSlider />
+      <MainSlider :slides="slides" />
     </div>
 
 
@@ -92,7 +134,7 @@
           <div class="grid grid-cols-1 gap-2">
             
             <div class="">
-              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic ${fontClass}`">{{ category.name }}</nuxt-link>
+              <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic`">{{ category.name }}</nuxt-link>
             </div>
             
             <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
