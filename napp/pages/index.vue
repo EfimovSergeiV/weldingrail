@@ -118,7 +118,7 @@
                       <img :src="product.image" class="w-[180px]" />
                     </div>
                     <div class="grid grid-cols-1 gap-4">
-                      <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2">Показать характеристики</button>
+                      <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2 px-4">Показать характеристики</button>
                       <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
                       <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                       <div class="flex items-center gap-4 py-1">
@@ -371,43 +371,55 @@
 
 
 
-
-    <div v-if="showParams" class="fixed bottom-0 left-0 w-full">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
-        <div class="bg-sky-900 min-h-[40vh] rounded-t-3xl border border-sky-900 shadow-4xl shadow-black">
-          
-          <div class="px-6 py-4">
+    <transition name="slide-up">
+      <div v-if="showParams" class="fixed bottom-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
+          <div class="bg-sky-900 min-h-[40vh] rounded-t-3xl border border-sky-900 shadow-4xl shadow-black">
             
-            <div class="grid grid-cols-1 gap-2">
-              <div class="flex items-center justify-between">
-                <p class="text-4xl text-white font-bold uppercase italic">{{showParams.name}}</p> 
-                <button @click="showParams = null" class="text-right text-white flex items-center gap-2">Закрыть</button>
+            <div class="px-6 pt-4 pb-2">
+              
+              <div class="grid grid-cols-1 gap-6 border-b-2 border-white mb-2">
+                <div class="flex items-center justify-between">
+                  <p class="text-4xl text-white font-bold uppercase italic">{{showParams.name}}</p> 
+                  <div class="bg-white h-[48px] w-[48px] rounded-full border-2 border-sky-800">
+                    <div class="flex items-center justify-center h-full w-full">
+                      <p @click="showParams = null" class="mdi mdi-36px mdi-window-close cursor-pointer text-sky-900"></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <p class="text-2xl text-white font-bold uppercase italic">характеристики машины</p>             
+              </div>
+
+              
+              <div class="pr-2 py-4 text-white h-[40vh] overflow-y-auto">
+                <div class="grid grid-cols-1 gap-2">
+                  <div v-for="prop in showParams.product_properties" :key="i" class="">
+                    <div v-if="prop.value" class="flex items-center gap-6 justify-between border-b border-white/50">
+                      <p class="">{{ prop.name }}</p>
+                      <p class="">{{ prop.value }}</p>                      
+                    </div>
+                    <div v-else class="mt-4">
+                      <p class="uppercase font-bold">{{ prop.name }}</p>
+                      <p class=""></p>                      
+                    </div>                    
+
+                  </div>                
+                </div>
               </div>
               
-              <p class="text-2xl text-white font-bold uppercase italic">характеристики машины</p>             
-            </div>
+              <div class="flex items-center justify-end pt-4">
+                <button class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Запросить стоимость</button>
+              </div>
 
-            
-            <div class="py-4 text-white">
-              <div v-for="i in 15" :key="i" class="flex items-center justify-between border-b border-white/50">
-                <p class="">Название параметра машины {{ i }}</p>
-                <p class="">Значение параметра машины {{ i }}</p>
-              </div>            
             </div>
-            
-            <div class="flex items-center justify-end">
-              <button class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Запросить стоимость</button>
-            </div>
-
+        
           </div>
-
-
-
-       
         </div>
-      </div>
 
-    </div>
+      </div>      
+    </transition>
+
 
 
 

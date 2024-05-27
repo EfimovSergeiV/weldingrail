@@ -70,13 +70,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2A72A9;
+  background-color: #0369a1;
   border-radius: 6px;
-  box-shadow: inset 1px 1px 10px #2A72A9;
+  box-shadow: inset 1px 1px 10px #0369a1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #2A72A9;
+  background-color: #0369a1;
 }
 
 
@@ -141,6 +141,25 @@
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateX(20px);
+  opacity: 0;
+}
+
+
+
+/*
+  Up and down animations can use different
+*/
+.slide-up-enter-active {
+  transition: all 0.4s ease-out;
+}
+
+.slide-up-leave-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(120px);
   opacity: 0;
 }
 
