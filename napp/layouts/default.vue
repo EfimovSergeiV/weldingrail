@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import { createApp } from 'vue';
+  const { locale, setLocale } = useI18n()
 
   const mainStore = useMainStore()
 
@@ -10,12 +11,17 @@
     });
   }
 
+  const fontClass = computed(() => {
+    const currentLocale = locale.value
+    console.log(currentLocale)
+    return `font-${currentLocale}`
+  })
 
 </script>
 
 
 <template>
-  <div class="">
+  <div :class="`${fontClass}`">
     <transition name="list">
       <div v-if="mainStore.mobileMenu" class="fixed z-50">
         <MobileMenu />

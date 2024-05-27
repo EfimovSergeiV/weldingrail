@@ -31,30 +31,6 @@
 
 <template>
   <div class="">
-    <!-- <div class="relative">
-      <img src="/slides/1.webp" alt="logo" class="" />
-      <div class="absolute bottom-0 left-0 w-full h-full ">
-        <div class="container mx-auto lg:max-w-7xl lg:px-8 h-full">
-          <div class="h-full flex items-center justify-start">
-            
-            <div class="">
-              <p class="text-white text-4xl font-semibold">СТАЦИОНАРНЫЕ МАШИНЫ</p>
-              <div class="hidden md:block">
-                <div v-for="text, pk in ['Машины могут объединяться с другим оборудованием для сварки рельсов', 'в единый производственный комплекс на сварочных производствах']" :key="pk" class="flex" >
-                  <div :id="pk" class="bg-white/60 p-2 my-0.5">
-                    <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
-                  </div>
-                </div>                  
-              </div>
-            </div>
-
-          </div>
-
-          
-        </div>
-        
-      </div>
-    </div> -->
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
       <MainSlider />
