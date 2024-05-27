@@ -10,14 +10,9 @@
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
   const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
 
-  const mashineDescription = ref('The machine is designed for flash butt welding of rails with cross-sectional area of from 6,500 mm to 10,000 mm in field conditions, through continuous or pulsating flashing, and removes flash immediately after welding. Due to the increased upsetting force of 140 tons, the welding machine is capable of welding long rail strings into tracks and tightening the strings. The welding machine can hold the welded joint within the time necessary for the joint to cool down after welding and removing flash. The welding machine is equipped with a welding process control system, which allows monitoring the welding process and and issues data sheets for every welded joint.')
 
 
-  const fontClass = computed(() => {
-    const currentLocale = locale.value
-    console.log(currentLocale)
-    return `font-${currentLocale}`
-  })
+  const showParams = ref(null)
 
 </script>
 
@@ -123,7 +118,7 @@
                       <img :src="product.image" class="w-[180px]" />
                     </div>
                     <div class="grid grid-cols-1 gap-4">
-                      <button class="text-left text-sky-900 font-semibold flex items-center gap-0.5"><span class=" mdi mdi-blur mdi-24px"></span>Показать характеристики</button>
+                      <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2">Показать характеристики</button>
                       <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
                       <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                       <div class="flex items-center gap-4 py-1">
@@ -377,7 +372,42 @@
 
 
 
+    <div v-if="showParams" class="fixed bottom-0 left-0 w-full">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
+        <div class="bg-sky-900 min-h-[40vh] rounded-t-3xl border border-sky-900 shadow-4xl shadow-black">
+          
+          <div class="px-6 py-4">
+            
+            <div class="grid grid-cols-1 gap-2">
+              <div class="flex items-center justify-between">
+                <p class="text-4xl text-white font-bold uppercase italic">{{showParams.name}}</p> 
+                <button @click="showParams = null" class="text-right text-white flex items-center gap-2">Закрыть</button>
+              </div>
+              
+              <p class="text-2xl text-white font-bold uppercase italic">характеристики машины</p>             
+            </div>
 
+            
+            <div class="py-4 text-white">
+              <div v-for="i in 15" :key="i" class="flex items-center justify-between border-b border-white/50">
+                <p class="">Название параметра машины {{ i }}</p>
+                <p class="">Значение параметра машины {{ i }}</p>
+              </div>            
+            </div>
+            
+            <div class="flex items-center justify-end">
+              <button class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Запросить стоимость</button>
+            </div>
+
+          </div>
+
+
+
+       
+        </div>
+      </div>
+
+    </div>
 
 
 
