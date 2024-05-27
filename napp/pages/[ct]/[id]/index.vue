@@ -95,59 +95,18 @@
               <div v-if="category.id === product.category" class="" v-html="category.description"></div>
             </div>
           </div>
+          
+          <div class="py-6">
+            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
+          </div>
+
           </div>
         </div>
       </div>
     </div>
 
 
-
-
     <div v-if="true" class="">
-      <div class="bg-white py-2 grid grid-cols-1 content-center">
-        <div class="container mx-auto lg:max-w-7xl lg:px-8 hidden">
-
-          <div class="">
-
-            <div class="flex items-center gap-8 py-2">
-              <div class="flex gap-2">
-                <div class="bg-white w-1/3 flex items-center justify-center">
-                  <img :src="product.image" class=" py-4" />
-                </div>
-
-
-
-              </div>               
-              <div class="grid grid-cols-1 content-between py-20">
-                <div class="flex items-center justify-start">
-                  <!-- <p class="text-lg font-semibold text-sky-900 text-center">{{ $t('pages.index.prod-name-1') }}</p> -->
-                  <p class="text-xl font-semibold text-sky-900 text-center">{{ product.name }}</p>
-                </div>
-
-                <div class="py-4 text-lg text-sky-900">
-                  <div v-if="product.description.length > 1" class="" v-html="product.description"></div>
-                  <div v-else class="">
-                    <div v-for="category in categories" :key="category.id">
-                      <div v-if="category.id === product.category" class="" v-html="category.description"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="flex items-end justify-between gap-4 py-4">
-                  <div class="">
-
-                  </div>
-
-                  <button class="text-sm shadow-md shadow-black/50 bg-sky-800 text-gray-100 px-4 py-2 font-semibold uppercase cut-corners">Запросить стоимость</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
 
       <div class=" bg-white grid grid-cols-1 content-center py-2">
         <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">

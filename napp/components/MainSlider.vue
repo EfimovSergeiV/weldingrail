@@ -3,7 +3,7 @@
   const slides = [
     {
       "id": 1,
-      "image": "/slides/1.webp",
+      "image": "/slides/blue-1.webp",
       "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
       "texts": [
         "Машины могут объединяться с другим оборудованием для сварки рельсов ",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "image": "/slides/2.webp",
+      "image": "/slides/blue-2.webp",
       "title": "МОБИЛЬНЫЕ МАШИНЫ",
       "texts": [
         "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
@@ -23,7 +23,7 @@
     },
     {
       "id": 3,
-      "image": "/slides/3.webp",
+      "image": "/slides/blue-3.webp",
       "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
       "texts": [
         "Предназначены для контактной стыковой сварки в полевых условиях",
@@ -33,7 +33,7 @@
     },
     {
       "id": 4,
-      "image": "/slides/4.webp",
+      "image": "/slides/blue-4.webp",
       "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
       "texts": [
         "Компактные размеры и масса пресса позволяют использовать",
@@ -169,8 +169,8 @@
                   <div class="flex">
                     <transition-group tag="div" name="list">
                       <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
-                        <div :id="pk" class="bg-white/60 p-2 my-0.5">
-                          <p class="text-sky-900 font-semibold text-base">{{ text }}</p>
+                        <div :id="pk" class="bg-sky-900/60 p-2 my-0.5">
+                          <p class="text-white font-semibold text-base">{{ text }}</p>
                         </div>
                       </div>
                     </transition-group>
@@ -179,7 +179,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Узнать больше</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

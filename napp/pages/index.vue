@@ -122,7 +122,8 @@
                     <div class="flex-none w-[200px]">
                       <img :src="product.image" class="w-[180px]" />
                     </div>
-                    <div class="grid grid-cols-1 gap-8">
+                    <div class="grid grid-cols-1 gap-4">
+                      <button class="text-left text-sky-900 font-semibold flex items-center gap-0.5"><span class=" mdi mdi-blur mdi-24px"></span>Показать характеристики</button>
                       <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
                       <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                       <div class="flex items-center gap-4 py-1">
@@ -225,13 +226,16 @@
 
       <div class="grid grid-cols-1 gap-4">
 
-        <div class=" flex items-start justify-center">
-          <p class="text-xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке стыков - десятки тысяч стыков?!</p>
+        <div class="">
+          <div class=" flex items-start justify-center">
+            <p class="text-xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке - десятки тысяч стыков?!</p>
+          </div>
+
+          <div class=" flex items-start justify-center">
+            <p class="text-xl text-sky-900 py-1"> Свяжитесь с нами прямо сейчас!</p>
+          </div>          
         </div>
 
-        <div class=" flex items-start justify-center">
-          <p class="text-xl text-sky-900 py-1"> Свяжитесь с нами прямо сейчас!</p>
-        </div>
 
         <div class="grid grid-cols-2 gap-4">
           
