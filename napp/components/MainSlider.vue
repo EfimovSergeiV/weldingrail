@@ -173,7 +173,7 @@
                   <div class="flex">
                     <transition-group tag="div" name="list">
                       <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
-                        <div :id="pk" class="bg-sky-900/60 p-2 my-0.5">
+                        <div :id="pk" class="bg-sky-900/60 rounded-md p-2 my-0.5">
                           <p class="text-white font-semibold text-base">{{ text }}</p>
                         </div>
                       </div>
