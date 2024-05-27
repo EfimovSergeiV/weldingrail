@@ -21,7 +21,7 @@
 
 
 <template>
-  <div :class="`${fontClass}`">
+  <div :class="`${fontClass} bg-gray-100`">
     <transition name="list">
       <div v-if="mainStore.mobileMenu" class="fixed z-50">
         <MobileMenu />

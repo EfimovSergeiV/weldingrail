@@ -24,7 +24,7 @@
   <div class="">
 
     <div class=" ">
-      <div id="navbar" class="bg-white w-full absolute z-50 duration-50 transition-all">
+      <div id="navbar" class="w-full absolute z-50 duration-50 transition-all">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
           <div class="py-4 ">
             <nuxt-link :to="localePath('index')">

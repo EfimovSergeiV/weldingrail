@@ -92,15 +92,17 @@
     </div>
 
 
-    <div class="pb-4">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 py-4">
-        <div class="bg-sky-900 rounded-md px-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
-            <div class="flex items-center justify-start">
+    <div class="">
+      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
+        <div class="py-4 bg-white">
+          <div class="bg-sky-900 rounded-md px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
               <div class="flex items-center justify-start">
-                <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
-                <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
-                <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
+                <div class="flex items-center justify-start">
+                  <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
+                  <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
+                  <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,10 +112,10 @@
 
 
 
-    <div class="container mx-auto lg:max-w-7xl lg:px-8 pt-8">
-      <div class="flex items-center gap-8">
+    <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <div class="flex items-center gap-8 bg-white pt-8 px-4">
         <div class=" flex-none">
-          <img :src="product.image" class="w-[295px]" />
+          <img :src="product.image" class="w-[290px]" />
         </div>
         <div class="grid grid-cols-1 gap-4">
           <div class="">
@@ -139,9 +141,9 @@
 
     <div v-if="true" class="">
 
-      <div class=" bg-white grid grid-cols-1 content-center py-2">
+      <div class=" grid grid-cols-1 content-center">
         <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">
-          <div class=" flex gap-8 py-8">
+          <div class=" bg-white flex gap-8 py-8 px-4">
             <div class=" w-1/3 invisible">
               <div class="my-2">
                 <p class="text-xl text-sky-900 se lect-none font-sans font-semibold uppercase">Материалы:</p>
