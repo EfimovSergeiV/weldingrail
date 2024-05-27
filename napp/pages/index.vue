@@ -366,7 +366,7 @@
 
         <div class="">
           <div class="flex items-center justify-center py-6">
-            <p class="text-sky-900 text-xl">Нашими партнёрами уже стали</p>
+            <p class="text-xl text-sky-900 font-bold uppercase italic">Нашими партнёрами уже стали</p>
           </div>
 
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
