@@ -95,13 +95,13 @@
         </div>
       </div>
 
-      <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <!-- <div class="container mx-auto lg:max-w-7xl lg:px-8">
         <p class="text-4xl text-sky-900 font-bold uppercase italic py-4 bg-white px-4">{{ category.name }}</p>
-      </div>
+      </div> -->
 
 
 
-      <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <!-- <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
         <div v-if="products" class="py-8 px-4 bg-white">
 
@@ -134,15 +134,14 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
-      <div class="container mx-auto lg:max-w-7xl lg:px-8">
-        <!-- <p class="text-4xl text-sky-900 font-bold uppercase italic py-4">{{ category.name }}</p> -->
+      <!-- <div class="container mx-auto lg:max-w-7xl lg:px-8">
         <div class="bg-white py-8 px-4">
           <div v-html="category.description" class="text-sky-900 text-xl"></div>
         </div>
         
-      </div>
+      </div> -->
 
 
     </div>

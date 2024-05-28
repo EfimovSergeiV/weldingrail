@@ -13,7 +13,6 @@
 
   const fontClass = computed(() => {
     const currentLocale = locale.value
-    console.log(currentLocale)
     return `font-${currentLocale}`
   })
 

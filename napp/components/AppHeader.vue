@@ -25,249 +25,254 @@
 
     <div class=" ">
       <div id="navbar" class="w-full absolute z-50 duration-50 transition-all">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 flex items-center justify-between gap-12 h-full relative">
-          <div class="py-4 ">
-            <nuxt-link :to="localePath('index')">
-              <img src="/logo-blue.webp" class="h-4 md:h-8" />
-            </nuxt-link>                
-          </div>
-          <div class="flex gap-4 items-center justify-end">
-            <div class="group hidden">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-sky-900 font-semibold text-base uppercase text-center h-[56px] flex items-center">{{ $t('railWeldingEquipment') }}</nuxt-link>
-              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                <div class="py-1">
-                  <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
-
-                    <div class="flex justify-end">
-
-                      <div class="border border-white px-2 py-4 w-full">
-
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Стационарные рельсосварочные машины</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-2 gap-2">
-                            <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
-                              <div class="">
-                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
-                                  <div class="px-2 py-2">
-                                    <div class="flex items-center gap-2">
-                                      <div class="px-4 py-2">
-                                        <img src="/prod/fbm-140.png" class=" w-14" />
-                                      </div>
-                                      
-                                      <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
-                                        <div class="flex justify-start">
-                                          <p class="text-xs text-sky-900">перейти к машине</p>
-                                        </div>
-                                      </div>
-                                      
-
-                                    </div>
-
-                                    <div>
-
-
-                                    </div>
-
-                                  </div>
-                                </nuxt-link>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Мобильные рельсосварочные машины</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-2 gap-2">
-                            <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
-                              <div class="">
-                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
-                                  <div class="px-2 py-2">
-                                    <div class="flex items-center gap-2">
-                                      <div class="px-4 py-2">
-                                        <img src="/prod/fbm-140.png" class=" w-14" />
-                                      </div>
-                                      
-                                      <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
-                                        <div class="flex justify-start">
-                                          <p class="text-xs text-sky-900">перейти к машине</p>
-                                        </div>
-                                      </div>
-                                      
-
-                                    </div>
-
-                                    <div>
-
-
-                                    </div>
-
-                                  </div>
-                                </nuxt-link>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Испытательное оборудование</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-2 gap-2">
-                            <div v-for="machine in railmachines.slice(0, 1)" :key="machine.id" class="">
-                              <div class="">
-                                <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
-                                  <div class="px-2 py-2">
-                                    <div class="flex items-center gap-2">
-                                      <div class="px-4 py-2">
-                                        <img src="/prod/fbm-140.png" class=" w-14" />
-                                      </div>
-                                      
-                                      <div class=" grid grid-cols-1">
-                                        <p class=" text-sm text-sky-900 py-1">ГЕРКУЛЕС 300</p>
-                                        <div class="flex justify-start">
-                                          <p class="text-xs text-sky-900">перейти к машине</p>
-                                        </div>
-                                      </div>
-                                      
-
-                                    </div>
-
-                                    <div>
-
-
-                                    </div>
-
-                                  </div>
-                                </nuxt-link>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
-                        <div class="">
-                          <div class="">
-                            <p class="text-white font-semibold text-4xl">Рельсосварочое оборудование</p>
-                          </div>
-                          <div class="my-4 py-4 border-t border-white/50">
-                            <p class="text-sm text-gray-100">Представляем вашему вниманию наши решения для сварки рельсов. Наше оборудование является сертифицированным по самим жёстким стандартам и проверенное временем</p>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="group hidden">
-              <nuxt-link :to="localePath({ name: 'index'})" class="text-sky-900 font-semibold text-base uppercase text-center h-[56px] flex items-center">{{ $t('services') }}</nuxt-link>
-              <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                <div class="py-1">
-                  <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
-
-                    <div class="flex justify-end">
-
-                      <div class="border border-white px-2 py-4 w-full">
-
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Капитальный ремонт оборудования</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-900">
-                              Мы готовы не только осуществить полное восстановление бывшего в эксплуатации оборудования, но и улучшить его технические характеристики, необходимые для введения вашей устаревшей рельсосварочной машины в современное производство.                            </p>
-                          </div>
-                        </div>
-
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Обучение и техническая поддержка</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-900">
-                              Наша команда состоит из опытных инженеров и квалифицированных рабочих, которые всегда готовы и рады поделиться своими знаниями с другими профессионалами в этой области.                            </p>
-                          </div>
-                        </div>
-                        <div class="">
-                          <div class="border-b border-sky-900/50 px-4 mx-4">
-                            <p class="text-sky-900 text-sm font-semibold">Ремонт и техническое обслуживание</p>
-                          </div>
-                          
-                          <div class="grid grid-cols-1 gap-2 px-8 py-2">
-                            <p class="text-sm text-sky-900">
-                              С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding. Независимо от того, имеется ли у вас оборудование для сварки рельсов, электропередвижные сварочные машины или другие товары из нашего разнообразного ассортимента, мы обеспечиваем полное техническое обслуживание и оперативное устранение любых возможных неисправностей.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
-                        <div class="">
-                          <div class="">
-                            <p class="text-white font-semibold text-4xl">Запасные части и комплектующие</p>
-                          </div>
-                          <!-- <div class="my-4 py-4 border-t border-white/50">
-                            <p class="text-sm text-gray-100">С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding</p>
-                          </div> -->
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
+        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 relative ">
+          <div id="navbar-style" class="px-1 flex items-center justify-between gap-12 h-full ">
             <div class="">
-              <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center uppercase">Версия для Китая</p>
+              <nuxt-link :to="localePath('index')">
+                <img src="/logo-blue.webp" class="h-4 md:h-8" />
+              </nuxt-link>                
             </div>
 
-            
-            <div class="relative group hidden md:block">
-              <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center cursor-pointer uppercase">RU</p>
-              <div class="absolute right-0 in visible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                <div class="py-1">
-                  <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[120px]">
-                    <div class="grid grid-cols-1">
-                      <nuxt-link :to="switchLocalePath('ru')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">Русский</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('en')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">English</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('zh')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">漢語</nuxt-link>
-                      <nuxt-link :to="switchLocalePath('de')" class="text-center text-sm text-main-primary font-semibold py-2">Deutsch</nuxt-link>
+            <div class="flex gap-4 items-center justify-end">
+              <div class="group hidden">
+                <nuxt-link :to="localePath({ name: 'index'})" class="text-sky-900 font-semibold text-base uppercase text-center h-[56px] flex items-center">{{ $t('railWeldingEquipment') }}</nuxt-link>
+                <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <div class="py-1">
+                    <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
+
+                      <div class="flex justify-end">
+
+                        <div class="border border-white px-2 py-4 w-full">
+
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Стационарные рельсосварочные машины</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                              <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
+                                <div class="">
+                                  <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                    <div class="px-2 py-2">
+                                      <div class="flex items-center gap-2">
+                                        <div class="px-4 py-2">
+                                          <img src="/prod/fbm-140.png" class=" w-14" />
+                                        </div>
+                                        
+                                        <div class=" grid grid-cols-1">
+                                          <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
+                                          <div class="flex justify-start">
+                                            <p class="text-xs text-sky-900">перейти к машине</p>
+                                          </div>
+                                        </div>
+                                        
+
+                                      </div>
+
+                                      <div>
+
+
+                                      </div>
+
+                                    </div>
+                                  </nuxt-link>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Мобильные рельсосварочные машины</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                              <div v-for="machine in railmachines.slice(0, 2)" :key="machine.id" class="">
+                                <div class="">
+                                  <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                    <div class="px-2 py-2">
+                                      <div class="flex items-center gap-2">
+                                        <div class="px-4 py-2">
+                                          <img src="/prod/fbm-140.png" class=" w-14" />
+                                        </div>
+                                        
+                                        <div class=" grid grid-cols-1">
+                                          <p class=" text-sm text-sky-900 py-1">{{  machine.name }}</p>
+                                          <div class="flex justify-start">
+                                            <p class="text-xs text-sky-900">перейти к машине</p>
+                                          </div>
+                                        </div>
+                                        
+
+                                      </div>
+
+                                      <div>
+
+
+                                      </div>
+
+                                    </div>
+                                  </nuxt-link>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Испытательное оборудование</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                              <div v-for="machine in railmachines.slice(0, 1)" :key="machine.id" class="">
+                                <div class="">
+                                  <nuxt-link :to="localePath({ name: 'ct-name', hash: '#product-description', params: { name: machine.path } })" class="">
+                                    <div class="px-2 py-2">
+                                      <div class="flex items-center gap-2">
+                                        <div class="px-4 py-2">
+                                          <img src="/prod/fbm-140.png" class=" w-14" />
+                                        </div>
+                                        
+                                        <div class=" grid grid-cols-1">
+                                          <p class=" text-sm text-sky-900 py-1">ГЕРКУЛЕС 300</p>
+                                          <div class="flex justify-start">
+                                            <p class="text-xs text-sky-900">перейти к машине</p>
+                                          </div>
+                                        </div>
+                                        
+
+                                      </div>
+
+                                      <div>
+
+
+                                      </div>
+
+                                    </div>
+                                  </nuxt-link>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
+                          <div class="">
+                            <div class="">
+                              <p class="text-white font-semibold text-4xl">Рельсосварочое оборудование</p>
+                            </div>
+                            <div class="my-4 py-4 border-t border-white/50">
+                              <p class="text-sm text-gray-100">Представляем вашему вниманию наши решения для сварки рельсов. Наше оборудование является сертифицированным по самим жёстким стандартам и проверенное временем</p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="md:hidden py-2">
-              <div>
-                <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-900 cursor-pointer"></div>
+
+
+              <div class="group hidden">
+                <nuxt-link :to="localePath({ name: 'index'})" class="text-sky-900 font-semibold text-base uppercase text-center h-[56px] flex items-center">{{ $t('services') }}</nuxt-link>
+                <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 absolute w-full right-0 invisible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <div class="py-1">
+                    <div class="bg-white shadow-md shadow-black/30 rounded-sm w-full">
+
+                      <div class="flex justify-end">
+
+                        <div class="border border-white px-2 py-4 w-full">
+
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Капитальный ремонт оборудования</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 gap-2 px-8 py-2">
+                              <p class="text-sm text-sky-900">
+                                Мы готовы не только осуществить полное восстановление бывшего в эксплуатации оборудования, но и улучшить его технические характеристики, необходимые для введения вашей устаревшей рельсосварочной машины в современное производство.                            </p>
+                            </div>
+                          </div>
+
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Обучение и техническая поддержка</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 gap-2 px-8 py-2">
+                              <p class="text-sm text-sky-900">
+                                Наша команда состоит из опытных инженеров и квалифицированных рабочих, которые всегда готовы и рады поделиться своими знаниями с другими профессионалами в этой области.                            </p>
+                            </div>
+                          </div>
+                          <div class="">
+                            <div class="border-b border-sky-900/50 px-4 mx-4">
+                              <p class="text-sky-900 text-sm font-semibold">Ремонт и техническое обслуживание</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 gap-2 px-8 py-2">
+                              <p class="text-sm text-sky-900">
+                                С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding. Независимо от того, имеется ли у вас оборудование для сварки рельсов, электропередвижные сварочные машины или другие товары из нашего разнообразного ассортимента, мы обеспечиваем полное техническое обслуживание и оперативное устранение любых возможных неисправностей.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="px-4 bg-sky-700 border border-sky-800 w-[640px] py-4 flex items-center">
+                          <div class="">
+                            <div class="">
+                              <p class="text-white font-semibold text-4xl">Запасные части и комплектующие</p>
+                            </div>
+                            <!-- <div class="my-4 py-4 border-t border-white/50">
+                              <p class="text-sm text-gray-100">С нашим многолетним опытом работы в железнодорожной отрасли, наша команда экспертов готова предоставить выдающийся уровень профессионализма и экспертизы при обслуживании и устранении неполадок для всех видов продукции Railwelding</p>
+                            </div> -->
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
+              <div class="">
+                <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center uppercase">Версия для Китая</p>
+              </div>
+
+              
+              <div class="relative group hidden md:block">
+                <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center cursor-pointer uppercase">RU</p>
+                <div class="absolute right-0 in visible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <div class="py-1">
+                    <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[120px]">
+                      <div class="grid grid-cols-1">
+                        <nuxt-link :to="switchLocalePath('ru')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">Русский</nuxt-link>
+                        <nuxt-link :to="switchLocalePath('en')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">English</nuxt-link>
+                        <nuxt-link :to="switchLocalePath('zh')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">漢語</nuxt-link>
+                        <nuxt-link :to="switchLocalePath('de')" class="text-center text-sm text-main-primary font-semibold py-2">Deutsch</nuxt-link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:hidden py-2">
+                <div>
+                  <div @click="mainStore.mobileMenu = !mainStore.mobileMenu" class="mdi mdi-24px mdi-menu text-sky-900 cursor-pointer"></div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+
 
 
         </div>
