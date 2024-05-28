@@ -26,7 +26,7 @@
     <div class=" ">
       <div id="navbar" class="w-full absolute z-50 duration-50 transition-all">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 relative ">
-          <div id="navbar-style" class="px-1 flex items-center justify-between gap-12 h-full ">
+          <div class="px-1 flex items-center justify-between gap-12 h-full ">
             <div class="">
               <nuxt-link :to="localePath('index')">
                 <img src="/logo-blue.webp" class="h-4 md:h-8" />

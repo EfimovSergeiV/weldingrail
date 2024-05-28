@@ -5,14 +5,13 @@ export default defineNuxtPlugin(nuxtApp => {
       // const navBar = document.querySelector('#navbar')
       const navMenu = document.getElementById('navbar')
       const navMoveUp = document.getElementById('move-up')
-      const writeUs = document.getElementById('navbar-style')
+      // const writeUs = document.getElementById('navbar-style')
 
       if (scrollPosition > 600) {
         /// Отображение навбара
         navMenu.classList.remove('absolute')
-        navMenu.classList.add('fixed')
+        navMenu.classList.add('fixed', 'bg-white', 'shadow-lg', 'rounded-b-md',)
         navMoveUp.classList.remove('invisible')
-        writeUs.classList.add('bg-white', 'shadow-lg', 'rounded-b-md')
         /// Отображение врайт закладки
 
         // writeUs.classList.remove('invisible')
@@ -20,7 +19,7 @@ export default defineNuxtPlugin(nuxtApp => {
         
       } else {
         /// Отображение навбара
-        navMenu.classList.remove('fixed')
+        navMenu.classList.remove('fixed', 'bg-white', 'shadow-lg', 'rounded-b-md',)
         navMenu.classList.add('absolute')
         navMoveUp.classList.add('invisible')
         writeUs.classList.remove('bg-white', 'shadow-lg', 'rounded-b-md')

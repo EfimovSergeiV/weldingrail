@@ -8,6 +8,9 @@ from catalog.serializers import CategoryModelSerializer, ProductModelSerializer,
 
 
 
+
+
+
 class CategoriesModelView(APIView):
     """ Category model view """
 
