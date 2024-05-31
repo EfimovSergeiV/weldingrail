@@ -111,10 +111,10 @@
                     <img :src="product.image" class="w-[240px]" />
                   </div>
                   <div class="grid grid-cols-1 gap-4">
-                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-900 font-bold uppercase">{{ product.name }}</nuxt-link>
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-900 font-bold">{{ product.name }}</nuxt-link>
                     <div class="text-sky-900" v-html="product.description"></div>
                     <div class="flex items-center gap-4 py-1">
-                      <button class="bg-gradient-to-tr from-sky-900 via-sky-900 to-sky-900 font-semibold text-white text-base w-60 py-2 rounded-md">Запросить стоимость</button>
+                      <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
                       <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                     </div>
                   </div>

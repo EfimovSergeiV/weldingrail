@@ -20,7 +20,7 @@
 
 
 <template>
-  <div :class="`${fontClass} bg-gray-100`">
+  <div :class="`${fontClass} bg-gray-100 min-w-7xl`">
     <transition name="list">
       <div v-if="mainStore.mobileMenu" class="fixed z-50">
         <MobileMenu />
