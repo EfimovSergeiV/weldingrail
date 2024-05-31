@@ -71,7 +71,7 @@
       <div class="">
         <div class="bg-gray-white">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="bg-white py-4 px-4">
+            <div class="bg-white py-4 px-8">
               <div class="grid grid-cols-1 lg:flex items-end justify-between bg-white">
                 <div class="">
                   <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('pages.index.chooseUs-title') }}</p>
@@ -132,7 +132,7 @@
     <div class="min-h-screen grid grid-cols-1 content-center">
 
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        <div class="bg-white py-4 px-4">
+        <div class="bg-white py-4 px-8">
           <div v-for="category in categories" :key="category.id" class="py-4 ">
             
             <div class="grid grid-cols-1 gap-2">
@@ -168,7 +168,7 @@
                         <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
                         <!-- <div class="text-sky-900" v-html="product.description"></div> -->
                         <div class="flex items-center gap-4 py-1">
-                          <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
+                          <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
                           <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                         </div>
                       </div>
@@ -210,20 +210,31 @@
 
 
     <div class="">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
         <div class="bg-[url('images/rails-bg.webp')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
           <div class="bg-sky-900/70 hover:bg-sky-900/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
             <div class="absolute w-full h-full">
 
-              <div class="flex items-center justify-center h-full px-6">
+              <div class="flex items-center justify-start h-full px-8">
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-white text-3xl font-bold uppercase italic">
-                    {{ $t('pages.index.quest-title') }}
-                  </p>
-                  <p class="text-4xl text-white font-bold uppercase italic">
-                    {{ $t('pages.index.quest-text') }}
-                  </p>
+                  <p class="text-4xl text-white font-bold uppercase italic">Компания WELDINGRAIL</p>
+                  <div class="">
+                    <div class="grid grid-cols-1 gap-2">
+                      <p class="text-lg text-white">Один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
+                      <p class="text-lg text-white">Сегодня наш опыт объеденяет 2000 машин и 13 стран мира, включая США, Канаду, Китай, Францию, Иран, Малайзию, Австрию, Марокко, Польшу и другие, состовляя 60% мирового парка контактных рельсосварочных машин.</p>
+                    </div>
+                  </div>
+                  <div class="flex py-4">
+                    <a href="" >
+                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-1.5 px-4 rounded-md">
+                        <div class="mdi mdi-24px mdi-download mt-1"></div>
+                        <p class="text-xl uppercase">Скачать каталог</p>
+                      </div>
+                    </a>                    
+                  </div>
+
+                  
                 </div>
               </div>
 
@@ -235,44 +246,14 @@
     </div>
 
 
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="bg-sky-900 border-t border-b border-white/20 rounded-b-md">
-        <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-          <div class="">
-            <a href="#" class="flex items-center justify-center gap-2 py-6">
-              <div class="mdi mdi-24px mdi-book-open-page-variant text-gray-100"></div>
-              <p class="text-xl text-gray-100">Скачать каталог</p>
-            </a>
-          </div>
-        </div>
-      </div>      
-    </div>
-
-
-
 
 
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-
-      <div class="py-8 px-4 bg-white">
-        <div class="flex items-center justify-start">
-          <p class="text-4xl text-sky-900 font-bold uppercase italic">Рельсосварочное оборудование</p>
-        </div>        
-        <div class="py-4 w-3/4">
-          <div class="grid grid-cols-1 gap-2">
-            <p class="text-lg text-sky-900">WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-            <p class="text-lg text-sky-900">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов.</p>
-            <p class="text-lg text-sky-900 "> Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов.</p>
-            <p class="text-lg text-sky-900 "> Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира.</p>
-          </div>
-        </div>
-      </div>
-
 
       <div class="grid grid-cols-1">
 
-        <div class="py-4 px-4 bg-white">
+        <div class="py-8 px-4 bg-white">
           <div class=" flex items-start justify-center">
             <p class="text-xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке - десятки тысяч стыков?!</p>
           </div>
