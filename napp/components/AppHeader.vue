@@ -246,7 +246,6 @@
                 <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center uppercase">Версия для Китая</p>
               </div>
 
-              
               <div class="relative group hidden md:block">
                 <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center cursor-pointer uppercase">RU</p>
                 <div class="absolute right-0 in visible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">

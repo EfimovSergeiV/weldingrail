@@ -71,7 +71,7 @@
       <div class="">
         <div class="bg-gray-white">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="bg-white py-4 px-8">
+            <div class="bg-white px-8">
               <div class="grid grid-cols-1 lg:flex items-end justify-between bg-white">
                 <div class="">
                   <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('pages.index.chooseUs-title') }}</p>
@@ -84,19 +84,33 @@
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
                   </div>                  
                 </div>
-                <div class="grid grid-cols-1 gap-2 text-right">
+                <!-- <div class="grid grid-cols-1 gap-2 text-right">
                   <div class="">
                     <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
                   </div>
                   <div class=" shadow-xl shadow-gray-900/10">
                     <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10 rounded-md">{{ $t('requestCall') }}</button>
                   </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="bg-white">
+              <div class="flex items-center justify-end gap-4 py-4">
+                <div class="">
+                  <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
+                </div>
+                <div class=" shadow-xl shadow-gray-900/10">
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10 rounded-md">{{ $t('requestCall') }}</button>
                 </div>
               </div>
             </div>
 
           </div>
         </div>
+
+
+
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-8">
@@ -191,11 +205,13 @@
 
 
             <div v-if="category.children" class="mt-6">
-              <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4">
+              <div class="flex flex-wrap gap-x-8 gap-y-4">
                 <div v-for="subct in category.children" :key="subct.id" class="">
-                  <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })">
-                    <p class="text-left text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
-                  </nuxt-link>
+                  <div class="">
+                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
+                      <p class="text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
+                    </nuxt-link>                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -212,7 +228,7 @@
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-        <div class="bg-[url('images/rails-bg.webp')] h-[380px] bg-no-repeat bg-left-bottom bg-cover">
+        <div class="bg-[url('images/rails-bg.webp')] h-[340px] bg-no-repeat bg-left-bottom bg-cover">
           <div class="bg-sky-900/70 hover:bg-sky-900/80 backdrop-blur-sm transition-all duration-1000 h-full relative">
             <div class="absolute w-full h-full">
 
