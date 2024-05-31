@@ -98,7 +98,7 @@
                     <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
                   </div>
                   <div class=" shadow-xl shadow-gray-900/10">
-                    <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10 rounded-md">{{ $t('requestCall') }}</button>
+                    <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestCall') }}</button>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@
         </div>
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900   px-8">
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>

@@ -95,7 +95,7 @@
     <div class="">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
         <div class="py-4 bg-white">
-          <div class="bg-sky-900 rounded-md px-4">
+          <div class="bg-sky-900   px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
               <div class="flex items-center justify-start">
                 <div class="flex items-center justify-start">
@@ -130,7 +130,7 @@
           </div>
           
           <div class="py-6">
-            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
+            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">Запросить стоимость</button>
           </div>
 
           </div>

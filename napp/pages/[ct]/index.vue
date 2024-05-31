@@ -81,7 +81,7 @@
       <div class="">
         <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
           <div class="py-4 bg-white">
-            <div class="bg-sky-900 rounded-md px-4">
+            <div class="bg-sky-900   px-4">
               <div class="flex items-center justify-start min-h-20">
                 <div class="flex gap-1 text-base font-semibold text-white text-center">
                   <nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link>
@@ -114,7 +114,7 @@
                     <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-900 font-bold">{{ product.name }}</nuxt-link>
                     <div class="text-sky-900" v-html="product.description"></div>
                     <div class="flex items-center gap-4 py-1">
-                      <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
+                      <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">Запросить стоимость</button>
                       <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
                     </div>
                   </div>

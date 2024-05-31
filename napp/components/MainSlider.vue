@@ -132,7 +132,7 @@
 <template>
     <div class="relative">
       <Swiper
-        class=" rounded-md"
+        class="  "
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
@@ -173,7 +173,7 @@
                   <div class="flex">
                     <transition-group tag="div" name="list">
                       <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
-                        <div :id="pk" class="bg-sky-900/60 rounded-md p-2 my-0.5">
+                        <div :id="pk" class="bg-sky-900/60   p-2 my-0.5">
                           <p class="text-white font-semibold text-base">{{ text }}</p>
                         </div>
                       </div>
@@ -183,7 +183,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Узнать больше</nuxt-link>
+                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

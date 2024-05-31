@@ -56,6 +56,8 @@
     }
   ]
 
+  const ctSelect = ref(1)
+
 </script>
 
 
@@ -87,13 +89,13 @@
               </div>
             </div>
 
-            <div class="bg-white px-4">
+            <div class="bg-white">
               <div class="flex items-center justify-end gap-4 py-4">
                 <div class="">
                   <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
                 </div>
                 <div class=" shadow-xl shadow-gray-900/10">
-                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10 rounded-md">{{ $t('requestCall') }}</button>
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestCall') }}</button>
                 </div>
               </div>
             </div>
@@ -105,7 +107,7 @@
 
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 rounded-md px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900   px-8">
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
               <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
@@ -132,19 +134,20 @@
 
 
 
-    <!-- РЕДАКТИРУЕМ ТУТ!!! -->
+    <!-- ПЕРВАЯ ВЕРСИЯ ТОВАРОВ !!! -->
 
 
-    <div class="min-h-screen grid grid-cols-1 content-center">
+    <div class="grid grid-cols-1 content-center hidden">
 
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        <div class="bg-white py-4 px-8">
+        <div class="bg-white py-4">
           <div v-for="category in categories" :key="category.id" class="py-4 ">
             
             <div class="grid grid-cols-1 gap-2">
               
-              <div class="">
-                <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic`">{{ category.name }}</nuxt-link>
+              <div class="px-8 py-4">
+                <!-- <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic`">{{ category.name }}</nuxt-link> -->
+                <p @click="ctSelect = category.id" class="text-4xl text-sky-900 font-bold uppercase italic cursor-pointer">{{ category.name }}</p>
               </div>
               
               <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
@@ -155,40 +158,44 @@
 
 
 
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-2 gap-x-4">
               <div v-for="product in products" :key="product.id">
-                <div v-if="product.category === category.id" class="py-8">
+                
+                  <div v-if="product.category === category.id && category.id === ctSelect " class="py-4">
 
-                  <div class="">
+                    <div class="">
 
-                    <div class="text-center">
-                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
-                    </div>
 
-                    <div class="flex items-center gap-4">
-                      <div class="flex-none w-[200px]">
-                        <img :src="product.image" class="w-[180px]" />
-                      </div>
-                      <div class="grid grid-cols-1 gap-4">
-                        <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2 px-4">Показать характеристики</button>
-                        <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
-                        <!-- <div class="text-sky-900" v-html="product.description"></div> -->
-                        <div class="flex items-center gap-4 py-1">
-                          <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10 rounded-md">Запросить стоимость</button>
-                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
+
+                      <div class="flex items-center gap-4 px-8 py-2">
+                        <div class="flex-none w-[200px]">
+                          <img :src="product.image" class="w-[180px]" />
+                        </div>
+                        <div class="grid grid-cols-1 gap-4">
+                          <!-- <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2">Показать характеристики</button> -->
+                          <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
+                          <!-- <div class="text-sky-900" v-html="product.description"></div> -->
+                          <div class="flex items-center gap-4 py-1">
+                            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">Запросить стоимость</button>
+                            <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
+                          </div>
                         </div>
                       </div>
+
+                      <div class="px-8   ">
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
+                      </div>
+
+                      <!-- <div class="text-center">
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
+                      </div> -->
+
+
                     </div>
-
-
-                    <!-- <div class="text-center">
-                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
-                    </div> -->
-
 
                   </div>
 
-                </div>
+
               </div>                
             </div>
 
@@ -196,7 +203,7 @@
 
 
 
-            <div v-if="category.children" class="mt-6">
+            <div v-if="category.children" class="mt-6 px-8">
               <div class="flex flex-wrap gap-x-8 gap-y-4">
                 <div v-for="subct in category.children" :key="subct.id" class="">
                   <div class="">
@@ -216,12 +223,39 @@
 
 
 
+    <!-- ВТОРАЯ ВЕРСИЯ ТОВАРОВ -->
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div class="py-4 bg-white">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="" v-for="i in ['slides/blue-1.webp','slides/blue-2.webp','slides/blue-3.webp','slides/blue-4.webp']" :key="i">
+            
+            <div class="relative">
+              <img :src="i" class="w-full" />
+              <div class="absolute bg-sky-900/80 hover:bg-sky-900/90 h-full w-full top-0 left-0">
+                <div class="flex items-center justify-center h-full">
+                  <p class="text-white text-2xl  font-bold uppercase italic cursor-pointer">МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ</p>
+                </div>
+                
+              </div>
+            </div>
+            
+
+            
+          </div>
+        </div>
+        
+      </div>      
+    </div>
+
+
+
+
 
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-        <div class="bg-[url('images/rails-bg.webp')] h-[320px] bg-no-repeat bg-left-bottom bg-cover rounded-md">
-          <div class="bg-sky-900/70 hover:bg-sky-900/80 backdrop-blur-sm transition-all duration-1000 h-full relative rounded-md">
+        <div class="bg-[url('images/rails-bg.webp')] h-[320px] bg-no-repeat bg-left-bottom bg-cover  ">
+          <div class="bg-sky-900/70 hover:bg-sky-900/80 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
             <div class="absolute w-full h-full">
 
               <div class="flex items-center justify-start h-full px-8">
@@ -235,7 +269,7 @@
                   </div>
                   <div class="flex py-4">
                     <a href="" >
-                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-1.5 px-4 rounded-md">
+                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-1.5 px-4  ">
                         <div class="mdi mdi-24px mdi-download mt-1"></div>
                         <p class="text-xl uppercase">Скачать каталог</p>
                       </div>
@@ -271,7 +305,7 @@
           </div>          
         </div>
 
-        <div class="px-4 bg-white">
+        <div class="px-8 bg-white">
           <div class="grid grid-cols-2 gap-4 py-4 ">
             
             <div class="flex flex-col gap-2">
@@ -353,7 +387,7 @@
           </div>
           <div class="">
             <div class="flex items-center justify-end">
-              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10 rounded-md">Отправить сообщение</button>
+              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10  ">Отправить сообщение</button>
             </div>
           </div>
         </div>
@@ -449,7 +483,7 @@
               </div>
               
               <div class="flex items-center justify-end pt-4">
-                <button class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2 rounded-md">Запросить стоимость</button>
+                <button class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">Запросить стоимость</button>
               </div>
 
             </div>
