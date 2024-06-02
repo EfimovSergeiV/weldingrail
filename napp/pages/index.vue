@@ -226,24 +226,59 @@
     <!-- ВТОРАЯ ВЕРСИЯ ТОВАРОВ -->
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="py-4 bg-white">
+
         <div class="grid grid-cols-2 gap-4">
-          <div class="" v-for="i in ['slides/blue-1.webp','slides/blue-2.webp','slides/blue-3.webp','slides/blue-4.webp']" :key="i">
-            
+          <div class="" v-for="ct in categories.slice(0, 4)" :key="ct.id">
             <div class="relative">
-              <img :src="i" class="w-full" />
+              <img src="/slides/blue-1.webp" class="w-full" />
               <div class="absolute bg-sky-900/80 hover:bg-sky-900/90 h-full w-full top-0 left-0">
                 <div class="flex items-center justify-center h-full">
-                  <p class="text-white text-2xl  font-bold uppercase italic cursor-pointer">МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ</p>
+                  <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="">
+                    <p class="text-white text-2xl font-bold uppercase italic cursor-pointer">{{ ct.name }}</p>
+                  </nuxt-link>
                 </div>
-                
               </div>
             </div>
-            
-
-            
           </div>
         </div>
-        
+
+        <div class="py-4 px-8">
+          <div class="flex flex-wrap gap-x-8 gap-y-4">
+            <div v-for="ct in categories.slice(4, 5)" :key="ct.id" class="">
+              <div class="py-4">
+                <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ ct.name }}</p>
+              </div>
+                
+              <div v-if="ct.children" class="">
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                  <div v-for="subct in ct.children" :key="subct.id" class="">
+                    <div class="">
+                      <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
+                        <p class="text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
+                      </nuxt-link>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    </div>
+
+
+
+
+    <!-- ТРЕТЬЯ ВЕРСИЯ ТОВАРОВ -->
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 hidden">
+      <div class="py-4 bg-white">
+        <div class="flex flex-wrap gap-x-8 gap-y-4">
+          <div v-for="ct in categories.slice(0, 4)" :key="ct.id" class="">
+            <p class="text-xl text-sky-900 font-semibold">{{ ct.name }}</p>
+          </div>
+        </div>
       </div>      
     </div>
 
@@ -269,9 +304,9 @@
                   </div>
                   <div class="flex py-4">
                     <a href="" >
-                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-1.5 px-4  ">
+                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-0.5 px-2  ">
                         <div class="mdi mdi-24px mdi-download mt-1"></div>
-                        <p class="text-xl uppercase">Скачать каталог</p>
+                        <p class="text-base uppercase">Скачать каталог</p>
                       </div>
                     </a>                    
                   </div>
@@ -297,11 +332,11 @@
 
         <div class="py-8 px-4 bg-white">
           <div class=" flex items-start justify-center">
-            <p class="text-xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке - десятки тысяч стыков?!</p>
+            <p class="text-2xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке - десятки тысяч стыков?!</p>
           </div>
 
           <div class=" flex items-start justify-center">
-            <p class="text-xl text-sky-900 py-1"> Свяжитесь с нами прямо сейчас!</p>
+            <p class="text-xl text-sky-900 py-1 uppercase"> Свяжитесь с нами прямо сейчас!</p>
           </div>          
         </div>
 
