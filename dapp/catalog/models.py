@@ -9,8 +9,14 @@ from django_ckeditor_5.fields import CKEditor5Field
 class CategoryModel(MPTTModel, TranslatableModel):
     """ Product categories """
 
+    SECTIONS = [
+        ('menu_1', 'Menu 1'),
+        ('menu_2', 'Menu 2'),
+    ]
+
     activated = models.BooleanField(verbose_name="activated", default=False)
     parent = TreeForeignKey('self', verbose_name="Parent", on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+    section = models.CharField(verbose_name="Section", max_length=7, choices=SECTIONS, default="menu_1")
     url = models.SlugField(verbose_name="URL", max_length=300, unique=False)
 
     translations = TranslatedFields(
@@ -26,13 +32,15 @@ class CategoryModel(MPTTModel, TranslatableModel):
 
     def __str__(self):
         return self.safe_translation_getter('name', any_language=True)
-    
+
+
 
 class ProductModel(TranslatableModel):
     """ Product model """
 
     activated = models.BooleanField(verbose_name="Activated", default=False)
     priority = models.IntegerField(verbose_name="Priority", default=50)
+
     category = models.ForeignKey(CategoryModel, verbose_name="Category", on_delete=models.SET_NULL, null=True, blank=True, related_name="product_category")
 
     image = ResizedImageField(

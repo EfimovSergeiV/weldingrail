@@ -27,7 +27,7 @@ class CategoryAdmin(TranslatableAdmin, DraggableMPTTAdmin):
     list_display = ('tree_actions', 'indented_title', 'activated',)
     list_editable = ('activated',)
     fieldsets = (
-        (None, {'fields': (('parent','activated'),'name', 'url','description',)}),
+        (None, {'fields': (('section', 'parent', 'activated'),'name', 'url','description',)}),
     )
 
     def get_prepopulated_fields(self, request, obj=None):
