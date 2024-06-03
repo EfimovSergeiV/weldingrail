@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_ckeditor_5',
     'catalog.apps.CatalogConfig',
+    'content.apps.ContentConfig',
 ]
 
 MIDDLEWARE = [

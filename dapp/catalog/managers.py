@@ -6,7 +6,6 @@ from mptt.querysets import TreeQuerySet
 class CategoryQuerySet(TranslatableQuerySet, TreeQuerySet):
 
     def as_manager(cls):
-        # make sure creating managers from querysets works.
         manager = CategoryManager.from_queryset(cls)()
         manager._built_with_as_manager = True
         return manager
