@@ -77,7 +77,7 @@
                       </div>
 
                       <div class="grid grid-cols-1 gap-4 items-center">
-                        <div class="flex items-center justify-start">
+                        <div class="flex items-center justify-center">
                           <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-900 font-bold">{{ product.name }}</nuxt-link>
                         </div>
 

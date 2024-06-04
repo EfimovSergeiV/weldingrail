@@ -14,5 +14,18 @@ class SliderView(APIView):
     def get(self, request, lang):
         queryset = SliderModel.objects.language(lang).filter(activated=True)
         slide = SliderModelSerializer(queryset, many=True, context={'request': request})
+
+        lang = lang if lang != 'zh' else 'zh-hans'
+        clear_data = []
+
+        for data in slide.data:
+            print(data)
+            clear_data.append({
+                'id': data['id'],
+                'title': data['title'],
+                'image': data['image'],
+                'url': data['url'],
+                'sub_title': [ sub_title['translations'][lang]['text'] for sub_title in data['sub_title'] ],
+            })
         
-        return Response(slide.data)
+        return Response(clear_data)

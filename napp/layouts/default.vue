@@ -12,6 +12,11 @@
     });
   }
 
+  // const fontClass = computed(() => {
+  //   const currentLocale = locale.value
+  //   return `font-${currentLocale}`
+  // })
+
   const fontClass = computed(() => {
     const currentLocale = locale.value
     return `font-${currentLocale}`
