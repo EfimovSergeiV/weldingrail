@@ -9,7 +9,7 @@ from parler.admin import TranslatableAdmin, TranslatableModelForm, TranslatableT
 
 class SliderForm(forms.TranslatableModelForm):
     title = forms.TranslatedField(widget=TextInput(attrs={'style': 'width: 100%;'}))
-    url = CharField(widget=TextInput(attrs={'style': 'width: 100%;'}))
+    # url = CharField(widget=TextInput(attrs={'style': 'width: 100%;'}))
 
     class Meta:
         model = SliderModel

@@ -6,56 +6,13 @@
 
 
 
-
+  const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
   const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
 
 
-
   const showParams = ref(null)
-  const slides = [
-    {
-      "id": 1,
-      "image": "/slides/blue-1.webp",
-      "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
-      "texts": [
-        "Машины могут объединяться с другим оборудованием для сварки рельсов ",
-        "в единый производственный комплекс на сварочных производствах"
-      ],
-      "url": "ru/stationary-machines/",
-    },
-    {
-      "id": 2,
-      "image": "/slides/blue-2.webp",
-      "title": "МОБИЛЬНЫЕ МАШИНЫ",
-      "texts": [
-        "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
-        "Процесс сварки стыка осуществляется автоматически по заданной программе."
-      ],
-      "url": "ru/mobile-machines/",
-    },
-    {
-      "id": 3,
-      "image": "/slides/blue-3.webp",
-      "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
-      "texts": [
-        "Предназначены для контактной стыковой сварки в полевых условиях",
-        "Оборудование компактно размещается в небольшом 20-футовом контейнере."
-      ],
-      "url": "ru/railwelding-complexes/",
-    },
-    {
-      "id": 4,
-      "image": "/slides/blue-4.webp",
-      "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
-      "texts": [
-        "Компактные размеры и масса пресса позволяют использовать",
-        "как стационарно, так и в составе переносных рельсосварочных машин."
-      ],
-      "url": "ru/testing-equipment/",
-    }
-  ]
-
   const ctSelect = ref(1)
 
 </script>
@@ -203,17 +160,6 @@
 
 
 
-            <div v-if="category.children" class="mt-6 px-8">
-              <div class="flex flex-wrap gap-x-8 gap-y-4">
-                <div v-for="subct in category.children" :key="subct.id" class="">
-                  <div class="">
-                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
-                      <p class="text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
-                    </nuxt-link>                    
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
@@ -228,7 +174,7 @@
       <div class="py-4 bg-white">
 
         <div class="grid grid-cols-2 gap-4">
-          <div class="" v-for="ct in categories.slice(0, 4)" :key="ct.id">
+          <div class="" v-for="ct in categories" :key="ct.id">
             <div class="relative">
               <img src="/slides/blue-1.webp" class="w-full" />
               <div class="absolute bg-sky-900/80 hover:bg-sky-900/90 h-full w-full top-0 left-0">
@@ -242,28 +188,26 @@
           </div>
         </div>
 
-        <div class="py-4 px-8">
-          <div class="flex flex-wrap gap-x-8 gap-y-4">
-            <div v-for="ct in categories.slice(4, 5)" :key="ct.id" class="">
-              <div class="py-4">
-                <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ ct.name }}</p>
-              </div>
-                
-              <div v-if="ct.children" class="">
-                <div class="flex flex-wrap gap-x-8 gap-y-4">
-                  <div v-for="subct in ct.children" :key="subct.id" class="">
-                    <div class="">
-                      <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
-                        <p class="text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
-                      </nuxt-link>                    
-                    </div>
-                  </div>
+        <div v-if="subcategories" class="">
+          <div class="py-4 px-8">
+
+            <div class="py-4">
+              <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('pages.index.subcategory') }}</p>
+            </div>
+
+            <div class="flex flex-wrap gap-x-8 gap-y-4">
+              <div v-for="subct in subcategories" :key="subct.id" class="">
+                <div class="">
+                  <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
+                    <p class="text-xl text-sky-900 font-semibold">{{ subct.name }}</p>
+                  </nuxt-link>                    
                 </div>
               </div>
-
             </div>
           </div>
+
         </div>
+
       </div>  
 
     </div>

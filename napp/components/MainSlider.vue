@@ -1,58 +1,13 @@
 <script setup>
 
   const props = defineProps(['slides'])
-
   const slides = props.slides
-
-  // const slides = [
-  //   {
-  //     "id": 1,
-  //     "image": "/slides/blue-1.webp",
-  //     "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
-  //     "texts": [
-  //       "Машины могут объединяться с другим оборудованием для сварки рельсов ",
-  //       "в единый производственный комплекс на сварочных производствах"
-  //     ],
-  //     "url": "ru/stationary-machines/",
-  //   },
-  //   {
-  //     "id": 2,
-  //     "image": "/slides/blue-2.webp",
-  //     "title": "МОБИЛЬНЫЕ МАШИНЫ",
-  //     "texts": [
-  //       "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
-  //       "Процесс сварки стыка осуществляется автоматически по заданной программе."
-  //     ],
-  //     "url": "ru/mobile-machines/",
-  //   },
-  //   {
-  //     "id": 3,
-  //     "image": "/slides/blue-3.webp",
-  //     "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
-  //     "texts": [
-  //       "Предназначены для контактной стыковой сварки в полевых условиях",
-  //       "Оборудование компактно размещается в небольшом 20-футовом контейнере."
-  //     ],
-  //     "url": "ru/railwelding-complexes/",
-  //   },
-  //   {
-  //     "id": 4,
-  //     "image": "/slides/blue-4.webp",
-  //     "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
-  //     "texts": [
-  //       "Компактные размеры и масса пресса позволяют использовать",
-  //       "как стационарно, так и в составе переносных рельсосварочных машин."
-  //     ],
-  //     "url": "ru/testing-equipment/",
-  //   }
-  // ]
-
 
   const showSlideData = ref({
     "id": null,
     "image": null,
     "title": null,
-    "texts": [],
+    "sub_title": [],
     "url": null,
   })
 
@@ -62,7 +17,7 @@
       "id": null,
       "image": null,
       "title": null,
-      "texts": [],
+      "sub_title": [],
       "url": null,
     }
     currentSlide.value = swiper.realIndex
@@ -75,15 +30,15 @@
       "id": data.id,
       "image": data.image,
       "title": data.title,
-      "texts": [
+      "sub_title": [
 
       ],
       "url": null,
     }
-    data.texts.forEach((text) => {
+    data.sub_title.forEach((text) => {
       setTimeout(() => {
-        showSlideData.value.texts.push(text)
-      }, 500 * data.texts.indexOf(text))
+        showSlideData.value.sub_title.push(text)
+      }, 500 * data.sub_title.indexOf(text))
     })
     setTimeout(() => {
       showSlideData.value.url = data.url
@@ -96,7 +51,7 @@
       "id": data.id,
       "image": data.title,
       "title": null,
-      "texts": [
+      "sub_title": [
 
       ],
       "url": null,
@@ -106,10 +61,10 @@
       showSlideData.value.title = data.title
     }, 500)
 
-    data.texts.forEach((text) => {
+    data.sub_title.forEach((text) => {
       setTimeout(() => {
-        showSlideData.value.texts.push(text)
-      }, 500 * data.texts.indexOf(text))
+        showSlideData.value.sub_title.push(text)
+      }, 500 * data.sub_title.indexOf(text))
     })
     setTimeout(() => {
       showSlideData.value.url = data.url
@@ -172,7 +127,7 @@
                 <div class="hidden md:block">
                   <div class="flex">
                     <transition-group tag="div" name="list">
-                      <div v-for="text, pk in showSlideData.texts" :key="pk" class="flex" >
+                      <div v-for="text, pk in showSlideData.sub_title" :key="pk" class="flex" >
                         <div :id="pk" class="bg-sky-900/60   p-2 my-0.5">
                           <p class="text-white font-semibold text-base">{{ text }}</p>
                         </div>
@@ -183,7 +138,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="showSlideData.url" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">Узнать больше</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: 2 } })" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">Узнать больше</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

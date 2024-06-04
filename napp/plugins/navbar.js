@@ -22,7 +22,7 @@ export default defineNuxtPlugin(nuxtApp => {
         navMenu.classList.remove('fixed', 'bg-white', 'shadow-lg', 'rounded-b-md',)
         navMenu.classList.add('absolute')
         navMoveUp.classList.add('invisible')
-        writeUs.classList.remove('bg-white', 'shadow-lg', 'rounded-b-md')
+        // writeUs.classList.remove('bg-white', 'shadow-lg', 'rounded-b-md')
         /// Отображение врайт закладки
         // writeUs.classList.remove('visible')
         // writeUs.classList.add('invisible')

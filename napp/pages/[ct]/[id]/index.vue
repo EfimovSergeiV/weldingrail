@@ -7,6 +7,7 @@
   const { locale, setLocale } = useI18n()
 
 
+  const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
   const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.id}/`)
 
@@ -26,60 +27,17 @@
     { "id": 4, 'title': "Сертификат", "link": "#", },
   ])
 
-  const slides = [
-    {
-      "id": 1,
-      "image": "/slides/blue-1.webp",
-      "title": "СТАЦИОНАРНЫЕ МАШИНЫ",
-      "texts": [
-        "Машины могут объединяться с другим оборудованием для сварки рельсов ",
-        "в единый производственный комплекс на сварочных производствах"
-      ],
-      "url": "ru/stationary-machines/",
-    },
-    {
-      "id": 2,
-      "image": "/slides/blue-2.webp",
-      "title": "МОБИЛЬНЫЕ МАШИНЫ",
-      "texts": [
-        "Предназначены для контактной стыковой сварки в стационарных или полевых условиях",
-        "Процесс сварки стыка осуществляется автоматически по заданной программе."
-      ],
-      "url": "ru/mobile-machines/",
-    },
-    {
-      "id": 3,
-      "image": "/slides/blue-3.webp",
-      "title": "МОБИЛЬНЫЕ РЕЛЬСОСВАРОЧНЫЕ КОМПЛЕКСЫ",
-      "texts": [
-        "Предназначены для контактной стыковой сварки в полевых условиях",
-        "Оборудование компактно размещается в небольшом 20-футовом контейнере."
-      ],
-      "url": "ru/railwelding-complexes/",
-    },
-    {
-      "id": 4,
-      "image": "/slides/blue-4.webp",
-      "title": "ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ",
-      "texts": [
-        "Компактные размеры и масса пресса позволяют использовать",
-        "как стационарно, так и в составе переносных рельсосварочных машин."
-      ],
-      "url": "ru/testing-equipment/",
-    }
-  ]
-
   /// Перемешиваем слайды в случайном порядке
-  const shuffle = (array) => {
-    let currentIndex = array.length, randomIndex;
-    while (currentIndex != 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-    return array;
-  }
+  // const shuffle = (array) => {
+  //   let currentIndex = array.length, randomIndex;
+  //   while (currentIndex != 0) {
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
+  //     [array[currentIndex], array[randomIndex]] = [
+  //       array[randomIndex], array[currentIndex]];
+  //   }
+  //   return array;
+  // }
 
 </script>
 
@@ -88,7 +46,7 @@
   <div class="">
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
-      <MainSlider :slides="shuffle(slides)" />
+      <MainSlider :slides="slides" />
     </div>
 
 

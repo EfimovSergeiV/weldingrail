@@ -11,24 +11,23 @@ from catalog.serializers import CategoryModelSerializer, ProductModelSerializer,
 
 
 
-class CategoriesModelView(APIView):
+class CategoriesView(APIView):
     """ Category model view """
 
     def get(self, request, lang, id=None, url=None):
-        queryset = CategoryModel.objects.filter(level=0).language(lang).filter(activated=True)
-
-        response_data = []
-
-        for category_qs in queryset:
-            category_children_qs = category_qs.get_children().language(lang).filter(activated=True)
-
-            category = CategoryModelSerializer(category_qs, context={'request': request}).data    
-            category_children = CategoryModelSerializer(category_children_qs, many=True, context={'request': request}).data
-
-            category['children'] = category_children if category_children else None
-            response_data.append(category)
+        category_qs = CategoryModel.objects.filter(section='menu_1').language(lang).filter(activated=True)
+        serializer = CategoryModelSerializer(category_qs, many=True, context={'request': request})
         
-        return Response(response_data)
+        return Response(serializer.data)
+
+
+class SubCategoriesView(APIView):
+
+    def get(self, request, lang):
+        category_qs = CategoryModel.objects.filter(level=1).filter(section='menu_2').language(lang).filter(activated=True)
+        serializer = CategoryModelSerializer(category_qs, many=True, context={'request': request})
+        
+        return Response(serializer.data)
     
 
 
