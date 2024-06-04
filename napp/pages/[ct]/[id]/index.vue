@@ -88,7 +88,7 @@
           </div>
           
           <div class="py-6">
-            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">Запросить стоимость</button>
+            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
           </div>
 
           </div>
@@ -183,6 +183,6 @@
     </div>
 
 
-
+    <AppFooter :categories="categories"/>
   </div>
 </template>

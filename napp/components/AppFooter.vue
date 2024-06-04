@@ -1,6 +1,7 @@
 <script setup>
   const localePath = useLocalePath()
   const config = useRuntimeConfig()
+  const props = defineProps(['categories'])
 
   const { locale, setLocale } = useI18n()
   const currentData = new Date().getFullYear()
@@ -26,7 +27,7 @@
 
           <div class="">
             <div class="grid grid-cols-1 gap-2">
-              <div v-for="ct in categories" class="">
+              <div v-for="ct in props.categories" class="">
                 <p class="text-white">{{ ct.name }}</p>
               </div>
             </div>            

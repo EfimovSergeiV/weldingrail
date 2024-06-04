@@ -138,7 +138,7 @@
                 <div class="py-4">
                   <transition name="list">
                     <div v-if="showSlideData.url" class="">
-                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: 2 } })" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">Узнать больше</nuxt-link>
+                      <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: 2 } })" class="bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base w-60 shadow-xl shadow-gray-900/10 px-6 py-2 my-2  ">{{ $t('learnMore') }}</nuxt-link>
                     </div>          
                   </transition>          
                 </div>

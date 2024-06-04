@@ -1,17 +1,21 @@
+from rest_framework import serializers
 from content.models import SliderModel, SubTitleSliderModel
 from parler_rest.serializers import TranslatableModelSerializer, TranslatedFieldsField, TranslatedField
 
 
-class SubTitleSlider(TranslatableModelSerializer):
-    """ Не переключается язык """
-    
+class SubTitleSliderModelSerializer(TranslatableModelSerializer):
+    translations = TranslatedFieldsField(shared_model=SubTitleSliderModel)
+
     class Meta:
         model = SubTitleSliderModel
-        fields = ('id', 'text',)
+        fields = ['id', 'translations']
 
 
 class SliderModelSerializer(TranslatableModelSerializer):
-    # sub_title = TranslatedField() # https://github.com/django-parler/django-parler-rest/blob/master/testproj/serializers.py
+    # https://github.com/django-parler/django-parler-rest/blob/master/testproj/serializers.py
+
+
+    sub_title = SubTitleSliderModelSerializer(many=True)
 
     class Meta:
         model = SliderModel

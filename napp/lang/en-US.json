@@ -1,9 +1,23 @@
 {
+  "language": "EN",
+  "requestPrice": "Request a price",
+  "learnMore": "Learn more",
+  "writeUs": "Write to us",
+
+  "employees": "Employees",
+  "projects": "Completed projects",
+  "prodArea": "Production area",
+  "clients": "Clients",
+
+  "components": "Spare parts and components",
+
+
+
+
   "railWeldingEquipment": "Rail welding equipment",
   "testEquipment": "Test equipment",
   "about": "About",
   "services": "Services",
-  "language": "US",
   "write-us": "Write to us",
 
   "title-1": "RAILWELDING",

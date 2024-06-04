@@ -1,7 +1,8 @@
 <script lang="ts" setup>
   import { createApp } from 'vue';
   const { locale, setLocale } = useI18n()
-
+  const localePath = useLocalePath()
+  const config = useRuntimeConfig()
   const mainStore = useMainStore()
 
   const moveUp = () => {
@@ -15,6 +16,8 @@
     const currentLocale = locale.value
     return `font-${currentLocale}`
   })
+
+  const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
 
 </script>
 
@@ -41,7 +44,7 @@
 
     
     <slot />
-    <AppFooter />
+    <!-- <AppFooter :categories="categories"/> -->
 
     <div id="move-up" class="invisible transition-all duration-900">
       <div class="fixed bottom-4 right-4 z-40">

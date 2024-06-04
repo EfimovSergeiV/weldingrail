@@ -40,21 +40,15 @@
                 <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center uppercase">Версия для Китая</p>
               </div>
 
-              <div class="relative group hidden md:block">
-                <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center cursor-pointer uppercase">{{ locale }}</p>
-                <div class="absolute right-0 in visible group-hover:visible ease-in-out transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <div class="py-1">
-                    <div class="bg-gray-100 border border-main-primary/40 shadow-sm shadow-black/30 rounded-sm w-[120px]">
-                      <div class="grid grid-cols-1">
-                        <nuxt-link :to="switchLocalePath('ru')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">RU</nuxt-link>
-                        <nuxt-link :to="switchLocalePath('en')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">EN</nuxt-link>
-                        <nuxt-link :to="switchLocalePath('zh')" class="text-center border-b border-sky-800/50 text-sm text-main-primary font-semibold py-2">CN</nuxt-link>
-                        <nuxt-link :to="switchLocalePath('de')" class="text-center text-sm text-main-primary font-semibold py-2">DE</nuxt-link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+              <div class="flex items-center h-full gap-4 bg-red-500/10">
+                <nuxt-link :to="switchLocalePath('ru')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">{{ locale }}</nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">EN</nuxt-link>
+                <nuxt-link :to="switchLocalePath('zh')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">CN</nuxt-link>
               </div>
+
+
+
 
               <div class="md:hidden py-2">
                 <div>
