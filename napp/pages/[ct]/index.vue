@@ -46,7 +46,7 @@
             <div class="bg-sky-900 px-8">
               <div class="flex items-center justify-start min-h-20">
                 <div class="flex gap-1 text-base font-semibold text-white text-center">
-                  <nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link>
+                  <nuxt-link :to="localePath({ name: 'index' })" class="uppercase">{{ $t('main') }}</nuxt-link>
                 </div>
                 <div v-if="category" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-right">
                   <p class="uppercase">{{ category.name }}</p>

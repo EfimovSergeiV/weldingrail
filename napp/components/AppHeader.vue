@@ -46,10 +46,10 @@
                 <div v-for="lang in ['ru', 'en', 'zh']">
                   
                   <div v-if="lang === locale" class="">
-                    <nuxt-link :to="switchLocalePath(lang)" class="text-sky-800 font-opensans font-semibold text-base text-center  uppercase border-b-2 border-sky-800">{{ lang }}</nuxt-link>
+                    <nuxt-link :to="switchLocalePath(lang)" style="font-family: Play;" class="text-sky-800 font-opensans font-semibold text-base text-center uppercase border-b-2 border-sky-800">{{ lang }}</nuxt-link>
                   </div>
                   <div v-else class="">
-                    <nuxt-link :to="switchLocalePath(lang)" class="text-sky-900 font-opensans font-semibold text-base text-center  uppercase">{{ lang }}</nuxt-link>
+                    <nuxt-link :to="switchLocalePath(lang)" style="font-family: Play;" class="text-sky-900 font-opensans font-semibold text-base text-center uppercase">{{ lang }}</nuxt-link>
                   </div>
                 
                 </div>

@@ -33,14 +33,14 @@
             <div class="bg-white px-8">
               <div class="grid grid-cols-1 lg:flex items-end justify-between">
                 <div class="">
-                  <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                  <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('chooseUS.title') }}</p>
                   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 text-sm md:text-base font-semibold">
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('chooseUS.1') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('chooseUS.2') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('chooseUS.3') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('chooseUS.4') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900">{{ $t('chooseUS.5') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900 uppercase"><p class="text-sm text-sky-900"> {{ $t('chooseUS.6') }}</p></div>
                   </div>                  
                 </div>
               </div>
@@ -49,7 +49,7 @@
             <div class="bg-white">
               <div class="flex items-center justify-end gap-8 py-4">
                 <div class="">
-                  <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
+                  <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
                 </div>
                 <div class=" shadow-xl shadow-gray-900/10">
                   <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 ">{{ $t('writeUs') }}</button>
@@ -65,10 +65,10 @@
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900   px-8">
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('employees') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('projects') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('prodArea') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold"> {{ $t('clients') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('employees') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('projects') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('prodArea') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold"> {{ $t('clients') }}</p></div>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class=" bg-white">
         <div class="py-8 px-8">
-          <p class="text-4xl text-sky-900 font-semibold uppercase italic">Рельсосварочнное оборудование</p>
+          <p class="text-4xl text-sky-900 font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
       </div>
     </div>
@@ -374,7 +374,7 @@
                 <img src="/partners/2.png" class="h-12"/>
               </div>
               <div class="flex items-center justify-center py-2">
-                <p class="text-sky-900 text-base">Kazakh Railways</p>
+                <p style="font-family: Play;" class="text-sky-900 text-base">Kazakh Railways</p>
               </div>
             </div>
             <div class="px-8">
@@ -382,7 +382,7 @@
                 <img src="/partners/1.png" class="h-12"/>
               </div>
               <div class="flex items-center justify-center py-2">
-                <p class="text-sky-900 text-base">Lithuanian Railways</p>
+                <p style="font-family: Play;" class="text-sky-900 text-base">Lithuanian Railways</p>
               </div>
             </div>
             <div class="px-8">
@@ -390,7 +390,7 @@
                 <img src="/partners/3.png" class="h-12"/>
               </div>
               <div class="flex items-center justify-center py-2">
-                <p class="text-sky-900 text-base">Ozbekiston temir yollari</p>
+                <p style="font-family: Play;" class="text-sky-900 text-base">Ozbekiston temir yollari</p>
               </div>
             </div>
             <div class="px-8">
@@ -398,7 +398,7 @@
                 <img src="/partners/4.png" class="h-12"/>
               </div>
               <div class="flex items-center justify-center py-2">
-                <p class="text-sky-900 text-base">Belarusian railways</p>
+                <p style="font-family: Play;" class="text-sky-900 text-base">Belarusian railways</p>
               </div>
             </div>
           </div>          

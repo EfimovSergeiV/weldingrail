@@ -15,6 +15,7 @@ class CategoriesView(APIView):
     """ Category model view """
 
     def get(self, request, lang, id=None, url=None):
+        lang = lang if lang != 'zh' else 'zh-hans'
         category_qs = CategoryModel.objects.filter(section='menu_1').language(lang).filter(activated=True)
         serializer = CategoryModelSerializer(category_qs, many=True, context={'request': request})
         
@@ -24,6 +25,7 @@ class CategoriesView(APIView):
 class SubCategoriesView(APIView):
 
     def get(self, request, lang):
+        lang = lang if lang != 'zh' else 'zh-hans'
         category_qs = CategoryModel.objects.filter(level=1).filter(section='menu_2').language(lang).filter(activated=True)
         serializer = CategoryModelSerializer(category_qs, many=True, context={'request': request})
         
@@ -34,6 +36,7 @@ class SubCategoriesView(APIView):
 class CategoryModelView(APIView):
 
     def get(self, request, lang, id=None, url=None):
+        lang = lang if lang != 'zh' else 'zh-hans'
         response_data = []
 
         if id:
@@ -64,6 +67,7 @@ class ProductsModelView(APIView):
     qs_advantages = ProductAdvantageModel.objects.all()
 
     def get(self, request, lang, url=None):
+        lang = lang if lang != 'zh' else 'zh-hans'
         response_data = []
 
         queryset = ProductModel.objects.language(lang).filter(activated=True)
@@ -97,6 +101,7 @@ class ProductModelView(APIView):
     qs_advantages = ProductAdvantageModel.objects.all()
 
     def get(self, request, lang, id):
+        lang = lang if lang != 'zh' else 'zh-hans'
 
         product_advantages = []
         product_properties = []

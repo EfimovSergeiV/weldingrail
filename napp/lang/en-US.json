@@ -1,5 +1,6 @@
 {
   "language": "EN",
+  "main": "Home",
   "requestPrice": "Request a price",
   "learnMore": "Learn more",
   "writeUs": "Write to us",
@@ -10,6 +11,20 @@
   "clients": "Clients",
 
   "components": "Spare parts and components",
+  "RWQ": "Railwelding equipment",
+
+  "chooseUS": {
+    "title": "Why choose us?",
+    "1": "More than 17 years of successful work",
+    "2": "Own design office",
+    "3": "Full production cycle",
+    "4": "Service and Support",
+    "5": "Solution of non-standard tasks",
+    "6": "Personal manager"
+  },
+  
+
+
 
 
 

@@ -85,7 +85,7 @@
           <div class="">
             <div class="flex items-end justify-between py-4">
               <img @click="moveUp()" src="/logo-white.webp" class="h-6 cursor-pointer"/>
-              <p class="text-xs text-gray-100">weldingrail.com | {{ currentData }} (c)</p>
+              <p style="font-family: Play;" class="text-xs text-gray-100">weldingrail.com | {{ currentData }} (c)</p>
             </div>
           </div>
         </div>
