@@ -19,7 +19,6 @@ class SliderView(APIView):
         clear_data = []
 
         for data in slide.data:
-            print(data)
             clear_data.append({
                 'id': data['id'],
                 'title': data['title'],

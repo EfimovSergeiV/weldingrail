@@ -53,7 +53,7 @@
     <div class="">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
         <div class="py-4 bg-white">
-          <div class="bg-sky-900   px-4">
+          <div class="bg-sky-900 px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
               <div class="flex items-center justify-start">
                 <div class="flex items-center justify-start">
@@ -71,26 +71,103 @@
 
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="flex items-center gap-8 bg-white pt-8 px-4">
+      <div class="flex items-center gap-8 bg-white pt-8 px-8">
         <div class=" flex-none">
           <img :src="product.image" class="w-[290px]" />
         </div>
-        <div class="grid grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 gap-4 w-full">
           <div class="">
             <p class="text-4xl text-sky-900 font-bold uppercase italic">{{ product.name }}</p>
           </div>
           <div class="">
-            <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-xl"></div>
-            <div v-else class="">
+          
+
+
+            <div class="">
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2 py-4 ">
+                
+
+                <div class="">
+                  <label for="text-1" class="text-sm text-sky-900">ФИО:</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                    <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Иванов Иван Иванович" />
+                  </div>              
+                </div>
+
+                <div class="">
+                  <label for="text-2" class="text-sm text-sky-900">Компания: (необязательно)</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                    <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="ООО Название компании" />
+                  </div>              
+                </div>
+
+                <div class="">
+                  <label for="text-4" class="text-sm text-sky-900">Email:</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                    <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="example@example.ru" />
+                  </div>              
+                </div>
+
+                <div class="">
+                  <label for="text-5" class="text-sm text-sky-900">Страна: (необязательно)</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                    <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Россия" />
+                  </div>              
+                </div>
+
+              </div>
+
+
+              <div class="flex gap-4 items-center justify-end">
+
+                <div class="flex items-center gap-4 ">
+                  <label for="privacy" class="text-xs text-sky-900 text-right">
+                    Согласен с правилами сайта и на обработку моих персональных данных в соответствии с требованиями Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»
+                  </label>              
+                  <input 
+                    id="privacy"
+                    type="checkbox"
+                    class="w-4 h-4 
+                      rounded text-gray-700 focus:ring-0 
+                      focus:ring-gray-300 ring-offset-gray-300 bg-gray-700 border-gray-300
+                      dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700" 
+                    />
+                </div>
+
+                <div class="flex items-end justify-end">
+                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
+                </div>
+              </div>
+
+ 
+
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <div class="bg-white px-8 py-8">
+        <div class="py-4">
+          <p class="text-2xl text-sky-900 font-semibold uppercase italic">Описание машины:</p>
+        </div>
+        <div class="">
+          <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-xl"></div>
+          <div v-else class="">
             <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
               <div v-if="category.id === product.category" class="" v-html="category.description"></div>
             </div>
-          </div>
-          
-          <div class="py-6">
-            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
-          </div>
-
           </div>
         </div>
       </div>
@@ -115,8 +192,6 @@
                         <div class="mdi mdi-open-in-new"></div>
                         <p class=" text-base">{{ material.title }}</p>
                       </div>
-                      
-                      
                     </a>
                   </div>
                 </div>
@@ -124,7 +199,7 @@
             </div>
             <div class="w-full text-sm">
               <div class="my-2">
-                <p class="text-xl text-sky-900 se lect-none font-sans font-semibold uppercase">Технические параметры:</p>
+                <p class="text-2xl text-sky-900 font-semibold uppercase italic">Технические параметры:</p>
               </div>
               <div class=" grid grid-cols-1 gap-2 py-4">
                 <div v-for="propdata in product.product_properties" :key="propdata.id" class="">

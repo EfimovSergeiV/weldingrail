@@ -41,10 +41,10 @@ module.exports = {
         'main-light': '#4C80A9',
       },
       // fontFamily: {
-      //   'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
-      //   'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
-      //   'opensans': ['ProximaNova-Light','Open Sans', ],
-      //   'extra': ['ProximaNova-Bold', ]
+      //   // 'sans': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+      //   // 'serif': ['ProximaNova-Light', 'Noto Sans', 'Open Sans', ],
+      //   // 'opensans': ['Play', 'Noto Sans', 'Open Sans'],
+      //   // 'extra': ['ProximaNova-Bold', ]
       // },
     },
   },

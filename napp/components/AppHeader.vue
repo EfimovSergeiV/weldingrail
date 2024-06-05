@@ -36,15 +36,26 @@
 
             <div class="flex gap-4 items-center justify-end">
 
-              <div class="">
+              <!-- <div class="">
                 <p class="text-sky-900 font-semibold text-base text-center h-[56px] flex items-center uppercase">Версия для Китая</p>
-              </div>
+              </div> -->
 
 
-              <div class="flex items-center h-full gap-4 bg-red-500/10">
-                <nuxt-link :to="switchLocalePath('ru')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">{{ locale }}</nuxt-link>
-                <nuxt-link :to="switchLocalePath('en')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">EN</nuxt-link>
-                <nuxt-link :to="switchLocalePath('zh')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">CN</nuxt-link>
+              <div class="flex items-center h-[60px] gap-4">
+                <!-- <nuxt-link :to="switchLocalePath('ru')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">{{ locale }}</nuxt-link> -->
+                <div v-for="lang in ['ru', 'en', 'zh']">
+                  
+                  <div v-if="lang === locale" class="">
+                    <nuxt-link :to="switchLocalePath(lang)" class="text-sky-800 font-opensans font-semibold text-base text-center  uppercase border-b-2 border-sky-800">{{ lang }}</nuxt-link>
+                  </div>
+                  <div v-else class="">
+                    <nuxt-link :to="switchLocalePath(lang)" class="text-sky-900 font-opensans font-semibold text-base text-center  uppercase">{{ lang }}</nuxt-link>
+                  </div>
+                
+                </div>
+                
+                <!-- <nuxt-link :to="switchLocalePath('en')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">EN</nuxt-link>
+                <nuxt-link :to="switchLocalePath('zh')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">CN</nuxt-link> -->
               </div>
 
 
