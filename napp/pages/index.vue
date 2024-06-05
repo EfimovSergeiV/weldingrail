@@ -171,7 +171,11 @@
 
     <!-- ВТОРАЯ ВЕРСИЯ ТОВАРОВ -->
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="py-4 bg-white">
+      <div class=" bg-white">
+
+        <div class="py-8 px-8">
+            <p class="text-4xl text-sky-900 font-semibold uppercase italic">Рельсосварочнное оборудование</p>
+          </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div class="" v-for="ct in categories" :key="ct.id">
@@ -189,7 +193,7 @@
         </div>
 
         <div v-if="subcategories" class="">
-          <div class="py-4 px-8">
+          <div class="py-8 px-8">
 
             <div class="py-4">
               <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('components') }}</p>
@@ -212,19 +216,6 @@
 
     </div>
 
-
-
-
-    <!-- ТРЕТЬЯ ВЕРСИЯ ТОВАРОВ -->
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 hidden">
-      <div class="py-4 bg-white">
-        <div class="flex flex-wrap gap-x-8 gap-y-4">
-          <div v-for="ct in categories.slice(0, 4)" :key="ct.id" class="">
-            <p class="text-xl text-sky-900 font-semibold">{{ ct.name }}</p>
-          </div>
-        </div>
-      </div>      
-    </div>
 
 
 
@@ -347,7 +338,7 @@
         </div>
 
 
-        <div class="flex items-center justify-end gap-4 bg-white px-4">
+        <div class="flex items-center justify-end gap-4 bg-white px-8">
           <div class="flex gap-4">
             <div class=""></div>
             <div class="flex items-center gap-4 max-w-[50rem]">
