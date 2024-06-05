@@ -28,7 +28,7 @@
 
           <div class="">
             <div class="pb-2">
-              <p class="text-white uppercase font-semibold text-lg">Рельсосварочнное оборудование</p>
+              <p class="text-white uppercase font-semibold text-lg">{{ $t('RWQ')}}</p>
             </div>
             
             <div class="grid grid-cols-1 gap-1">
@@ -43,7 +43,7 @@
 
           <div class="flex items-center justify-center">
             <div class="grid grid-cols-1 gap-2">
-              <p class="text-white text-xl font-bold uppercase italic">Подписывайтесь на нашу новостную рассылку</p>
+              <p class="text-white text-xl font-bold uppercase italic">{{ $t('subscriebe') }}</p>
               <!-- <p class="text-white text-sm uppercase">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p> -->
               <div id="subscriebe" class="flex items-center gap-0.5 py-2">
                 <input type="email" class=" w-[22vw] text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" placeholder="ВАШ E-MAIL" /> 
