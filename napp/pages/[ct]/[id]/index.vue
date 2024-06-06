@@ -9,6 +9,7 @@
 
   const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
   const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.id}/`)
 
 
@@ -57,7 +58,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between">
               <div class="flex items-center justify-start">
                 <div class="flex items-center justify-start">
-                  <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">Главная</nuxt-link></div>
+                  <div class="flex gap-1 text-base font-semibold text-white text-center"><nuxt-link :to="localePath({ name: 'index' })" class="uppercase">{{ $t('main') }}</nuxt-link></div>
                   <div class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><nuxt-link :to="localePath({ name: 'ct', params: { ct: currentCategory.url } })" class="uppercase">{{ currentCategory.name }}</nuxt-link></div>
                   <div v-if="product" class="flex gap-1 text-base font-semibold text-white text-center mdi mdi-chevron-double-right"><p class="uppercase">{{ product.name }}</p></div>
                 </div>
@@ -258,6 +259,6 @@
     </div>
 
 
-    <AppFooter :categories="categories"/>
+    <AppFooter :categories="categories" :subcategories="subcategories" />
   </div>
 </template>

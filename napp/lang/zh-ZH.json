@@ -12,8 +12,11 @@
 
   "components": "备件和组件",
   "RWQ": "钢轨焊接设备",
+  "complects": "备件和组件",
   "subscriebe": "订阅",
   "getCatalog": "下载目录",
+  "privacy": "单击按钮即表示您同意隐私政策",
+
 
   "chooseUS": {
     "title": "为什么选择我们",
@@ -30,6 +33,25 @@
     "text-1": "使用闪光法对钢轨进行闪光对焊的世界领先设备制造商之一。",
     "text-2": "如今，我们的经验涵盖 2,000 台机器，遍布全球 13 个国家，包括美国、加拿大、中国、法国、伊朗、马来西亚、奥地利、摩洛哥、波兰等，占世界接触轨焊接机数量的 60%。"
   },
+
+  "contactus": {
+    "title-1": "年度焊接计划——数万个接头？！",
+    "title-2": "立即联系我们",
+    "name-title": "姓名",
+    "name": "张伟",
+    "email-title": "E-mail",
+    "email": "{'eg: example@example.com'}",
+    "company-title": "公司（可选）",
+    "company": "Company name Ltd",
+    "land-title": "国家（可选）",
+    "land": "China",
+    "message-title": "信息",
+    "message": "您的留言",
+    "send": "发送一个消息"
+  },
+
+
+
 
 
   "railWeldingEquipment": "Рельсосварочное оборудование",

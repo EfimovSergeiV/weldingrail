@@ -64,11 +64,11 @@
 
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900   px-8">
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('employees') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('projects') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('prodArea') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold"> {{ $t('clients') }}</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 px-8">
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+250</span><p class="text-white text-xl font-semibold"> {{ $t('employees') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+300</span><p class="text-white text-xl font-semibold"> {{ $t('projects') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-xl font-semibold"> {{ $t('prodArea') }}</p></div>
+              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+150</span><p class="text-white text-xl font-semibold"> {{ $t('clients') }}</p></div>
             </div>
           </div>
         </div>
@@ -231,22 +231,24 @@
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-        <div class="bg-[url('backgrounds/bg-1.webp')] h-[380px] bg-no-repeat bg-left bg-cover  ">
+        <div class="bg-[url('backgrounds/bg-1.webp')] h-[460px] bg-no-repeat bg-left bg-cover  ">
           <div class="bg-gradient-to-br from-sky-950/90 via-sky-900/70 to-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
             <div class="absolute w-full h-full">
 
               <div class="flex items-center justify-start h-full px-8">
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-4xl text-white font-bold uppercase italic">{{ $t('about.title') }}</p>
+                  <!-- <p class="text-4xl text-white font-bold uppercase italic">{{ $t('about.title') }}</p> -->
+                  <img src="/logo-white.webp" class="h-10" />
                   <div class="">
-                    <div class="grid grid-cols-1 gap-6">
-                      <p class="text-2xl text-white ">{{ $t('about.text-1') }}</p>
-                      <p class="text-2xl text-white ">{{ $t('about.text-2') }}</p>
+                    <div class="grid grid-cols-1 gap-6 py-4">
+                      <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
+                      <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
                     </div>
                   </div>
-                  <div class="flex py-4">
+                  <div class="flex items-center justify-end gap-8">
+                    <p class="text-xl text-white py-1 uppercase">{{ $t('contactus.title-2') }}</p>
                     <a href="" >
-                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-0.5 px-2  ">
+                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-2 px-6  ">
                         <div class="mdi mdi-24px mdi-download mt-1"></div>
                         <p class="text-base uppercase">{{ $t('getCatalog') }}</p>
                       </div>
@@ -283,7 +285,7 @@
         </div>
 
         <div class="px-8 bg-white">
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-y-2 gap-x-6">
             <div class="">
               <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
               <div class="relative">

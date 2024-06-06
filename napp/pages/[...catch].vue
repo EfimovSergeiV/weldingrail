@@ -8,6 +8,7 @@
 
   const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
   const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
 
 
@@ -87,7 +88,7 @@
 
 
 
-    <AppFooter :categories="categories"/>
+    <AppFooter :categories="categories" :subcategories="subcategories" />
   </div>
 
   <!-- <div class="h-screen flex items-center justify-center">

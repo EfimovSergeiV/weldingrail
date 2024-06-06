@@ -7,6 +7,7 @@
 
   const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
   const { data: category } = await useFetch(`${ config.public.baseURL }${locale.value}/c/category/${route.params.ct}/`)
   const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/${route.params.ct}/`)
 
@@ -121,6 +122,6 @@
 
     </div>
 
-    <AppFooter :categories="categories"/>
+    <AppFooter :categories="categories" :subcategories="subcategories" />
   </div>
 </template>

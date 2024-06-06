@@ -12,8 +12,11 @@
 
   "components": "Spare parts and components",
   "RWQ": "Railwelding equipment",
+  "complects": "Запасные части и комплектующие",
   "subscriebe": "Subscribe to our newsletter",
   "getCatalog": "Download catalog",
+  "privacy": "By clicking the button, you agree to the Privacy Policy",
+
 
   "chooseUS": {
     "title": "Why choose us?",
@@ -31,7 +34,21 @@
     "text-2": "Today, our experience spans 2,000 machines and 13 countries around the world, including the USA, Canada, China, France, Iran, Malaysia, Austria, Morocco, Poland and others, accounting for 60% of the world fleet of contact rail welding machines."
   },
 
-
+  "contactus": {
+    "title-1": "Annual welding plans - tens of thousands of joints?!",
+    "title-2": "Contact us right now",
+    "name-title": "Name",
+    "name": "John M Smith",
+    "email-title": "E-mail",
+    "email": "{'eg: example@example.com'}",
+    "company-title": "Company (optional)",
+    "company": "Company name Ltd.",
+    "land-title": "Country (optional)",
+    "land": "USA",
+    "message-title": "Message",
+    "message": "Your text here",
+    "send": "Send message"
+  },
 
 
 
