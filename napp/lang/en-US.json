@@ -13,6 +13,7 @@
   "components": "Spare parts and components",
   "RWQ": "Railwelding equipment",
   "subscriebe": "Subscribe to our newsletter",
+  "getCatalog": "Download catalog",
 
   "chooseUS": {
     "title": "Why choose us?",
@@ -24,23 +25,16 @@
     "6": "Personal manager"
   },
   
+  "about": {
+    "title": "WELDINGRAIL",
+    "text-1": "One of the world's leading manufacturers of equipment for flash butt welding of rails using the flash method.",
+    "text-2": "Today, our experience spans 2,000 machines and 13 countries around the world, including the USA, Canada, China, France, Iran, Malaysia, Austria, Morocco, Poland and others, accounting for 60% of the world fleet of contact rail welding machines."
+  },
 
 
 
 
 
-
-  "railWeldingEquipment": "Rail welding equipment",
-  "testEquipment": "Test equipment",
-  "about": "About",
-  "services": "Services",
-  "write-us": "Write to us",
-
-  "title-1": "RAILWELDING",
-  "title-2": "EQUIPMENT",
-  "slogan": "Development and production of rail welding machines",
-
-  "requestCall": "Request a call",
 
   "pages": {
     "index": {
@@ -88,9 +82,7 @@
 
       "learn-title": "TRAINING AND TECHNICAL SUPPORT",
       "learn-text": "We offer specialized technical training and consulting services in rail welding. Our team consists of experienced engineers and skilled workers who are always ready and willing to share their knowledge with other professionals in this field. The customer service department of Railwelding company pays great attention to the quality transmission of knowledge, continuous support, and ensuring sustainable production without the need for frequent technical maintenance. Such a comprehensive approach to customer service is a guarantee of long-term fruitful cooperation. We are eager to provide training and guidance on all aspects of operating and maintaining the equipment we produce."
-    },
-    "about": {
-      "description": "English description"
     }
+
   }
 }

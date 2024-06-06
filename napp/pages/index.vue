@@ -237,18 +237,18 @@
 
               <div class="flex items-center justify-start h-full px-8">
                 <div class="grid grid-cols-1 gap-4">
-                  <p class="text-4xl text-white font-bold uppercase italic">Компания WELDINGRAIL</p>
+                  <p class="text-4xl text-white font-bold uppercase italic">{{ $t('about.title') }}</p>
                   <div class="">
                     <div class="grid grid-cols-1 gap-6">
-                      <p class="text-2xl text-white ">Один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-                      <p class="text-2xl text-white ">Сегодня наш опыт объеденяет 2000 машин и 13 стран мира, включая США, Канаду, Китай, Францию, Иран, Малайзию, Австрию, Марокко, Польшу и другие, состовляя 60% мирового парка контактных рельсосварочных машин.</p>
+                      <p class="text-2xl text-white ">{{ $t('about.text-1') }}</p>
+                      <p class="text-2xl text-white ">{{ $t('about.text-2') }}</p>
                     </div>
                   </div>
                   <div class="flex py-4">
                     <a href="" >
                       <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-0.5 px-2  ">
                         <div class="mdi mdi-24px mdi-download mt-1"></div>
-                        <p class="text-base uppercase">Скачать каталог</p>
+                        <p class="text-base uppercase">{{ $t('getCatalog') }}</p>
                       </div>
                     </a>                    
                   </div>
@@ -274,44 +274,44 @@
 
         <div class="py-8 px-4 bg-white">
           <div class=" flex items-start justify-center">
-            <p class="text-2xl text-sky-900 font-bold uppercase italic "> Ежегодные планы по сварке - десятки тысяч стыков?!</p>
+            <p class="text-2xl text-sky-900 font-bold uppercase italic ">{{ $t('contactus.title-1') }}</p>
           </div>
 
           <div class=" flex items-start justify-center">
-            <p class="text-xl text-sky-900 py-1 uppercase"> Свяжитесь с нами прямо сейчас!</p>
+            <p class="text-xl text-sky-900 py-1 uppercase">{{ $t('contactus.title-2') }}</p>
           </div>          
         </div>
 
         <div class="px-8 bg-white">
           <div class="grid grid-cols-2 gap-4">
             <div class="">
-              <label for="text-1" class="text-sm text-sky-900">ФИО:</label>
+              <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Иванов Иван Иванович" />
+                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
               </div>              
             </div>          
             <div class="">
-              <label for="text-2" class="text-sm text-sky-900">Компания: (необязательно)</label>
+              <label for="text-2" class="text-sm text-sky-900">{{ $t('contactus.company-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="ООО Название компании" />
+                <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
               </div>              
             </div>          
 
             <div class="">
-              <label for="text-4" class="text-sm text-sky-900">Email:</label>
+              <label for="text-4" class="text-sm text-sky-900">{{ $t('contactus.email-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="example@example.ru" />
+                <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.email')" />
               </div>
             </div>
               
             <div class="">
-              <label for="text-5" class="text-sm text-sky-900">Страна: (необязательно)</label>
+              <label for="text-5" class="text-sm text-sky-900">{{ $t('contactus.land-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Россия" />
+                <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
               </div>              
             </div>              
 
@@ -321,10 +321,10 @@
           <div class="grid grid-cols-1 gap-4 py-4 ">
           
             <div class="">
-              <label for="text-6" class="text-sm text-sky-900">Комментарий:</label>
+              <label for="text-6" class="text-sm text-sky-900">{{ $t('contactus.message-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-900/90"></p> -->
-                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 p-1.5 " placeholder="Ваш текст"></textarea>
+                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 p-1.5 " :placeholder="$t('contactus.message')"></textarea>
               </div>              
             </div>
           </div>
@@ -334,11 +334,8 @@
 
         <div class="flex items-center justify-end gap-4 bg-white px-8">
           <div class="flex gap-4">
-
             <div class="flex items-center gap-4 max-w-[50rem]">
-              <label for="privacy" class="text-sm text-sky-900 text-right">
-                Согласен с правилами сайта и на обработку моих персональных данных в соответствии с требованиями Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»
-              </label>              
+              <label for="privacy" class="text-sm text-sky-900 text-right">{{ $t('privacy') }}</label> 
               <input 
                 id="privacy"
                 type="checkbox"
@@ -351,7 +348,7 @@
           </div>
           <div class="">
             <div class="flex items-center justify-end">
-              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10  ">Отправить сообщение</button>
+              <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('contactus.send') }}</button>
             </div>
           </div>
         </div>
@@ -460,7 +457,7 @@
 
 
 
-    <AppFooter :categories="categories"/>
+    <AppFooter :categories="categories" :subcategories="subcategories" />
   </div>
 </template>
 

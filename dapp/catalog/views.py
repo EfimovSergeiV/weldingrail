@@ -128,3 +128,5 @@ class ProductModelView(APIView):
         data['product_properties'] = product_properties
 
         return Response(data)
+
+
