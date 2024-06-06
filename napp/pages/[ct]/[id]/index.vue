@@ -89,34 +89,34 @@
                 
 
                 <div class="">
-                  <label for="text-1" class="text-sm text-sky-900">ФИО:</label>
+                  <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
                   <div class="relative">
                     <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                    <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Иванов Иван Иванович" />
+                    <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
                   </div>              
                 </div>
 
                 <div class="">
-                  <label for="text-2" class="text-sm text-sky-900">Компания: (необязательно)</label>
+                  <label for="text-2" class="text-sm text-sky-900">{{ $t('contactus.company-title') }}</label>
                   <div class="relative">
                     <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                    <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="ООО Название компании" />
+                    <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
+                  </div>              
+                </div>
+
+                <div style="font-family: Play;" class="">
+                  <label for="text-4" class="text-sm text-sky-900">{{ $t('contactus.email-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
+                    <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.email')" />
                   </div>              
                 </div>
 
                 <div class="">
-                  <label for="text-4" class="text-sm text-sky-900">Email:</label>
+                  <label for="text-5" class="text-sm text-sky-900">{{ $t('contactus.land-title') }}</label>
                   <div class="relative">
                     <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                    <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="example@example.ru" />
-                  </div>              
-                </div>
-
-                <div class="">
-                  <label for="text-5" class="text-sm text-sky-900">Страна: (необязательно)</label>
-                  <div class="relative">
-                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                    <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " placeholder="Россия" />
+                    <input style="font-family: Play;" type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
                   </div>              
                 </div>
 
