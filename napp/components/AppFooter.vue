@@ -60,7 +60,7 @@
               <p class="text-white text-xl font-bold uppercase italic">{{ $t('subscriebe') }}</p>
               <!-- <p class="text-white text-base ">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p> -->
               <div id="subscriebe" class="flex items-center gap-0.5 py-2">
-                <input type="email" class=" w-[22vw] text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+                <input type="email" style="font-family: Play;" class=" w-[22vw] text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
                 <button class="h-8 px-4 text-base uppercase bg-white text-sky-900 shadow-xl shadow-gray-900/10 mdi mdi-send-variant"></button>
               </div>
 

@@ -297,11 +297,11 @@
               <label for="text-2" class="text-sm text-sky-900">{{ $t('contactus.company-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
+                <input type="text" style="font-family: Play;" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
               </div>              
             </div>          
 
-            <div class="">
+            <div style="font-family: Play;" class="">
               <label for="text-4" class="text-sm text-sky-900">{{ $t('contactus.email-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
@@ -313,7 +313,7 @@
               <label for="text-5" class="text-sm text-sky-900">{{ $t('contactus.land-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-5" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
+                <input type="text" id="text-5" style="font-family: Play;" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
               </div>              
             </div>              
 
