@@ -364,7 +364,7 @@
 
         <div class="py-4 px-4 bg-white">
           <div class="flex items-center justify-center py-6">
-            <p class="text-xl text-sky-900 font-bold uppercase italic">Нашими партнёрами уже стали</p>
+            <p class="text-xl text-sky-900 font-bold uppercase italic">{{ $t('partners') }}</p>
           </div>
 
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">

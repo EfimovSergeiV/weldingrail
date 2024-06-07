@@ -71,15 +71,17 @@ export default defineNuxtConfig({
         file: 'zh-ZH.json'
       },
       {
-        code: 'de',
-        iso: 'de-DE',
-        file: 'de-DE.json'
-      },
-      {
         code: 'ru',
         iso: 'ru-RU',
         file: 'ru-RU.json'
       },
+
+      // {
+      //   code: 'de',
+      //   iso: 'de-DE',
+      //   file: 'de-DE.json'
+      // },
+
     ],
     lazy: true,
     langDir: 'lang/',

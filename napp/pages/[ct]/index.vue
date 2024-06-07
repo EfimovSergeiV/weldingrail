@@ -113,7 +113,13 @@
       </div>
 
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
+        
         <div class="bg-white py-8 px-8">
+
+          <div class="py-4">
+            <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('desription') }}</p>
+          </div>
+          
           <div v-html="category.description" class="text-sky-900 text-xl"></div>
         </div>
         

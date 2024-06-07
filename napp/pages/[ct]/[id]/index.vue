@@ -72,22 +72,21 @@
 
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="flex items-center gap-8 bg-white pt-8 px-8">
-        <div class=" flex-none">
+      <div class="flex items-center gap-8 bg-white pt-8">
+        <div class=" flex-none px-8">
           <img :src="product.image" class="w-[290px]" />
         </div>
-        <div class="grid grid-cols-1 gap-4 w-full">
+        <div class="grid grid-cols-1 gap-6 w-full">
           <div class="">
             <p class="text-4xl text-sky-900 font-bold uppercase italic">{{ product.name }}</p>
           </div>
-          <div class="">
-          
 
 
+          <div class="bg-white px-8 py-2">
             <div class="">
-              <div class="grid grid-cols-2 gap-x-4 gap-y-2 py-4 ">
+              <p class="text-lg text-sky-900 font-semibold uppercase italic">{{ $t('requestPrice') }}</p>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2 py-2 ">
                 
-
                 <div class="">
                   <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
                   <div class="relative">
@@ -100,7 +99,7 @@
                   <label for="text-2" class="text-sm text-sky-900">{{ $t('contactus.company-title') }}</label>
                   <div class="relative">
                     <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                    <input type="text" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
+                    <input type="text" style="font-family: Play;" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
                   </div>              
                 </div>
 
@@ -123,11 +122,11 @@
               </div>
 
 
-              <div class="flex gap-4 items-center justify-end">
+              <div class="flex gap-4 items-center justify-end py-4">
 
                 <div class="flex items-center gap-4 ">
                   <label for="privacy" class="text-xs text-sky-900 text-right">
-                    Согласен с правилами сайта и на обработку моих персональных данных в соответствии с требованиями Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»
+                    {{ $t('privacy') }}
                   </label>              
                   <input 
                     id="privacy"
@@ -144,15 +143,10 @@
                 </div>
               </div>
 
- 
-
-
             </div>
-
-
-
-
           </div>
+
+
         </div>
       </div>
     </div>
@@ -161,10 +155,10 @@
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
       <div class="bg-white px-8 py-8">
         <div class="py-4">
-          <p class="text-2xl text-sky-900 font-semibold uppercase italic">Описание машины:</p>
+          <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('desription') }}</p>
         </div>
         <div class="">
-          <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-xl"></div>
+          <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-base"></div>
           <div v-else class="">
             <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
               <div v-if="category.id === product.category" class="" v-html="category.description"></div>
@@ -200,7 +194,7 @@
             </div>
             <div class="w-full text-sm">
               <div class="my-2">
-                <p class="text-2xl text-sky-900 font-semibold uppercase italic">Технические параметры:</p>
+                <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('specifications') }}</p>
               </div>
               <div class=" grid grid-cols-1 gap-2 py-4">
                 <div v-for="propdata in product.product_properties" :key="propdata.id" class="">

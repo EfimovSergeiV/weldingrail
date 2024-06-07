@@ -23,7 +23,7 @@
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class=" bg-sky-900 px-8">        
-        <div class="flex items-start justify-start gap-24 h-full py-8">
+        <div class="flex flex-wrap items-start justify-between gap-14 h-full py-8">
 
 
           <div class="">
@@ -45,22 +45,33 @@
               <p class="text-white uppercase font-semibold text-lg italic">{{ $t('components')}}</p>
             </div>
             
-            <div class="grid grid-cols-2 gap-y-2 gap-x-14">
+            <div class="grid grid-cols-1 gap-y-2 gap-x-14">
               <div v-for="sct in props.subcategories" class="">
                 <p class="text-white">{{ sct.name }}</p>
               </div>
             </div>
           </div>
+
+          <div class="grid grid-cols-1 gap-1">
+            <p class="text-white text-lg font-bold uppercase italic">{{ $t('subscriebe') }}</p>
+            <!-- <p class="text-white text-base ">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p> -->
+            <div id="subscriebe" class="flex items-center justify-center gap-0.5 py-2">
+              <input type="email" style="font-family: Play;" class=" w-full text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+              <button class="h-8 px-4 text-base uppercase bg-white text-sky-900 shadow-xl shadow-gray-900/10 mdi mdi-send-variant"></button>
+            </div>
+          </div>
+
+
         </div>
 
 
-        <div class="flex items-end justify-end py-2">
+        <div class="flex items-end justify-end py-2 hidden">
           <div class="flex items-center justify-center">
             <div class="grid grid-cols-1 gap-1">
-              <p class="text-white text-xl font-bold uppercase italic">{{ $t('subscriebe') }}</p>
+              <p class="text-white text-lg font-bold uppercase italic">{{ $t('subscriebe') }}</p>
               <!-- <p class="text-white text-base ">Будьте первым, кто узнает последние новости о тенденциях в сварочных технологиях!</p> -->
-              <div id="subscriebe" class="flex items-center gap-0.5 py-2">
-                <input type="email" style="font-family: Play;" class=" w-[22vw] text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+              <div id="subscriebe" class="flex items-center justify-center gap-0.5 py-2">
+                <input type="email" style="font-family: Play;" class=" w-[300px] text-center h-8 px-4 text-base text-sky-900 bg-white border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
                 <button class="h-8 px-4 text-base uppercase bg-white text-sky-900 shadow-xl shadow-gray-900/10 mdi mdi-send-variant"></button>
               </div>
 
