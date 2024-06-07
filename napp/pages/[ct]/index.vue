@@ -60,8 +60,8 @@
 
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
         <div class="flex">
-          <div class="bg-sky-900 bg-slice-right">
-            <p class="text-4xl text-white font-bold uppercase italic py-4 px-8">{{ category.name }}</p>
+          <div class="bg-sky-900 bg-slice-right px-8">
+            <p class="text-2xl text-white font-bold uppercase italic py-2 px-8">{{ category.name }}</p>
           </div>
         </div>
         
