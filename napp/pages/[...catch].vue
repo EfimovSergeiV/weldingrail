@@ -57,7 +57,7 @@
                     <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
                   </div>
                   <div class=" shadow-xl shadow-gray-900/10">
-                    <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestCall') }}</button>
+                    <button class="bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestCall') }}</button>
                   </div>
                 </div>
               </div>

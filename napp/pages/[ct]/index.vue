@@ -44,7 +44,7 @@
       <div class="">
         <div class="container mx-auto px-8 lg:max-w-7xl lg:px-8 ">
           <div class="py-4 bg-white">
-            <div class="bg-sky-900 px-8">
+            <div class="bg-sky-700 px-8">
               <div class="flex items-center justify-start min-h-20">
                 <div class="flex gap-1 text-base font-semibold text-white text-center">
                   <nuxt-link :to="localePath({ name: 'index' })" class="uppercase">{{ $t('main') }}</nuxt-link>
@@ -60,7 +60,7 @@
 
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
         <div class="flex bg-white border-b border-sky-900">
-          <div class="bg-sky-900 bg-slice-right px-8">
+          <div class="bg-sky-700 bg-slice-right px-8">
             <p class="text-2xl text-white font-bold uppercase italic py-2 px-8">{{ category.name }}</p>
           </div>
         </div>
@@ -84,13 +84,13 @@
 
                       <div class="grid grid-cols-1 gap-4 items-center">
                         <div class="flex items-center justify-center">
-                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-900 font-bold">{{ product.name }}</nuxt-link>
+                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-700 font-bold">{{ product.name }}</nuxt-link>
                         </div>
 
                         <div class="flex items-center justify-start gap-4">
 
-                          <button class="min-w-[180px] bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
-                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-base text-sky-900 font-semibold">{{ $t('learnMore') }}</nuxt-link>
+                          <button class="min-w-[180px] bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
+                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-base text-sky-700 font-semibold">{{ $t('learnMore') }}</nuxt-link>
 
                         </div>
                       </div>
@@ -111,7 +111,7 @@
 
         <div v-else class="min-h-[24vh]">
           <div class="flex items-center justify-center">
-            <p class="text-4xl text-sky-900 py-8">Нет товаров для отображения</p>
+            <p class="text-4xl text-sky-700 py-8">Нет товаров для отображения</p>
           </div>
         </div>
 
@@ -122,13 +122,13 @@
         <div class="bg-white py-8">
 
           <div class="flex border-b border-sky-900">
-            <div class="bg-sky-900 px-20 py-2 bg-slice-right">
+            <div class="bg-sky-700 px-20 py-2 bg-slice-right">
               <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('desription') }}</p>
             </div>            
           </div>
 
           
-          <div v-html="category.description" class="text-sky-900 text-base px-8  py-4"></div>
+          <div v-html="category.description" class="text-sky-700 text-base px-8  py-4"></div>
         </div>
         
       </div>
