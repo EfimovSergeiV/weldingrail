@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class="">
-              <div class="bg-sky-800/90 bg-slice-left border-y  border-white/20 px-4 py-6">
+              <div class="bg-sky-800/90 bg-slice-left border-y  border-white/20 px-6 py-6 min-w-[22vw]">
                 <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
 
                 <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
