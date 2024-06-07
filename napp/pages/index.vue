@@ -46,15 +46,18 @@
               </div>
             </div>
 
-            <div class="bg-white">
-              <div class="flex items-center justify-end gap-8 py-4">
-                <div class="">
-                  <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
-                </div>
-                <div class=" shadow-xl shadow-gray-900/10">
-                  <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base w-48 py-2 ">{{ $t('writeUs') }}</button>
-                </div>
+            <div class="bg-white py-2">
+              <div class="flex items-center justify-end">
+                <div class="flex items-center justify-end gap-8 py-2 px-24 bg-sky-900 bg-slice-left">
+                  <div class="">
+                    <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-lg font-semibold">info@weldingrail.com</a>
+                  </div>
+                  <div class=" shadow-xl shadow-gray-900/10 hidden">
+                    <button class="bg-gradient-to-tr from-white via-gray-100 to-white font-semibold text-sky-900 text-base w-48 py-2 ">{{ $t('writeUs') }}</button>
+                  </div>
+                </div>                
               </div>
+
             </div>
 
           </div>
@@ -75,97 +78,6 @@
       </div>
     </div>
 
-
-
-    <!-- <div class="py-16 hidden">
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        <div class="flex items-center justify-center">
-          <div class="grid grid-cols-1 gap-4 px-10">
-            <p class="text-4xl text-sky-900 font-semibold text-center">Компания WELDINGRAIL – один из лидирующих мировых производителей оборудования для контактной стыковой сварки рельсов методом оплавления.</p>
-            <p class="text-xl text-sky-900 text-center">Мы разрабатываем и производим надёжные рельсосварочные машины и комплексы, оказываем полный спектр услуг по гарантийному, постгарантийному обслуживанию оборудования, включая капитальный ремонт и модернизацию оборудования для сварки рельсов. Сильная инженерная команда и более 20 лет опыта позволяют нам разрабатывать высокотехнологичные решения по сварке рельсов. Оборудование WELDINGRAIL успешно эксплуатируется в 13-ти странах мира. Свяжитесь с нами, мы предложим вам лучшее решение для сварки рельсов.</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-
-
-    <!-- ПЕРВАЯ ВЕРСИЯ ТОВАРОВ !!! -->
-
-
-    <div class="grid grid-cols-1 content-center hidden">
-
-      <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-        <div class="bg-white py-4">
-          <div v-for="category in categories" :key="category.id" class="py-4 ">
-            
-            <div class="grid grid-cols-1 gap-2">
-              
-              <div class="px-8 py-4">
-                <!-- <nuxt-link :to="localePath({ name: 'ct', params: { ct: category.url } })" :class="`text-4xl text-sky-900 font-bold uppercase italic`">{{ category.name }}</nuxt-link> -->
-                <p @click="ctSelect = category.id" class="text-4xl text-sky-900 font-bold uppercase italic cursor-pointer">{{ category.name }}</p>
-              </div>
-              
-              <!-- <div v-if="category.description" class="grid grid-cols-1 gap-4">
-                <div class="text-base text-sky-900 px-0.5" v-html="category.description"></div>
-              </div> -->
-
-            </div>
-
-
-
-            <div class="grid grid-cols-2 gap-x-4">
-              <div v-for="product in products" :key="product.id">
-                
-                  <div v-if="product.category === category.id && category.id === ctSelect " class="py-4">
-
-                    <div class="">
-
-
-
-                      <div class="flex items-center gap-4 px-8 py-2">
-                        <div class="flex-none w-[200px]">
-                          <img :src="product.image" class="w-[180px]" />
-                        </div>
-                        <div class="grid grid-cols-1 gap-4">
-                          <!-- <button @click="showParams = product" class="text-left text-sky-900 font-semibold flex items-center gap-2">Показать характеристики</button> -->
-                          <!-- <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link> -->
-                          <!-- <div class="text-sky-900" v-html="product.description"></div> -->
-                          <div class="flex items-center gap-4 py-1">
-                            <button class="bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-900 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">Запросить стоимость</button>
-                            <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-900 font-semibold">Подробнее</nuxt-link>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="px-8   ">
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
-                      </div>
-
-                      <!-- <div class="text-center">
-                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="mb-10 text-xl text-sky-900 font-semibold">{{ product.name }}</nuxt-link>
-                      </div> -->
-
-
-                    </div>
-
-                  </div>
-
-
-              </div>                
-            </div>
-
-
-
-
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
 
 
 
@@ -200,13 +112,16 @@
         </div>
 
         <div v-if="subcategories" class="">
-          <div class="py-8 px-8">
+          <div class="py-8">
 
-            <div class="py-4">
-              <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('components') }}</p>
+            <div class="py-4 flex">
+              <div class=" px-8 py-2 bg-slice-right bg-sky-900">
+                <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('components') }}</p>
+              </div>              
             </div>
 
-            <div class="flex flex-wrap gap-x-8 gap-y-4">
+
+            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8">
               <div v-for="subct in subcategories" :key="subct.id" class="">
                 <div class="">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
@@ -231,33 +146,38 @@
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-        <div class="bg-[url('backgrounds/bg-1.webp')] h-[460px] bg-no-repeat bg-left bg-cover  ">
+        <div class="bg-[url('backgrounds/bg-1.webp')] h-[400px] bg-no-repeat bg-left bg-cover  ">
           <div class="bg-gradient-to-br from-sky-950/90 via-sky-900/70 to-sky-950/80 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
             <div class="absolute w-full h-full">
 
-              <div class="flex items-center justify-start h-full px-8">
-                <div class="grid grid-cols-1 gap-4">
-                  <!-- <p class="text-4xl text-white font-bold uppercase italic">{{ $t('about.title') }}</p> -->
-                  <img src="/logo-white.webp" class="h-10" />
-                  <div class="">
-                    <div class="grid grid-cols-1 gap-6 py-4">
-                      <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
-                      <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-end gap-8">
-                    <p class="text-xl text-white py-1 uppercase">{{ $t('contactus.title-2') }}</p>
-                    <a href="" >
-                      <div class="flex items-center justify-center gap-0.5 bg-gradient-to-tr from-gray-100 via-white to-gray-100 font-semibold text-sky-900 text-base shadow-xl shadow-gray-900/10 py-2 px-6  ">
-                        <div class="mdi mdi-24px mdi-download mt-1"></div>
-                        <p class="text-base uppercase">{{ $t('getCatalog') }}</p>
-                      </div>
-                    </a>                    
+              <div class="flex items-center justify-center h-full">
+                <div class="grid grid-cols-1 gap-10">
+                  <div class="grid grid-cols-1 gap-4 px-8">
+                    <img src="/logo-white.webp" class="h-10" />
+                    <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
+                    <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
+
                   </div>
 
-                  
+                  <div class="flex items-center justify-end gap-4">
+                    <div class="">
+                      <p class="text-xl text-white py-1 font-semibold uppercase">{{ $t('contactus.title-2') }}</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-0.5 text-sky-900 bg-white bg-slice-left px-8 py-1 -mr-1">
+                      <div class="mdi mdi-24px mdi-download"></div>
+                      <p class="text-base font-semibold uppercase ">{{ $t('getCatalog') }}</p>
+                    </div>
+                  </div>
+
                 </div>
+
+
+
+
               </div>
+
+
+
 
             </div>
           </div>

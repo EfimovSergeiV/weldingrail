@@ -82,11 +82,17 @@
           </div>
 
 
-          <div class="bg-white px-8 py-2">
-            <div class="">
-              <p class="text-lg text-sky-900 font-semibold uppercase italic">{{ $t('requestPrice') }}</p>
-              <div class="grid grid-cols-2 gap-x-4 gap-y-2 py-2 ">
-                
+          <div class="bg-white py-2">
+
+            <div class="flex items-center justify-end">
+              <div class="bg-slice-left bg-sky-900 py-2 px-32">
+                <p class="text-lg text-white font-semibold uppercase italic">{{ $t('requestPrice') }}</p>
+              </div>
+            </div>
+
+            <div class="px-8 ">
+
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2 py-8 ">
                 <div class="">
                   <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
                   <div class="relative">
@@ -153,11 +159,14 @@
 
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="bg-white px-8 py-8">
-        <div class="py-4">
-          <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('desription') }}</p>
+      <div class="bg-white py-8">
+        <div class="py-4 flex">
+          <div class="bg-sky-900 px-32 py-2 bg-slice-right">
+            <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('desription') }}</p>
+          </div>
+          
         </div>
-        <div class="">
+        <div class=" px-8 ">
           <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-base"></div>
           <div v-else class="">
             <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
@@ -173,7 +182,38 @@
 
       <div class=" grid grid-cols-1 content-center">
         <div id="product-property" class="container mx-auto lg:max-w-7xl lg:px-8">
-          <div class=" bg-white flex gap-8 py-8 px-4">
+          <div class=" bg-white flex gap-8 py-8 ">
+            
+
+
+            <div class="w-full text-sm">
+              <div class="flex">
+                <div class="my-2 bg-sky-900 px-20 py-2 bg-slice-right flex">
+                  <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('specifications') }}</p>
+                </div>                
+              </div>
+
+
+
+              <div class="px-8 grid grid-cols-1 gap-2 py-4">
+                <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
+                  <div v-if="propdata.value" class="">
+                    <div class="flex items-center justify-between text-base border-b border-sky-900/30 hover:border-sky-900/50 transition-all duration-300">
+                      <p class="text-sky-900 se lect-none font-sans">{{ propdata.name }}</p>
+                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
+                    </div>                
+                  </div>
+                  <div v-else class="">
+                    <div class="flex items-center justify-start text-base mt-6">
+                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.name }}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>            
+            </div>
+
+
             <div class=" w-1/3 invisible">
               <div class="my-2">
                 <p class="text-xl text-sky-900 se lect-none font-sans font-semibold uppercase">Материалы:</p>
@@ -192,27 +232,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full text-sm">
-              <div class="my-2">
-                <p class="text-2xl text-sky-900 font-semibold uppercase italic">{{ $t('specifications') }}</p>
-              </div>
-              <div class=" grid grid-cols-1 gap-2 py-4">
-                <div v-for="propdata in product.product_properties" :key="propdata.id" class="">
-                  <div v-if="propdata.value" class="">
-                    <div class="flex items-center justify-between text-base border-b border-sky-900/30 hover:border-sky-900/50 transition-all duration-300">
-                      <p class="text-sky-900 se lect-none font-sans">{{ propdata.name }}</p>
-                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.value }}</p>
-                    </div>                
-                  </div>
-                  <div v-else class="">
-                    <div class="flex items-center justify-start text-base mt-6">
-                      <p class="text-sky-900 se lect-none font-sans font-semibold">{{ propdata.name }}</p>
-                    </div>
-                  </div>
 
-                </div>
-              </div>            
-            </div>
           </div>
         </div>
       </div>
