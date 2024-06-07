@@ -81,7 +81,7 @@
 
 
 
-    <!-- ВТОРАЯ ВЕРСИЯ ТОВАРОВ -->
+
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class=" bg-white">
         <div class="py-8 px-8">
@@ -99,8 +99,8 @@
         <div class="grid grid-cols-2 gap-4">
           <div class="" v-for="ct in categories" :key="ct.id">
             <div class="relative">
-              <img src="/slides/blue-1.webp" class="w-full" />
-              <div class="absolute bg-sky-900/80 hover:bg-sky-900/90 h-full w-full top-0 left-0">
+              <img src="/backgrounds/10.jpg" class="h-[240px] w-full" />
+              <div class="absolute bg-sky-900/80 hover:bg-sky-900/90 transition-all duration-300 h-full w-full top-0 left-0">
                 <div class="flex items-center justify-center h-full">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="">
                     <p class="text-white text-2xl font-bold uppercase italic cursor-pointer">{{ ct.name }}</p>
@@ -110,6 +110,9 @@
             </div>
           </div>
         </div>
+
+
+
 
         <div v-if="subcategories" class="">
           <div class="py-8">
@@ -168,7 +171,7 @@
                     <div class="">
                       <p class="text-xl text-white py-1 font-semibold uppercase">{{ $t('contactus.title-2') }}</p>
                     </div>
-                    <div class="flex items-center justify-center gap-0.5 text-sky-900 bg-white bg-slice-left px-8 py-1">
+                    <div class="flex items-center justify-center gap-0.5 text-sky-900 bg-white bg-slice-left px-8 py-1 cursor-pointer">
                       <div class="mdi mdi-24px mdi-download"></div>
                       <p class="text-base font-semibold uppercase ">{{ $t('getCatalog') }}</p>
                     </div>
