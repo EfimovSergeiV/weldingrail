@@ -215,7 +215,7 @@
               <label for="text-1" class="text-sm text-sky-700">{{ $t('contactus.name-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-700/90"></p> -->
-                <input type="text" id="text-1" class="bg-gray-50 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
+                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
               </div>              
             </div>          
             <div class="">

@@ -52,9 +52,9 @@
               <div class="bg-sky-800/90 bg-slice-left border-y  border-white/20 px-4 py-6">
                 <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
 
-                <div id="subscriebe" class="flex items-center gap-4 py-2 pl-4">
-                  <div class="border-b border-sky-900">
-                    <input type="email" style="font-family: Play;" class="w-[22vw] text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+                <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
+                  <div class=" w-full ">
+                    <input type="email" style="font-family: Play;" class="w-full text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
                   </div>
 
                 </div>
