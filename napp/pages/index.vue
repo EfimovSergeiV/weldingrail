@@ -114,14 +114,14 @@
         <div v-if="subcategories" class="">
           <div class="py-8">
 
-            <div class="py-4 flex">
+            <div class="flex border-b border-sky-900">
               <div class=" px-8 py-2 bg-slice-right bg-sky-900">
                 <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('components') }}</p>
               </div>              
             </div>
 
 
-            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 py-4">
+            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 py-8">
               <div v-for="subct in subcategories" :key="subct.id" class="">
                 <div class="">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">

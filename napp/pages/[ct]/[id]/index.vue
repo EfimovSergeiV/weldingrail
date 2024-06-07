@@ -84,7 +84,7 @@
 
           <div class="bg-white py-2">
 
-            <div class="flex items-center justify-end">
+            <div class="flex items-center justify-end border-b border-sky-900">
               <div class="bg-slice-left bg-sky-900 py-2 px-32">
                 <p class="text-lg text-white font-semibold uppercase italic">{{ $t('requestPrice') }}</p>
               </div>
@@ -160,13 +160,13 @@
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
       <div class="bg-white py-8">
-        <div class="py-4 flex">
+        <div class="flex  border-b border-sky-900">
           <div class="bg-sky-900 px-32 py-2 bg-slice-right">
             <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('desription') }}</p>
           </div>
           
         </div>
-        <div class=" px-8 ">
+        <div class=" px-8 py-4">
           <div v-if="product.description.length > 1" v-html="product.description" class="text-sky-900 text-base"></div>
           <div v-else class="">
             <div v-for="category in categories" :key="category.id" class="text-sky-900 text-base">
@@ -187,8 +187,8 @@
 
 
             <div class="w-full text-sm">
-              <div class="flex">
-                <div class="my-2 bg-sky-900 px-20 py-2 bg-slice-right flex">
+              <div class="flex border-b border-sky-900">
+                <div class=" bg-sky-900 px-20 py-2 bg-slice-right flex">
                   <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('specifications') }}</p>
                 </div>                
               </div>

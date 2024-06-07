@@ -58,8 +58,8 @@
         </div>
       </div>
 
-      <div class="container mx-auto lg:max-w-7xl lg:px-8">
-        <div class="flex">
+      <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
+        <div class="flex bg-white border-b border-sky-900">
           <div class="bg-sky-900 bg-slice-right px-8">
             <p class="text-2xl text-white font-bold uppercase italic py-2 px-8">{{ category.name }}</p>
           </div>
@@ -71,7 +71,7 @@
 
         <div v-if="products" class="py-8 px-8 bg-white">
 
-          <div class="flex flex-wrap gap-16">
+          <div class="flex flex-wrap gap-16 py-12">
             <div class="" v-for="product in products" :key="product.id">
               <div class="">
                 <div class="">
@@ -121,14 +121,14 @@
         
         <div class="bg-white py-8">
 
-          <div class="flex py-4">
+          <div class="flex border-b border-sky-900">
             <div class="bg-sky-900 px-20 py-2 bg-slice-right">
               <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('desription') }}</p>
             </div>            
           </div>
 
           
-          <div v-html="category.description" class="text-sky-900 text-base px-8"></div>
+          <div v-html="category.description" class="text-sky-900 text-base px-8  py-4"></div>
         </div>
         
       </div>
