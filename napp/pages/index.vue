@@ -48,7 +48,7 @@
 
             <div class="bg-white py-2">
               <div class="flex items-center justify-end">
-                <div class="flex items-center justify-end gap-8 py-2 px-24 bg-sky-900 bg-slice-left">
+                <div class="flex items-center justify-end gap-8 py-2 px-24 bg-sky-800 bg-slice-left">
                   <div class="">
                     <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-lg font-semibold">info@weldingrail.com</a>
                   </div>
@@ -67,7 +67,7 @@
 
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900 px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-800 px-8">
               <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+250</span><p class="text-white text-xl font-semibold"> {{ $t('employees') }}</p></div>
               <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+300</span><p class="text-white text-xl font-semibold"> {{ $t('projects') }}</p></div>
               <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-xl font-semibold"> {{ $t('prodArea') }}</p></div>
@@ -117,8 +117,8 @@
         <div v-if="subcategories" class="">
           <div class="py-8">
 
-            <div class="flex border-b border-sky-900">
-              <div class=" px-8 py-2 bg-slice-right bg-sky-900">
+            <div class="flex border-b border-sky-800">
+              <div class=" px-8 py-2 bg-slice-right bg-sky-800">
                 <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('components') }}</p>
               </div>              
             </div>
@@ -169,7 +169,7 @@
 
                   <div class="flex items-center justify-end gap-4">
                     <div class="">
-                      <p class="text-xl text-white py-1 font-semibold uppercase">{{ $t('contactus.title-2') }}</p>
+                      <p class="text-base text-white py-1 font-semibold uppercase">{{ $t('contactus.title-2') }}</p>
                     </div>
                     <div class="flex items-center justify-center gap-0.5 text-sky-900 bg-white bg-slice-left px-8 py-1 cursor-pointer">
                       <div class="mdi mdi-24px mdi-download"></div>
@@ -218,7 +218,7 @@
               <label for="text-1" class="text-sm text-sky-900">{{ $t('contactus.name-title') }}</label>
               <div class="relative">
                 <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-900/90"></p> -->
-                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
+                <input type="text" id="text-1" class="bg-gray-50 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
               </div>              
             </div>          
             <div class="">
