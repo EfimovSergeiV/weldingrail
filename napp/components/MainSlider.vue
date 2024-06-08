@@ -96,7 +96,7 @@
         :loop="true"
         :effect="'fade'"
         :autoplay="{
-          delay: 8000,
+          delay: 16000,
           disableOnInteraction: true
         }"
       >

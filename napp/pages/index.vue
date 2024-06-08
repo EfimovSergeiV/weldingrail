@@ -152,12 +152,11 @@
 
               <div class="flex items-center justify-center h-full">
                 <div class="grid grid-cols-1 gap-10">
-                  <div class="grid grid-cols-1 gap-4 px-8">
+                  <div class="grid grid-cols-1 gap-6 px-8">
                     
                     <div class="py-4">
                       <img src="/logo-white.webp" class="h-8" />
                     </div>
-
                     
                     <p class="text-2xl text-white ">{{ $t('about.text-1') }}</p>
                     <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
