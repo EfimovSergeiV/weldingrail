@@ -25,7 +25,7 @@
       <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover">
         <div class=" bg-sky-900/80">
 
-          <div class="flex flex-wrap items-center justify-between py-14">
+          <div class="flex flex-wrap items-start justify-between py-6">
             <div class="flex flex-wrap items-start gap-14 px-8">
               <div class="">
                 <div class="pb-2">
@@ -65,10 +65,17 @@
                 </div>
               </div>
 
+              <div class="">
+                <div class="flex items-center justify-end mt-2 py-2 px-8 ">
+                  <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-center text-lg ">info@weldingrail.com</a>
+                </div>                
+              </div>
 
 
             </div>
+
           </div>
+
 
         </div>
       </div>
@@ -81,7 +88,11 @@
           <div class="">
             <div class="flex items-end justify-between py-4">
               <img @click="moveUp()" src="/logo-white.webp" class="h-6 cursor-pointer"/>
-              <p style="font-family: Play;" class="text-xs text-gray-100">weldingrail.com | {{ currentData }} (c)</p>
+              <div class="grid grid-cols-1 gap-1">
+                <p style="font-family: Play;" class="text-xs text-gray-100">weldingrail.com | {{ currentData }} (c)</p>
+                <!-- <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-right text-xs">info@weldingrail.com</a> -->
+              </div>
+              
             </div>
           </div>
         </div>

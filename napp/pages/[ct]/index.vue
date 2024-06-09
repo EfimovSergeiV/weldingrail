@@ -69,7 +69,7 @@
 
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
-        <div v-if="products" class="py-8 px-8 bg-white">
+        <div v-if="products.length > 0" class="py-8 px-8 bg-white">
 
           <div class="flex flex-wrap gap-16 py-12">
             <div class="" v-for="product in products" :key="product.id">
@@ -87,13 +87,13 @@
 
                       <div class="grid grid-cols-1 gap-4 items-center">
                         <div class="flex items-center justify-center">
-                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-700 font-bold">{{ product.name }}</nuxt-link>
+                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-700 font-bold">{{ product.name }}</nuxt-link>
                         </div>
 
                         <div class="flex items-center justify-start gap-4">
 
                           <button class="min-w-[180px] bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base py-2 px-4 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
-                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-base text-sky-700 font-semibold">{{ $t('learnMore') }}</nuxt-link>
+                          <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-700 font-semibold">{{ $t('learnMore') }}</nuxt-link>
 
                         </div>
                       </div>
@@ -112,9 +112,11 @@
         </div>
 
 
-        <div v-else class="min-h-[24vh]">
-          <div class="flex items-center justify-center">
-            <p class="text-4xl text-sky-700 py-8">Нет товаров для отображения</p>
+        <div v-else class="py-8 px-8 bg-white">
+          <div class="min-h-[24vh] flex items-center justify-center">
+            <div class="flex items-center justify-center py-8">
+              <p class="text-sky-900/70">{{ $t('noData') }}</p>
+            </div>
           </div>
         </div>
 

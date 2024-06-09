@@ -214,7 +214,7 @@
             </div>
 
 
-            <div class=" w-1/3 invisible">
+            <div class=" w-1/3 hidden">
               <div class="my-2">
                 <p class="text-xl text-sky-700 se lect-none font-sans font-semibold uppercase">Материалы:</p>
               </div>
