@@ -159,7 +159,7 @@
                     </div>
                     
                     <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
-                    <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
+                    <p class="text-xl text-gray-100 ">{{ $t('about.text-2') }}</p>
 
                   </div>
 
