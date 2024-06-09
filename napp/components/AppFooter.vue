@@ -58,8 +58,8 @@
                   </div>
 
                 </div>
-                <div class="flex items-center justify-center mt-2">
-                  <button class="h-8 px-14 text-base uppercase bg-white text-sky-900 hover:text-orange-400 transition-all duration-300 ">
+                <div class="flex items-center justify-center mt-1">
+                  <button class="h-7 px-6 text-base bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white hover:text-orange-400 transition-all duration-300 ">
                     <p class="">{{ $t('send') }}</p>
                   </button>                   
                 </div>
