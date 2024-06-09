@@ -78,6 +78,9 @@
                   <div class="">
                     
                     <div class="">
+                      <!-- <div class="flex items-center justify-center pb-4">
+                        <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: 'category.url', id: product.id } })" class="text-xl text-sky-700 font-bold">{{ product.name }}</nuxt-link>
+                      </div> -->
                       <div class="flex items-center justify-center">
                         <img :src="product.image" class="w-[240px]" />
                       </div>
@@ -127,8 +130,15 @@
             </div>            
           </div>
 
+          <div v-if="category.description">
+            <div v-html="category.description" class="text-sky-700 text-base px-8  py-4"></div>
+          </div>
+          <div v-else class="">
+            <div class="flex items-center justify-center py-8">
+              <p class="text-sky-900/70">{{ $t('noDescription') }}</p>
+            </div>
+          </div>
           
-          <div v-html="category.description" class="text-sky-700 text-base px-8  py-4"></div>
         </div>
         
       </div>

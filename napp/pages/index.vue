@@ -147,7 +147,7 @@
       <div class="container mx-auto lg:max-w-7xl lg:px-8">
 
         <div class="bg-[url('/backgrounds/bg-1.webp')] h-[400px] bg-no-repeat bg-left bg-cover  ">
-          <div class="bg-gradient-to-br from-sky-800/90 via-sky-700/70 to-sky-800/80 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
+          <div class="bg-gradient-to-br from-sky-800/60 via-sky-700/40 to-sky-800/60 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
             <div class="absolute w-full h-full">
 
               <div class="flex items-center justify-center h-full">
@@ -158,14 +158,14 @@
                       <img src="/logo-white.webp" class="h-8" />
                     </div>
                     
-                    <p class="text-2xl text-white ">{{ $t('about.text-1') }}</p>
+                    <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
                     <p class="text-xl text-white ">{{ $t('about.text-2') }}</p>
 
                   </div>
 
                   <div class="flex items-center justify-end gap-4">
                     <div class="">
-                      <p class="text-base text-white py-1 font-semibold uppercase">{{ $t('contactus.title-2') }}</p>
+                      <p class="text-base text-white py-1 font-semibold uppercase">{{ $t('about.text-3') }}</p>
                     </div>
                     <div class="flex items-center justify-center gap-0.5 text-sky-700 bg-white bg-slice-left px-8 py-1 cursor-pointer">
                       <div class="mdi mdi-24px mdi-download"></div>

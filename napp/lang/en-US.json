@@ -20,6 +20,7 @@
   "partners": "They have already become our partners",
   "desription": "Description",
   "specifications": "Specifications",
+  "noDescription": "No description",
 
 
   "chooseUS": {
@@ -35,7 +36,8 @@
   "about": {
     "title": "WELDINGRAIL",
     "text-1": "One of the world's leading manufacturers of equipment for flash butt welding of rails using the flash method.",
-    "text-2": "Today, our experience spans 2,000 machines and 13 countries around the world, including the USA, Canada, China, France, Iran, Malaysia, Austria, Morocco, Poland and others, accounting for 60% of the world fleet of contact rail welding machines."
+    "text-2": "Today, our experience spans 2,000 machines and 13 countries around the world, including the USA, Canada, China, France, Iran, Malaysia, Austria, Morocco, Poland and others, accounting for 60% of the world fleet of contact rail welding machines.",
+    "text-3": "Find out more about our equipment"
   },
 
   "contactus": {

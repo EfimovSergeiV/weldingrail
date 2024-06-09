@@ -33,7 +33,7 @@
                 </div>
                 <div class="grid grid-cols-1 gap-y-2 gap-x-14">
                   <div v-for="ct in props.categories" class="">
-                    <p class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ ct.name }}</p>
+                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ ct.name }}</nuxt-link>
                   </div>
                 </div>
               </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="grid grid-cols-1 gap-y-2 gap-x-14">
                   <div v-for="sct in props.subcategories" class="">
-                    <p class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ sct.name }}</p>
+                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: sct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ sct.name }}</nuxt-link>
                   </div>
                 </div>
               </div>

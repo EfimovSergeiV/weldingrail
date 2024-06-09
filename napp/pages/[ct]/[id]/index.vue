@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="flex items-end justify-end">
-                  <button class="bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestPrice') }}</button>
+                  <button class="bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('send') }}</button>
                 </div>
               </div>
 
