@@ -185,3 +185,6 @@
   background: #f97316;
   color: #fff;
  }
+.about-polygon {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
