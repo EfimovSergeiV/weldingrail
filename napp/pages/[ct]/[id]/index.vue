@@ -72,14 +72,21 @@
 
 
     <div class="container mx-auto lg:max-w-7xl lg:px-8">
-      <div class="flex items-center gap-8 bg-white pt-8">
+
+      <div class="flex items-center justify-end bg-white py-4 px-8">
+        <div class="">
+          <p class="text-4xl text-sky-800 font-bold uppercase italic">{{ product.name }}</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-8 bg-white">
         <div class=" flex-none px-8">
           <img :src="product.image" class="w-[290px]" />
         </div>
         <div class="grid grid-cols-1 gap-6 w-full">
-          <div class="">
+          <!-- <div class="">
             <p class="text-4xl text-sky-800 font-bold uppercase italic">{{ product.name }}</p>
-          </div>
+          </div> -->
 
 
           <div class="bg-white py-2">
