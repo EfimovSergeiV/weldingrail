@@ -65,11 +65,11 @@
                 </div>
               </div>
 
-              <div class="">
+              <!-- <div class="">
                 <div class="flex items-center justify-end mt-2 py-2 px-8 ">
                   <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-center text-lg ">info@weldingrail.com</a>
                 </div>                
-              </div>
+              </div> -->
 
 
             </div>

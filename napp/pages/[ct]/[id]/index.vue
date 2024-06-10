@@ -50,6 +50,18 @@
       <MainSlider :slides="slides" />
     </div>
 
+    <!-- <div class="container mx-auto lg:max-w-7xl lg:px-8">
+      <div class="bg-white pt-4">
+        <div class="flex items-center justify-end">
+          <div class="flex items-center justify-end gap-8 py-2 px-24 bg-sky-800 bg-slice-left">
+            <div class="">
+              <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-lg font-semibold">info@weldingrail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
 
     <div class="">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">

@@ -52,9 +52,8 @@
                   <div class="">
                     <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-lg font-semibold">info@weldingrail.com</a>
                   </div>
-                </div>                
+                </div>
               </div>
-
             </div>
 
           </div>
@@ -65,10 +64,10 @@
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-800 px-8">
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+250</span><p class="text-white text-xl font-semibold"> {{ $t('employees') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+300</span><p class="text-white text-xl font-semibold"> {{ $t('projects') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-xl font-semibold"> {{ $t('prodArea') }}</p></div>
-              <div class="flex items-center gap-4"><span style="font-family: Play;" class="font-bold text-white text-[36px]">+150</span><p class="text-white text-xl font-semibold"> {{ $t('clients') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+250</span><p class="text-white text-xl font-semibold"> {{ $t('employees') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+300</span><p class="text-white text-xl font-semibold"> {{ $t('projects') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+460Ha</span><p class="text-white text-xl font-semibold"> {{ $t('prodArea') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+150</span><p class="text-white text-xl font-semibold"> {{ $t('clients') }}</p></div>
             </div>
           </div>
         </div>
