@@ -86,7 +86,7 @@
 
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="flex py-2">
+      <div class="flex pb-2 pt-6">
         <div class="px-8 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
