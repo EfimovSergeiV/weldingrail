@@ -41,7 +41,7 @@
                   </div>
 
                   
-                  <div class="px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 text-sm md:text-base font-semibold">
+                  <div class="px-8 py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 text-sm md:text-base font-semibold">
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.1') }}</p></div>
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.2') }}</p></div>
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.3') }}</p></div>
