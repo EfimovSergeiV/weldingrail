@@ -113,13 +113,13 @@
 
         <div v-if="subcategories" class="">
           <div class="mt-4">
-            <div class="flex">
+            <div class="flex py-2">
               <div class=" px-8 py-2 bg-slice-right bg-sky-800 border-b border-orange-500">
                 <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('components') }}</p>
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 my-1 py-4 bg-sky-800">
+            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 py-4 bg-sky-800">
               <div v-for="subct in subcategories" :key="subct.id" class="">
                 <div class="">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
@@ -143,9 +143,9 @@
 
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
-        <div class="bg-white">
+        <div class=" bg-gradient-to-b from-sky-800 to-white">
           <div class="bg-[url('/backgrounds/bg-1.webp')] h-[420px] bg-no-repeat bg-left bg-cover about-polygon">
-            <div class="bg-gradient-to-br from-sky-800/60 via-sky-700/40 to-sky-800/60 backdrop-blur-sm transition-all duration-1000 h-full relative  ">
+            <div class="bg-gradient-to-br from-white/80 via-white/60 to-white/70 back drop-blur-sm transition-all duration-1000 h-full relative  ">
               <div class="absolute w-full h-full">
 
                 <div class="flex items-center justify-center h-full">
@@ -162,14 +162,14 @@
                       
 
                       
-                      <p class="text-4xl text-white ">{{ $t('about.text-1') }}</p>
-                      <p class="text-xl text-gray-100 ">{{ $t('about.text-2') }}</p>
+                      <p class="text-4xl text-sky-800 ">{{ $t('about.text-1') }}</p>
+                      <p class="text-xl text-sky-800 ">{{ $t('about.text-2') }}</p>
 
                     </div>
 
                     <div class="flex items-center justify-end gap-4">
                       <div class="">
-                        <p class="text-base text-white py-1 font-semibold uppercase">{{ $t('about.text-3') }}</p>
+                        <p class="text-base text-sky-800 py-1 font-semibold uppercase">{{ $t('about.text-3') }}</p>
                       </div>
                       <div class="flex items-center justify-center gap-0.5 text-sky-800 bg-white bg-slice-left px-8 py-1 cursor-pointer">
                         <div class="mdi mdi-24px mdi-download"></div>
