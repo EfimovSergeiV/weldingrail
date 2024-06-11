@@ -187,9 +187,7 @@
  }
 
 
-.top-polygon {
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-}
+
 
 .about-polygon {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);

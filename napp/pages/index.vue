@@ -86,7 +86,7 @@
 
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="flex pb-2 pt-6">
+      <div class="flex pb-2 pt-6 bg-white">
         <div class="px-8 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
@@ -306,12 +306,12 @@
     <div class="">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
 
-        <div class="py-4 px-4 bg-white">
-          <div class="flex items-center justify-center py-6">
+        <div class="py-2 px-4 bg-white">
+          <div class="flex items-center justify-center">
             <p class="text-xl text-sky-800 font-bold uppercase italic">{{ $t('partners') }}</p>
           </div>
 
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 pt-6">
             <div class="px-8">
               <div class="flex items-center justify-center py-2">
                 <img src="/partners/2.png" class="h-12"/>
