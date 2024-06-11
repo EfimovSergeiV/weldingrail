@@ -30,11 +30,18 @@
       <div class="">
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-            <div class="bg-white px-8">
+            <div class="bg-white">
               <div class="grid grid-cols-1 lg:flex items-end justify-between">
                 <div class="">
-                  <p class="text-2xl text-sky-800 font-bold uppercase italic my-4">{{ $t('chooseUS.title') }}</p>
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 text-sm md:text-base font-semibold">
+                  
+                  <div class="flex py-2">
+                    <div class=" px-14 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
+                      <p class="text-xl text-white font-bold uppercase italic">{{ $t('chooseUS.title') }}</p>
+                    </div>                    
+                  </div>
+
+                  
+                  <div class="px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 text-sm md:text-base font-semibold">
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.1') }}</p></div>
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.2') }}</p></div>
                     <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.3') }}</p></div>
@@ -79,8 +86,8 @@
 
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="flex border-b border-sky-800 py-2">
-        <div class="px-8 py-2 bg-slice-right bg-sky-800">
+      <div class="flex py-2">
+        <div class="px-8 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
       </div>
@@ -143,9 +150,9 @@
 
     <div class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
-        <div class=" bg-gradient-to-b from-sky-800 to-white">
+        <div class=" bg-sky-800">
           <div class="bg-[url('/backgrounds/bg-1.webp')] h-[420px] bg-no-repeat bg-left bg-cover about-polygon">
-            <div class="bg-gradient-to-br from-white/80 via-white/60 to-white/70 back drop-blur-sm transition-all duration-1000 h-full relative  ">
+            <div class="bg-gradient-to-br from-white/90 via-white/60 to-white/70 back drop-blur-sm transition-all duration-1000 h-full relative  ">
               <div class="absolute w-full h-full">
 
                 <div class="flex items-center justify-center h-full">
@@ -194,21 +201,23 @@
 
 
 
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+
+    <!-- ALTER -->
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 hidden">
 
       <div class="bg-white">
 
         <div class="grid grid-cols-1 w-[820px]">
-          <div class="px-8 bg-white">
+          <div class="px-8 bg-sky-800 pt-8">
             <div class=" flex items-start justify-center">
-              <p class="text-2xl text-sky-800 font-bold uppercase italic ">{{ $t('contactus.title-1') }}</p>
+              <p class="text-2xl text-white font-bold uppercase italic ">{{ $t('contactus.title-1') }}</p>
             </div>
             <div class=" flex items-start justify-center">
-              <p class="text-xl text-sky-800 py-1 uppercase">{{ $t('contactus.title-2') }}</p>
+              <p class="text-xl text-white py-1 uppercase">{{ $t('contactus.title-2') }}</p>
             </div>          
           </div>
 
-          <div class="px-8 bg-white">
+          <div class="px-8 bg-sky-800">
             <div class="grid grid-cols-2 gap-y-2 gap-x-6">
               <div class="">
                 <label for="text-1" class="text-sm text-sky-800">{{ $t('contactus.name-title') }}</label>
@@ -258,10 +267,10 @@
           </div>
 
 
-          <div class="flex items-center justify-end gap-4 bg-white px-8">
+          <div class="flex items-center justify-end gap-4 bg-sky-800 px-8 pb-8">
             <div class="flex gap-4">
               <div class="flex items-center gap-4 max-w-[50rem]">
-                <label for="privacy" class="text-sm text-sky-800 text-right">{{ $t('privacy') }}</label> 
+                <label for="privacy" class="text-sm text-white text-right">{{ $t('privacy') }}</label> 
                 <input 
                   id="privacy"
                   type="checkbox"
@@ -274,19 +283,46 @@
             </div>
             <div class="">
               <div class="flex items-center justify-end">
-                <button class="bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('contactus.send') }}</button>
+                <button class="bg-gradient-to-tr from-white via-gray-100 to-white font-semibold text-sky-800 w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('contactus.send') }}</button>
               </div>
             </div>
           </div>
         </div>
 
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div class="flex items-center justify-center bg-sky-800">
+        <div class="px-8">
+          <div class=" flex items-start justify-center">
+            <p class="text-2xl text-white font-bold uppercase italic">{{ $t('contactus.title-1') }}</p>
+          </div>
+          <div class="flex items-start justify-center">
+            <p class="text-xl text-white py-1 uppercase">{{ $t('contactus.title-2') }}</p>
+          </div>          
+        </div>
+      </div>
+
+      <div class="px-8 grid-cols-2 gap-2">
+        <div class="">
+
+        </div>
+        <div class="">
+        </div>  
 
       </div>
 
-
-
-
     </div>
+
+
+
+
 
 
     <div class="">

@@ -22,10 +22,10 @@
   <div>
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
-      <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover">
+      <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover footer-polygon">
         <div class=" bg-sky-900/80">
 
-          <div class="flex flex-wrap items-start justify-between py-8">
+          <div class="flex flex-wrap items-start justify-between py-14">
             <div class="flex flex-wrap items-start gap-14 px-8">
               <div class="">
                 <div class="pb-2">
