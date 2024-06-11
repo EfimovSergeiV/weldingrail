@@ -310,71 +310,82 @@
       </div>
 
       <div class="bg-white">
-        <div class="bg-sky-800  contactus-polygon">
-          <div class="px-20 grid grid-cols-2 gap-2">
-            <div class="">
-              <label for="text-1" class="text-sm text-white">{{ $t('contactus.name-title') }}</label>
-              <div class="relative">
-                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
-                <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
-              </div>              
-            </div>          
-            <div class="">
-              <label for="text-2" class="text-sm text-white">{{ $t('contactus.company-title') }}</label>
-              <div class="relative">
-                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
-                <input type="text" style="font-family: Play;" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
-              </div>              
-            </div>
+        <div class="bg-sky-800 contactus-polygon">
 
-            <div style="font-family: Play;" class="">
-              <label for="text-4" class="text-sm text-white">{{ $t('contactus.email-title') }}</label>
-              <div class="relative">
-                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
-                <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.email')" />
+          <div class=" bg-[url('/backgrounds/10.png')] bg-no-repeat bg-bottom bg-cover">
+            <div class="bg-sky-800/70">
+
+              <div class="px-20 grid grid-cols-2 gap-2">
+                <div class="">
+                  <label for="text-1" class="text-sm text-white">{{ $t('contactus.name-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
+                    <input type="text" id="text-1" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.name')" />
+                  </div>              
+                </div>          
+                <div class="">
+                  <label for="text-2" class="text-sm text-white">{{ $t('contactus.company-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
+                    <input type="text" style="font-family: Play;" id="text-2" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.company')" />
+                  </div>              
+                </div>
+
+                <div style="font-family: Play;" class="">
+                  <label for="text-4" class="text-sm text-white">{{ $t('contactus.email-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
+                    <input type="text" id="text-4" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.email')" />
+                  </div>
+                </div>
+                  
+                <div class="">
+                  <label for="text-5" class="text-sm text-white">{{ $t('contactus.land-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
+                    <input type="text" id="text-5" style="font-family: Play;" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
+                  </div>              
+                </div>   
               </div>
-            </div>
-              
-            <div class="">
-              <label for="text-5" class="text-sm text-white">{{ $t('contactus.land-title') }}</label>
-              <div class="relative">
-                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-account-tie text-sky-800/90"></p> -->
-                <input type="text" id="text-5" style="font-family: Play;" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 py-1.5 " :placeholder="$t('contactus.land')" />
-              </div>              
-            </div>   
-          </div>
 
 
-          <div class="px-20 grid grid-cols-1 gap-4 py-4 ">
-            <div class="">
-              <label for="text-6" class="text-sm text-white">{{ $t('contactus.message-title') }}</label>
-              <div class="relative">
-                <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-800/90"></p> -->
-                <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 p-1.5 " :placeholder="$t('contactus.message')"></textarea>
-              </div>              
-            </div>
-          </div>
-
-
-          <div class="flex items-center justify-end gap-4 bg-sky-800 px-20 pb-12">
-            <div class="flex gap-4">
-              <div class="flex items-center gap-4 max-w-[50rem]">
-                <label for="privacy" class="text-sm text-white text-right">{{ $t('privacy') }}</label> 
-                <input 
-                  id="privacy"
-                  type="checkbox"
-                  class="w-4 h-4 
-                    rounded text-gray-700 focus:ring-0 
-                    focus:ring-gray-300 ring-offset-gray-300 bg-gray-700 border-gray-300
-                    dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700" 
-                  />
+              <div class="px-20 grid grid-cols-1 gap-4 py-4 ">
+                <div class="">
+                  <label for="text-6" class="text-sm text-white">{{ $t('contactus.message-title') }}</label>
+                  <div class="relative">
+                    <!-- <p class="absolute px-2 py-1 mdi mdi-16px mdi-text-long text-sky-800/90"></p> -->
+                    <textarea type="text" id="text-6" rows="8" class="bg-gray-50 shadow-lg shadow-black/10 border border-gray-300 focus:border-gray-300 text-gray-900 text-sm focus:ring-blue-500/0 focus:border-blue-500/0 block w-full pl-2 p-1.5 " :placeholder="$t('contactus.message')"></textarea>
+                  </div>              
+                </div>
               </div>
-            </div>
-            <div class="">
-              <div class="flex items-center justify-end">
-                <button class="bg-gradient-to-tr from-white via-gray-100 to-white font-semibold text-sky-800 w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('contactus.send') }}</button>
+
+              <div class="flex items-center justify-end gap-4 px-20 pb-12">
+                <div class="flex gap-4">
+                  <div class="flex items-center gap-4 max-w-[50rem]">
+                    <label for="privacy" class="text-sm text-white text-right">{{ $t('privacy') }}</label> 
+                    <input 
+                      id="privacy"
+                      type="checkbox"
+                      class="w-4 h-4 
+                        rounded text-gray-700 focus:ring-0 
+                        focus:ring-gray-300 ring-offset-gray-300 bg-gray-700 border-gray-300
+                        dark:focus:ring-gray-700 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-700" 
+                      />
+                  </div>
+                </div>
+                <div class="">
+                  <div class="flex items-center justify-end">
+                    <button class="bg-gradient-to-tr from-white via-gray-100 to-white font-semibold text-sky-800 w-60 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('contactus.send') }}</button>
+                  </div>
+                </div>
               </div>
+
+
+
             </div>
+
+
+
           </div>
 
 
