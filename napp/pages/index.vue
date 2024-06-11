@@ -98,7 +98,7 @@
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class=" bg-white">
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-0.5">
           <div class="" v-for="ct in categories" :key="ct.id">
             <div class="relative">
               <img src="/backgrounds/10.jpg" class="h-[220px] w-full" />
