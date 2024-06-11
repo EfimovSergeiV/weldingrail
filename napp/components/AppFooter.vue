@@ -22,63 +22,66 @@
   <div>
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 ">
-      <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover footer-polygon">
-        <div class=" bg-sky-900/80">
+      <div class="bg-white">
+        <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover footer-polygon">
+          <div class=" bg-sky-900/80">
 
-          <div class="flex flex-wrap items-start justify-between py-14">
-            <div class="flex flex-wrap items-start gap-14 px-8">
-              <div class="">
-                <div class="pb-2">
-                  <p class="text-white uppercase  font-semibold text-lg italic border-b border-white/80">{{ $t('RWQ')}}</p>
+            <div class="flex flex-wrap items-start justify-between py-14">
+              <div class="flex flex-wrap items-start gap-14 px-8">
+                <div class="">
+                  <div class="pb-2">
+                    <p class="text-white uppercase  font-semibold text-lg italic border-b border-white/80">{{ $t('RWQ')}}</p>
+                  </div>
+                  <div class="grid grid-cols-1 gap-y-2 gap-x-14">
+                    <div v-for="ct in props.categories" class="">
+                      <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ ct.name }}</nuxt-link>
+                    </div>
+                  </div>
                 </div>
-                <div class="grid grid-cols-1 gap-y-2 gap-x-14">
-                  <div v-for="ct in props.categories" class="">
-                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ ct.name }}</nuxt-link>
+                <div class="">
+                  <div class="pb-2">
+                    <p class="text-white uppercase font-semibold text-lg italic border-b border-white/80">{{ $t('components')}}</p>
+                  </div>
+                  <div class="grid grid-cols-1 gap-y-2 gap-x-14">
+                    <div v-for="sct in props.subcategories" class="">
+                      <nuxt-link :to="localePath({ name: 'ct', params: { ct: sct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ sct.name }}</nuxt-link>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="">
-                <div class="pb-2">
-                  <p class="text-white uppercase font-semibold text-lg italic border-b border-white/80">{{ $t('components')}}</p>
-                </div>
-                <div class="grid grid-cols-1 gap-y-2 gap-x-14">
-                  <div v-for="sct in props.subcategories" class="">
-                    <nuxt-link :to="localePath({ name: 'ct', params: { ct: sct.url } })" class="text-gray-300 cursor-pointer hover:text-orange-400 transition-all duration-300">{{ sct.name }}</nuxt-link>
+                <div class="bg-sky-800/90 bg-slice-left border-y  border-white/50 px-6 py-6 min-w-[26vw]">
+                  <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
+
+                  <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
+                    <div class=" w-full ">
+                      <input type="email" style="font-family: Play;" class="w-full text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+                    </div>
+
+                  </div>
+                  <div class="flex items-center justify-center mt-1">
+                    <button class="h-7 px-6 text-base text-white hover:text-orange-400 transition-all duration-300 ">
+                      <p class="">{{ $t('send') }}</p>
+                    </button>                   
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="bg-sky-800/90 bg-slice-left border-y  border-white/50 px-6 py-6 min-w-[26vw]">
-                <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
 
-                <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
-                  <div class=" w-full ">
-                    <input type="email" style="font-family: Play;" class="w-full text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
-                  </div>
+                <!-- <div class="">
+                  <div class="flex items-center justify-end mt-2 py-2 px-8 ">
+                    <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-center text-lg ">info@weldingrail.com</a>
+                  </div>                
+                </div> -->
 
-                </div>
-                <div class="flex items-center justify-center mt-1">
-                  <button class="h-7 px-6 text-base text-white hover:text-orange-400 transition-all duration-300 ">
-                    <p class="">{{ $t('send') }}</p>
-                  </button>                   
-                </div>
+
               </div>
 
-              <!-- <div class="">
-                <div class="flex items-center justify-end mt-2 py-2 px-8 ">
-                  <a style="font-family: Play;" href="mailto:info@railwelding.com" target="_blank" class="text-white text-center text-lg ">info@weldingrail.com</a>
-                </div>                
-              </div> -->
-
-
             </div>
+
 
           </div>
-
-
-        </div>
+        </div>        
       </div>
+
     </div>
 
     
