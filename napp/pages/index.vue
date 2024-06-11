@@ -114,7 +114,7 @@
         <div v-if="subcategories" class="">
           <div class="mt-4">
             <div class="flex py-2">
-              <div class=" px-8 py-2 bg-slice-right bg-sky-800 border-b border-orange-500">
+              <div class=" px-8 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
                 <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('components') }}</p>
               </div>
             </div>
@@ -152,7 +152,7 @@
                   <div class="grid grid-cols-1 gap-8">
                     
                     <div class="flex ">
-                      <div class="px-8 py-3 bg-slice-right bg-sky-800 border-b-2 border-orange-500">
+                      <div class="px-8 py-3 bg-slice-right bg-sky-800 border-b-2 border-blue-500">
                         <img src="/logo-white.webp" class="h-8" />
                       </div>                      
                     </div>

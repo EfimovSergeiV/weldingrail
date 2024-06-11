@@ -29,7 +29,7 @@
             <div class="flex flex-wrap items-start gap-14 px-8">
               <div class="">
                 <div class="pb-2">
-                  <p class="text-orange-500 uppercase  font-semibold text-lg italic border-b border-orange-500/80">{{ $t('RWQ')}}</p>
+                  <p class="text-white uppercase  font-semibold text-lg italic border-b border-white/80">{{ $t('RWQ')}}</p>
                 </div>
                 <div class="grid grid-cols-1 gap-y-2 gap-x-14">
                   <div v-for="ct in props.categories" class="">
@@ -39,7 +39,7 @@
               </div>
               <div class="">
                 <div class="pb-2">
-                  <p class="text-orange-500 uppercase font-semibold text-lg italic border-b border-orange-500/80">{{ $t('components')}}</p>
+                  <p class="text-white uppercase font-semibold text-lg italic border-b border-white/80">{{ $t('components')}}</p>
                 </div>
                 <div class="grid grid-cols-1 gap-y-2 gap-x-14">
                   <div v-for="sct in props.subcategories" class="">
@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class="">
-              <div class="bg-sky-800/90 bg-slice-left border-y  border-orange-500 px-6 py-6 min-w-[22vw]">
+              <div class="bg-sky-800/90 bg-slice-left border-y  border-white/50 px-6 py-6 min-w-[26vw]">
                 <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
 
                 <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
