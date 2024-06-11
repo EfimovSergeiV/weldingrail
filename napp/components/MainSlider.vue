@@ -85,7 +85,7 @@
 
 
 <template>
-    <div class="relative rounded-t-md">
+    <div class="relative">
       <Swiper
         class="  "
         :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
@@ -102,8 +102,8 @@
       >
       
         <SwiperSlide v-for="slide in slides" :key="slide.id">
-          <div class=" rounded-t-md">
-            <img :src="slide.image" class="rounded-t-md" />
+          <div class="">
+            <img :src="slide.image" class="" />
           </div>
         </SwiperSlide>
 
