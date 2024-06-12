@@ -72,7 +72,7 @@
       </div>
 
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
-        <div class="flex bg-white border-b border-sky-900">
+        <div class="flex bg-white border-b border-sky-800">
           <div class="bg-sky-800 bg-slice-right px-8">
             <p class="text-2xl text-white font-bold uppercase italic py-2 px-8">{{ category.name }}</p>
           </div>
@@ -139,7 +139,7 @@
         
         <div class="bg-white py-8">
 
-          <div class="flex border-b border-sky-900">
+          <div class="flex border-b border-sky-800">
             <div class="bg-sky-800 px-20 py-2 bg-slice-right">
               <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('desription') }}</p>
             </div>            
