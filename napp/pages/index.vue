@@ -153,7 +153,7 @@
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
         <div class=" bg-sky-800">
           <div class="bg-[url('/backgrounds/bg-1.webp')] h-[420px] bg-no-repeat bg-left bg-cover about-polygon">
-            <div class="bg-gradient-to-br from-white/90 via-white/80 to-white/70 back drop-blur-sm transition-all duration-1000 h-full relative  ">
+            <div class="bg-gradient-to-br from-white via-white/90 to-white/70 back drop-blur-sm transition-all duration-1000 h-full relative  ">
               <div class="absolute w-full h-full">
 
                 <div class="flex items-center justify-center h-full">
@@ -167,12 +167,8 @@
 
 
                     <div class="grid grid-cols-1 gap-6 px-8">
-                      
-
-                      
                       <p class="text-4xl text-sky-800 ">{{ $t('about.text-1') }}</p>
                       <p class="text-xl text-sky-800 ">{{ $t('about.text-2') }}</p>
-
                     </div>
 
                     <div class="flex items-center justify-end gap-4">
