@@ -131,7 +131,7 @@
               <div v-for="subct in subcategories" :key="subct.id" class="">
                 <div class="">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
-                    <p class="text-xl text-white font-semibold text-center">{{ subct.name }}</p>
+                    <p class="text-xl text-white text-center">{{ subct.name }}</p>
                   </nuxt-link>                    
                 </div>
               </div>
@@ -173,7 +173,7 @@
 
                     <div class="flex items-center justify-end gap-4">
                       <div class="">
-                        <p class="text-base text-sky-800 py-1 font-semibold uppercase">{{ $t('about.text-3') }}</p>
+                        <p class="text-base text-sky-800 py-1 uppercase">{{ $t('about.text-3') }}</p>
                       </div>
                       <div class="flex items-center justify-center gap-0.5 text-sky-800 bg-white bg-slice-left px-8 py-1 cursor-pointer">
                         <div class="mdi mdi-24px mdi-download"></div>
