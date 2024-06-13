@@ -166,9 +166,7 @@
 
 
 
-.cut-corners {
-  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px, 10px 0);
-}
+
 
 .bg-slice-right {
   clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
@@ -187,7 +185,9 @@
  }
 
 
-
+.button-polygon {
+  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px, 10px 0);
+}
 
 .about-polygon {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
