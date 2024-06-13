@@ -64,6 +64,12 @@
 }
 
 
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f97316 #202020;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

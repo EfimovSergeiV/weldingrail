@@ -26,7 +26,7 @@
         <div class="bg-[url('/backgrounds/10.jpg')] bg-no-repeat bg-bottom bg-cover footer-polygon">
           <div class=" bg-sky-900/80">
 
-            <div class="flex flex-wrap items-start justify-between py-14">
+            <div class="flex flex-wrap items-center justify-between py-14">
               <div class="flex flex-wrap items-start gap-14 px-8">
                 <div class="">
                   <div class="pb-2">
@@ -50,12 +50,12 @@
                 </div>
               </div>
               <div class="">
-                <div class="bg-sky-800/90 bg-slice-left border-y  border-white/50 px-6 py-6 min-w-[420px]">
+                <div class="bg-sky-800/90 bg-slice-left border-y  border-white/50 px-6 py-6 min-w-[400px]">
                   <p class="text-white text-lg font-bold uppercase italic text-center">{{ $t('subscriebe') }}</p>
 
                   <div id="subscriebe" class="flex items-center justify-center w-full gap-4 py-2 pl-4">
                     <div class=" w-full ">
-                      <input type="email" style="font-family: Play;" class="w-full text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
+                      <input id="subs-form" type="email" style="font-family: Play;" class="w-full text-center h-8 px-4 text-base text-sky-900 border border-white/0 focus:border-white/0 focus:ring-gray-600/0 ring-0 placeholder-sky-800" :placeholder="$t('contactus.email')" /> 
                     </div>
 
                   </div>

@@ -10,7 +10,7 @@ export default defineNuxtPlugin(nuxtApp => {
       if (scrollPosition > 600) {
         /// Отображение навбара
         navMenu.classList.remove('absolute')
-        navMenu.classList.add('fixed', 'bg-white', 'shadow-lg', 'rounded-b-md',)
+        navMenu.classList.add('fixed', 'bg-white', 'shadow-lg',)
         navMoveUp.classList.remove('invisible')
         /// Отображение врайт закладки
 
@@ -19,7 +19,7 @@ export default defineNuxtPlugin(nuxtApp => {
         
       } else {
         /// Отображение навбара
-        navMenu.classList.remove('fixed', 'bg-white', 'shadow-lg', 'rounded-b-md',)
+        navMenu.classList.remove('fixed', 'bg-white', 'shadow-lg',)
         navMenu.classList.add('absolute')
         navMoveUp.classList.add('invisible')
         // writeUs.classList.remove('bg-white', 'shadow-lg', 'rounded-b-md')
