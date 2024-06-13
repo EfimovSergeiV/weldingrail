@@ -87,20 +87,24 @@
           <div class="grid grid-cols-1 gap-16 py-12">
             <div class="" v-for="product in products" :key="product.id">
               
-              <div class="flex gap-8">
+              <div class="flex gap-20">
                 <div class="grid grid-cols-1 gap-4">
                   <img :src="product.image" class="w-[240px]" />
                 </div>
 
-                <div class="flex items-center justify-start gap-4">
-                  <button class="min-w-[180px] bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white text-base py-2 px-4 button-polygon ">{{ $t('requestPrice') }}</button>
-                  <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-800 font-semibold">{{ $t('learnMore') }}</nuxt-link>
+                <div class="flex flex-col items-start justify-center gap-6">
+                  <div class="py-2">
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-2xl text-sky-800">{{ product.name }}</nuxt-link>
+                  </div>                  
+                  <div class="flex items-center justify-start gap-4">
+                    <button class="min-w-[180px] bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white text-base py-2 px-4 button-polygon ">{{ $t('requestPrice') }}</button>
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-base text-sky-800 font-semibold">{{ $t('learnMore') }}</nuxt-link>
+                  </div>                  
                 </div>
+
               </div>
 
-              <div class="py-2">
-                <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-xl text-sky-800 font-bold">{{ product.name }}</nuxt-link>
-              </div>
+
 
 
               <!-- <div class="">
