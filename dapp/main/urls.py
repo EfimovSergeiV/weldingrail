@@ -25,6 +25,8 @@ urlpatterns = [
     path('adm/', admin.site.urls),
     path('<slug:lang>/c/', include('catalog.urls')),
     path('<slug:lang>/d/', include('content.urls')),
+    path('u/', include('customers.urls')),
+
     path('ckeditor5/', include('django_ckeditor_5.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
