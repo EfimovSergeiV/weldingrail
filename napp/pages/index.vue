@@ -89,8 +89,8 @@
 
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
-      <div class="flex pb-2 pt-6 bg-white">
-        <div class="px-8 py-2 bg-slice-right bg-sky-800 border-b border-blue-500">
+      <div class="flex pt-6 bg-white  border-b border-sky-800">
+        <div class="px-8 py-2 bg-slice-right bg-sky-800">
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
       </div>
@@ -98,13 +98,13 @@
     </div>
 
 
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 mt-2">
       <div class=" bg-white">
 
         <div class="grid grid-cols-2 gap-0.5">
           <div class="" v-for="ct in categories" :key="ct.id">
             <div class="relative">
-              <img src="/backgrounds/10.jpg" class="h-[220px] w-full" />
+              <img src="/backgrounds/10.jpg" class="h-[180px] w-full" />
               <div class="absolute bg-sky-800/80 hover:bg-sky-800/90 transition-all duration-300 h-full w-full top-0 left-0">
                 <div class="flex items-center justify-center h-full">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="">

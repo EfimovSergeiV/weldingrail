@@ -3,9 +3,14 @@ from customers.models import CustomerMessagesModel, SubscribersModel, PriceReque
 
 
 class CustomerMessagesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'company', 'country', 'date_created')
+
+    def time_created(self, obj):
+        return obj.date_created.strftime('%H:%M:%S %Y-%m-%d')
+
+    list_display = ('name', 'email', 'company', 'country', 'time_created')
     search_fields = ('name', 'email', 'company', 'country', 'message')
     list_filter = ('date_created',)
+    readonly_fields = ('time_created',)
 
     fieldsets = (
         (None, {'fields': (('name', 'email',), ('company', 'country',), 'message')}),
@@ -14,9 +19,14 @@ class CustomerMessagesAdmin(admin.ModelAdmin):
 
 
 class PriceRequestsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'company', 'country', 'product', 'date_created')
+
+    def time_created(self, obj):
+        return obj.date_created.strftime('%H:%M:%S %Y-%m-%d')
+
+    list_display = ('name', 'email', 'company', 'country', 'product', 'time_created')
     search_fields = ('name', 'email', 'company', 'country', 'product')
     list_filter = ('date_created',)
+    readonly_fields = ('time_created',)
 
     fieldsets = (
         (None, {'fields': (('name', 'email',), ('company', 'country',), 'product')}),
@@ -25,9 +35,14 @@ class PriceRequestsAdmin(admin.ModelAdmin):
 
 
 class SubscribersAdmin(admin.ModelAdmin):
-    list_display = ('email', 'date_created')
+
+    def time_created(self, obj):
+        return obj.date_created.strftime('%H:%M:%S %Y-%m-%d')
+    
+    list_display = ('email', 'time_created')
     search_fields = ('email',)
     list_filter = ('date_created',)
+    readonly_fields = ('time_created',)
 
 
 
