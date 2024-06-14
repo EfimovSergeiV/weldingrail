@@ -88,22 +88,13 @@
     <div class="relative bg-[url('/backgrounds/logo-bg.webp')] bg-no-repeat bg-bottom bg-cover">
       <Swiper
         class="  "
-        :modules="[SwiperEffectCreative, SwiperAutoplay, SwiperPagination]"
+        :modules="[SwiperEffectFade, SwiperAutoplay, SwiperPagination]"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
         :pagination="pagination"
         :slides-per-view="1"
         :loop="true"
-        :effect="'creative'"
-        :creative-effect="{
-          prev: {
-            shadow: false,
-            translate: ['-20%', 0, -1],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }"
+        :effect="'fade'"
         :autoplay="{
           delay: 16000,
           disableOnInteraction: true

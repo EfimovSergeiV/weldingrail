@@ -94,7 +94,7 @@
 
                 <div class="flex flex-col items-start justify-center gap-6">
                   <div class="py-2">
-                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-2xl text-sky-800">{{ product.name }}</nuxt-link>
+                    <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-4xl text-sky-800 font-semibold italic">{{ product.name }}</nuxt-link>
                   </div>                  
                   <div class="flex items-center justify-start gap-4">
                     <button class="min-w-[180px] bg-gradient-to-tr from-sky-800 via-sky-700 to-sky-800 font-semibold text-white text-base py-2 px-4 button-polygon ">{{ $t('requestPrice') }}</button>
