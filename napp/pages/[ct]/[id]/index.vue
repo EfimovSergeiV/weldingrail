@@ -87,7 +87,7 @@
 
       <div class="flex items-center justify-end bg-white py-4 px-8">
         <div class="">
-          <p class="text-4xl text-sky-800 font-bold uppercase italic">{{ product.name }}</p>
+          <p class="text-4xl text-sky-800 font-bold italic">{{ product.name }}</p>
         </div>
       </div>
 

@@ -61,7 +61,7 @@
                   </div>
                   <div class="flex items-center justify-center mt-1">
                     <button class="h-7 px-6 text-base text-white hover:text-orange-400 transition-all duration-300 ">
-                      <p class="">{{ $t('send') }}</p>
+                      <p class="">{{ $t('subscribe') }}</p>
                     </button>                   
                   </div>
                 </div>

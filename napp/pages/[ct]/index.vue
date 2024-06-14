@@ -92,7 +92,7 @@
                   <img :src="product.image" class="w-[240px]" />
                 </div>
 
-                <div class="flex flex-col items-start justify-center gap-6">
+                <div class="flex flex-col items-start justify-center gap-8">
                   <div class="py-2">
                     <nuxt-link :to="localePath({ name: 'ct-id', params: { ct: category.url, id: product.id } })" class="text-4xl text-sky-800 font-semibold italic">{{ product.name }}</nuxt-link>
                   </div>                  
