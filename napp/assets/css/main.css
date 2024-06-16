@@ -191,8 +191,13 @@
  }
 
 
+
 .button-polygon {
   clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px, 10px 0);
+}
+
+.preabout-polygon {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
 }
 
 .about-polygon {
