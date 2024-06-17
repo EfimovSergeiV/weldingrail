@@ -42,6 +42,7 @@ export default defineNuxtConfig({
 
   plugins: [
     { src: '~/plugins/navbar.js', mode: 'client' },
+    { src: '~/plugins/watchHash.js', mode: 'client' },
   ],
 
   css: [

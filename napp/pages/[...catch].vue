@@ -42,22 +42,19 @@
             <div class="bg-white py-8 px-4">
               <div class="grid grid-cols-1 lg:flex items-end justify-between">
                 <div class="">
-                  <p class="text-2xl text-sky-900 font-bold uppercase italic my-4">{{ $t('pages.index.chooseUs-title') }}</p>
+                  <p class="text-xl text-white font-bold uppercase italic">{{ $t('chooseUS.title') }}</p>
                   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm md:text-base font-semibold">
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-1') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-2') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-3') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-4') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900">{{ $t('pages.index.chooseUs-5') }}</p></div>
-                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-900/80 uppercase"><p class="text-sm text-sky-900"> {{ $t('pages.index.chooseUs-6') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.1') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.2') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.3') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.4') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800">{{ $t('chooseUS.5') }}</p></div>
+                    <div class="flex items-center gap-1 mdi mdi-brightness-1 text-sky-800 uppercase"><p class="text-sm text-sky-800"> {{ $t('chooseUS.6') }}</p></div>
                   </div>                  
                 </div>
                 <div class="grid grid-cols-1 gap-2 text-right">
                   <div class="">
                     <a href="mailto:info@railwelding.com" target="_blank" class="text-sky-900 text-lg font-semibold">info@weldingrail.com</a>
-                  </div>
-                  <div class=" shadow-xl shadow-gray-900/10">
-                    <button class="bg-gradient-to-tr from-sky-700 via-sky-600 to-sky-700 font-semibold text-white text-base w-48 py-2 shadow-xl shadow-gray-900/10  ">{{ $t('requestCall') }}</button>
                   </div>
                 </div>
               </div>
@@ -67,10 +64,12 @@
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center min-h-20 justify-between bg-sky-900   px-8">
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+250</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.employees') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+300</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.complProjects') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+460Ha</span><p class="text-white text-base font-semibold"> {{ $t('pages.index.prodArea') }}</p></div>
-              <div class="flex items-center gap-2"><span class="font-bold text-white text-[36px]">+150</span><p class="text-white text-base font-semibold">Клиентов</p></div>
+
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+250</span><p class="text-white text-xl font-semibold"> {{ $t('employees') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+300</span><p class="text-white text-xl font-semibold"> {{ $t('projects') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+460Ha</span><p class="text-white text-xl font-semibold"> {{ $t('prodArea') }}</p></div>
+              <div class="flex items-center gap-2"><span style="font-family: Play;" class="font-bold text-white text-[32px]">+150</span><p class="text-white text-xl font-semibold"> {{ $t('clients') }}</p></div>
+
             </div>
           </div>
         </div>
