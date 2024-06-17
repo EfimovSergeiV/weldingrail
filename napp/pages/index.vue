@@ -26,7 +26,7 @@
     </div>
 
 
-    <div class="">
+    <div id="why-choose-us" class="">
       <div class="">
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
@@ -98,7 +98,7 @@
     </div>
 
 
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 mt-2">
+    <div id="railwelding-equipment" class="container mx-auto px-4 lg:max-w-7xl lg:px-8 mt-2">
       <div class=" bg-white">
 
         <div class="grid grid-cols-2 gap-0.5">
@@ -149,7 +149,7 @@
 
 
 
-    <div class="">
+    <div id="about-us" class="">
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
         <div class=" bg-sky-800">
           <div class="bg-[url('/backgrounds/bg-1.webp')] h-[480px] bg-no-repeat bg-left bg-cover about-polygon">
@@ -203,7 +203,7 @@
 
 
 
-    <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+    <div id="write-to-us" class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center bg-sky-800">
         <div class="px-8 pt-8">
           <div class=" flex items-start justify-center">
@@ -305,7 +305,7 @@
 
 
 
-    <div class="">
+    <div id="our-partners" class="">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
 
         <div class="py-2 px-4 bg-white">
