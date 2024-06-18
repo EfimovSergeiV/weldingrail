@@ -18,8 +18,12 @@ class SliderView(APIView):
         slide = SliderModelSerializer(queryset, many=True, context={'request': request})
 
         clear_data = []
+        print(slide.data)
 
         for data in slide.data:
+            #   KeyError: 'de'
+            #   'sub_title': [ sub_title['translations'][lang]['text'] for sub_title in data['sub_title'] ],
+
             clear_data.append({
                 'id': data['id'],
                 'title': data['title'],

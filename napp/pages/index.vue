@@ -102,10 +102,9 @@
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
 
-        <div class="flex items-center justify-end gap-4">
-          <p @click="variant = 1" class="text-sm text-black font-semibold py-1 uppercase cursor-pointer">вариант категории - 1</p>
-          <p @click="variant = 2" class="text-sm text-black font-semibold py-1 uppercase cursor-pointer">вариант категории - 2</p>
-          <p class="text-sm text-black py-1">( сейчас - {{ variant }} вариант )</p>
+        <div class="flex items-center gap-8 px-4">
+          <p @click="variant = 1" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Категории</p>
+          <p @click="variant = 2" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Машины</p>
         </div>
 
       </div>
@@ -118,12 +117,16 @@
 
 
         <!-- РЕЛЬСОСВАРОЧНОЕ ОБОРУДОВАНИЕ -->
-         <div v-if="variant === 1">
-          <EquipmentSection1 :categories="categories" />
-         </div>
-         <div v-else>
-          <EquipmentSection2 :categories="categories" :products="products" />
-         </div>
+
+        <transition name="fade" mode="out-in">
+          <div v-if="variant === 1">
+            <EquipmentSection1 :categories="categories" />
+          </div>
+          <div v-else>
+            <EquipmentSection2 :categories="categories" :products="products" />
+          </div>          
+        </transition>
+
 
 
 
