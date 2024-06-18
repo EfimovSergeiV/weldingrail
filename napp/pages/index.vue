@@ -11,22 +11,30 @@
   const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
   const { data: products } = await useFetch(`${ config.public.baseURL }${locale.value}/c/products/`)
 
-
   const showParams = ref(null)
   const ctSelect = ref(1)
+
+
+
+  const variant = ref(2)
+
+
+  const message = (message) => {
+    alert(message)
+  }
 
 </script>
 
 
 <template>
-  <div>
+  <div id="home">
 
     <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8 pt-4">
       <MainSlider :slides="slides" />
     </div>
 
 
-    <div id="why-choose-us" class="">
+    <div id="why-choose-us" class="sec">
       <div class="">
         <div class="">
           <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
@@ -93,29 +101,29 @@
         <div class="px-8 py-2 bg-slice-right bg-sky-800">
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
+
+        <div class="flex items-center justify-end gap-4">
+          <p @click="variant = 1" class="text-sm text-black font-semibold py-1 uppercase cursor-pointer">вариант категории - 1</p>
+          <p @click="variant = 2" class="text-sm text-black font-semibold py-1 uppercase cursor-pointer">вариант категории - 2</p>
+          <p class="text-sm text-black py-1">( сейчас - {{ variant }} вариант )</p>
+        </div>
+
       </div>
 
     </div>
 
 
-    <div id="railwelding-equipment" class="container mx-auto px-4 lg:max-w-7xl lg:px-8 mt-2">
-      <div class=" bg-white">
+    <div id="railwelding-equipment" class="sec container mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div class=" bg-white pt-2">
 
-        <div class="grid grid-cols-2 gap-0.5">
-          <div class="" v-for="ct in categories" :key="ct.id">
-            <div class="relative">
-              <img src="/backgrounds/10.jpg" class="h-[180px] w-full" />
-              <div class="absolute bg-sky-800/80 hover:bg-sky-800/90 transition-all duration-300 h-full w-full top-0 left-0">
-                <div class="flex items-center justify-center h-full">
-                  <nuxt-link :to="localePath({ name: 'ct', params: { ct: ct.url } })" class="">
-                    <p class="text-white text-2xl font-bold uppercase italic cursor-pointer">{{ ct.name }}</p>
-                  </nuxt-link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
+        <!-- РЕЛЬСОСВАРОЧНОЕ ОБОРУДОВАНИЕ -->
+         <div v-if="variant === 1">
+          <EquipmentSection1 :categories="categories" />
+         </div>
+         <div v-else>
+          <EquipmentSection2 :categories="categories" :products="products" />
+         </div>
 
 
 
@@ -149,7 +157,7 @@
 
 
 
-    <div id="about-us" class="">
+    <div id="about-us" class="sec">
       <div class="container mx-auto lg:max-w-7xl lg:px-8 ">
         <div class=" bg-sky-800">
           <div class="bg-[url('/backgrounds/bg-1.webp')] h-[480px] bg-no-repeat bg-left bg-cover about-polygon">
@@ -203,7 +211,7 @@
 
 
 
-    <div id="write-to-us" class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
+    <div id="write-to-us" class="sec container mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div class="flex items-center justify-center bg-sky-800">
         <div class="px-8 pt-8">
           <div class=" flex items-start justify-center">
@@ -305,7 +313,7 @@
 
 
 
-    <div id="our-partners" class="">
+    <div id="our-partners" class="sec">
       <div class="container mx-auto px-4 lg:max-w-7xl lg:px-8">
 
         <div class="py-2 px-4 bg-white">

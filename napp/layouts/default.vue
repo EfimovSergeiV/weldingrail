@@ -5,6 +5,10 @@
   const config = useRuntimeConfig()
   const mainStore = useMainStore()
 
+  const route = useRoute()
+  const router = useRouter()
+
+
   const moveUp = () => {
     window.scrollTo({
       top: 0,
@@ -22,13 +26,26 @@
     return `font-${currentLocale}`
   })
 
-  const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
+  onMounted( async () => {
+    const selectors = document.querySelectorAll("div.sec")
+    console.log(selectors)
+
+    const scrollHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    )
+
+    console.log(scrollHeight)
+
+
+  })
+
 
 </script>
 
 
 <template>
-  <div :class="`${fontClass} bg-gray-100 min-w-7xl`">
+  <div id="weldingrail" :class="`${fontClass} bg-gray-100 min-w-7xl`">
     <transition name="list">
       <div v-if="mainStore.mobileMenu" class="fixed z-50">
         <MobileMenu />
