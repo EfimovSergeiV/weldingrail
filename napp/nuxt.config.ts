@@ -76,11 +76,11 @@ export default defineNuxtConfig({
         file: 'ru-RU.json'
       },
 
-      // {
-      //   code: 'de',
-      //   iso: 'de-DE',
-      //   file: 'de-DE.json'
-      // },
+      {
+        code: 'de',
+        iso: 'de-DE',
+        file: 'de-DE.json'
+      },
 
     ],
     lazy: true,
