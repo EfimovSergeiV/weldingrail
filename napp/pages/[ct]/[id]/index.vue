@@ -10,6 +10,8 @@
   const { data: slides } = await useFetch(`${ config.public.baseURL }${locale.value}/d/slides/`)
   const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
   const { data: subcategories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/subcategories/`)
+
+    /// route.params.ct возвращает хрень бывает
   const { data: product } = await useFetch(`${ config.public.baseURL }${locale.value}/c/product/${route.params.id}/`)
 
 

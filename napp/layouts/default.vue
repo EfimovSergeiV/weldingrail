@@ -28,14 +28,14 @@
 
   onMounted( async () => {
     const selectors = document.querySelectorAll("div.sec")
-    console.log(selectors)
+    // console.log(selectors)
 
     const scrollHeight = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight
     )
 
-    console.log(scrollHeight)
+    // console.log(scrollHeight)
 
 
   })

@@ -13,8 +13,6 @@
     });
   }
 
-  const { data: categories } = await useFetch(`${ config.public.baseURL }${locale.value}/c/categories/`)
-
 </script>
 
 
