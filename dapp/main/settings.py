@@ -158,8 +158,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://192.168.60.201"
-    "http://192.168.60.250"
+    "http://192.168.60.201",
+    "http://192.168.60.250",
 ]
 
 customColorPalette = [
