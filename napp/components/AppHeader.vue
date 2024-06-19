@@ -43,7 +43,7 @@
 
               <div class="flex items-center h-[60px] gap-4">
                 <!-- <nuxt-link :to="switchLocalePath('ru')" class="text-sky-900 font-semibold text-base text-center py-2 uppercase">{{ locale }}</nuxt-link> -->
-                <div v-for="lang in ['ru', 'en', 'zh', 'de']">
+                <div v-for="lang in ['ru', 'en', 'de', 'zh',]">
                   
                   <div v-if="lang === locale" class="">
                     <nuxt-link :to="switchLocalePath(lang)" style="font-family: Play;" class="text-sky-800 font-opensans font-semibold text-base text-center uppercase border-b-2 border-sky-800">{{ lang }}</nuxt-link>

@@ -104,7 +104,7 @@
 
         <div class="flex items-center gap-8 px-4">
           <p @click="variant = 1" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Категории</p>
-          <p @click="variant = 2" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Машины</p>
+          <p @click="variant = 2" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Оборудование</p>
         </div>
 
       </div>
@@ -178,7 +178,7 @@
 
 
                     <div class="grid grid-cols-1 gap-6 px-8">
-                      <p class="text-4xl text-sky-800 ">{{ $t('about.text-1') }}</p>
+                      <p class="text-4xl text-sky-800 font-semibold italic">{{ $t('about.text-1') }}</p>
                       <div class="grid grid-cols-1 gap-3">
                         <p class="text-xl text-sky-800 ">{{ $t('about.text-2') }}</p>
                         <p class="text-xl text-sky-800 ">{{ $t('about.text-4') }}</p>                        
