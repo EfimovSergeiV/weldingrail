@@ -10,27 +10,30 @@ from content.serializers import SliderModelSerializer
 
 
 class SliderView(APIView):
+    """ TOP SLIDER VIEW """
 
     def get(self, request, lang):
         lang = lang if lang != 'zh' else 'zh-hans'
-
         queryset = SliderModel.objects.language(lang).filter(activated=True)
         slide = SliderModelSerializer(queryset, many=True, context={'request': request})
-
         clear_data = []
-        print(slide.data)
 
         for data in slide.data:
-            #   KeyError: 'de'
-            #   'sub_title': [ sub_title['translations'][lang]['text'] for sub_title in data['sub_title'] ],
+
+            try:
+                sub_titles = [ sub_title['translations'][lang]['text'] for sub_title in data['sub_title'] ]
+            except KeyError:
+                sub_titles = [
+                    "Complete translations for the selected language", 
+                    "Complete translations for the selected language",
+                ]
 
             clear_data.append({
                 'id': data['id'],
                 'title': data['title'],
                 'image': data['image'],
                 'url': data['url'],
-                'sub_title': [ sub_title['translations'][lang]['text'] for sub_title in data['sub_title'] ],
+                'sub_title': sub_titles,
             })
-
         
         return Response(clear_data)
