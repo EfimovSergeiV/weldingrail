@@ -102,10 +102,10 @@
           <p class="text-2xl text-white font-semibold uppercase italic">{{ $t('RWQ') }}</p>
         </div>
 
-        <div class="flex items-center gap-8 px-4">
+        <!-- <div class="flex items-center gap-8 px-4">
           <p @click="variant = 1" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Категории</p>
           <p @click="variant = 2" class="text-base text-sky-800 font-semibold uppercase cursor-pointer">Оборудование</p>
-        </div>
+        </div> -->
 
       </div>
 
@@ -138,11 +138,11 @@
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 pt-4 pb-8 bg-sky-800">
+            <div class="flex flex-wrap gap-x-8 gap-y-4 px-8 py-4 bg-sky-800">
               <div v-for="subct in subcategories" :key="subct.id" class="">
                 <div class="">
                   <nuxt-link :to="localePath({ name: 'ct', params: { ct: subct.url } })" class="w-full">
-                    <p class="text-xl text-white text-center">{{ subct.name }}</p>
+                    <p class="text-xl text-white italic font-semibold text-center">{{ subct.name }}</p>
                   </nuxt-link>                    
                 </div>
               </div>
