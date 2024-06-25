@@ -70,9 +70,9 @@
 
     <div id="move-up" class="invisible transition-all duration-900">
       <div class="fixed bottom-4 right-4 z-40">
-        <div class="bg-white h-[36px] w-[36px] rounded-full border border-sky-800">
+        <div class="">
           <div class="flex items-center justify-center h-full w-full">
-            <p @click="moveUp()" class="mdi mdi-24px mdi-arrow-up-bold cursor-pointer text-sky-900"></p>
+            <p @click="moveUp()" class="mdi mdi-48px mdi-arrow-up-bold-hexagon-outline cursor-pointer text-sky-900"></p>
           </div>
         </div>
       </div>
